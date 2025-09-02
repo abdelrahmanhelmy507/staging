@@ -1,27 +1,34 @@
 // App.jsx
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Home from "./components/Home";
+import Aurmenu from "./components/Store/Aurmenu";
+import Aurest from "./components/Store/Aurest";
+import Aurpos from "./components/Store/Aurpos";
+import Aurac from "./components/Store/Aurac";
 import Header from "./components/Header";
-import Hero from "./components/Hero";
-import Services from "./components/services";
-import Pricing from "./components/Pricing";
-import Features from "./components/Features";
-import CTA from "./components/CTA";
 import Footer from "./components/Footer";
-import Solution from "./components/solution";
 import "./App.css";
+import { BrowserRouter , Routes , Route } from "react-router-dom";
+import Store from "./components/Store/Store";
 
 export default function App() {
   return (
     <div>
-      <Header />
-      <Hero />
-      <Services />
-      <Pricing />
-      <CTA />
-      <Solution />
-      <Features />
-      <Footer />
+      <BrowserRouter>
+       <Header />
+        <Routes>
+          <Route path="/aurages" element={<Home/>} />
+          <Route path="/aurages/store" element={<Store/>}>
+            <Route path="aurmenu" element={<Aurmenu/>}/> 
+            <Route path="aurest" element={<Aurest/>}/> 
+            <Route path="aurpos" element={<Aurpos/>}/> 
+            <Route path="aurac" element={<Aurac/>}/> npm run dev
+          </Route>ىحة
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+      
     </div>
   );
 }

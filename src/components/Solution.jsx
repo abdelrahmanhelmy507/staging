@@ -6,84 +6,7 @@ export default function Solution() {
     <>
       <section>
         <div className="solution">
-          <Container className='py-5'>
-            <h2 className="text-center fw-bold mb-3">حلول SaaS لكل الأعمال</h2>
-            <p className="text-center mb-5">برمجيات قوية قائمة على السحابة وتتكامل بسلاسة مع أجهزة أوريجس الخاصة بك</p>
-            
-            <Row className="g-4 mb-5">
-              {/* Card 1 - أورمينيو (Ourmenu) */}
-              <Col lg={4} md={6}>
-                <Card className="solution-card h-100">
-                  <Card.Body className="text-center p-4">
-                    <div className="solution-icon mb-3">
-                      <span className="icon-text">a</span>
-                    </div>
-                    <Card.Title className="fw-bold mb-2">أورمينيو</Card.Title>
-                    <Card.Text className="mb-3">حل القائمة الرقمية مع طلب عبر رمز الاستجابة السريعة (QR)</Card.Text>
-                    <div className="price-section mb-3">
-                      <div className="price fw-bold">456 / شهريا</div>
-                      <div className="trial">تجربة مجانية لمدة 3 أشهر متضمنة</div>
-                    </div>
-                    <ul className="features-list text-end">
-                      <li>إنشاء قائمة عبر رمز الاستجابة السريعة (QR)</li>
-                      <li>تحديثات فورية للقائمة</li>
-                      <li>دعم متعدد اللغات</li>
-                      <li>تخصيص الهوية البصرية</li>
-                    </ul>
-                    <Button className='w-100'>اضف الي العربه</Button>
-                  </Card.Body>
-                </Card>
-              </Col>
-
-              {/* Card 2 - أوربوس (Ourpos) */}
-              <Col lg={4} md={6}>
-                <Card className="solution-card h-100">
-                  <Card.Body className="text-center p-4">
-                    <div className="solution-icon mb-3">
-                      <span className="icon-text">a</span>
-                    </div>
-                    <Card.Title className="fw-bold mb-2">أوربوس</Card.Title>
-                    <Card.Text className="mb-3">نظام نقاط بيع كامل قائم على السحابة</Card.Text>
-                    <div className="price-section mb-3">
-                      <div className="price fw-bold">495 / شهريا</div>
-                      <div className="trial">تشمل تجربة مجانية مدتها 3 أشهر</div>
-                    </div>
-                    <ul className="features-list text-end">
-                      <li>نظام نقاط بيع مستند إلى السحابة</li>
-                      <li>إدارة المخزون</li>
-                      <li>تقارير المبيعات</li>
-                      <li>إدارة الموظفين</li>
-                    </ul>
-                    <Button className='w-100'>اضف الي العربه</Button>
-                  </Card.Body>
-                </Card>
-              </Col>
-
-              {/* Card 3 - أورست (Ourrest) */}
-              <Col lg={4} md={12}>
-                <Card className="solution-card h-100">
-                  <Card.Body className="text-center p-4">
-                    <div className="solution-icon mb-3">
-                      <span className="icon-text">a</span>
-                    </div>
-                    <Card.Title className="fw-bold mb-2">أورست</Card.Title>
-                    <Card.Text className="mb-3">حزمة إدارة المطاعم</Card.Text>
-                    <div className="price-section mb-3">
-                      <div className="price fw-bold">1,499 / شهريا</div>
-                      <div className="trial">تجربة مجانية 3 أشهر متضمنة</div>
-                    </div>
-                    <ul className="features-list text-end">
-                      <li>إدارة الطاولات</li>
-                      <li>نظام عرض المطبخ</li>
-                      <li>إدارة علاقات العملاء</li>
-                      <li>إدارة الموظفين</li>
-                    </ul>
-                    <Button className='w-100'>اضف الي العربه</Button>
-                  </Card.Body>
-                </Card>
-              </Col>
-            </Row>
-
+          <Container className='py-2'>
             {/* Custom Solutions Section */}
             <div className="custom-solutions-section">
               <Card className="custom-solutions-card">
@@ -161,3 +84,81 @@ export default function Solution() {
     </>
   )
 }
+
+
+
+
+
+// <Row className="g-4 mb-5">
+//               {/* Card 1 - أورمينيو (Ourmenu) */}
+//               <Col lg={4} md={6}>
+//                 <Card className="solution-card h-100">
+//                   <Card.Body className="text-center p-4">
+//                     <div className="solution-icon mb-3">
+//                       <span className="icon-text">a</span>
+//                     </div>
+//                     <Card.Title className="fw-bold mb-2">أورمينيو</Card.Title>
+//                     <Card.Text className="mb-3">حل القائمة الرقمية مع طلب عبر رمز الاستجابة السريعة (QR)</Card.Text>
+//                     <div className="price-section mb-3">
+//                       <div className="price fw-bold">456 / شهريا</div>
+//                       <div className="trial">تجربة مجانية لمدة 3 أشهر متضمنة</div>
+//                     </div>
+//                     <ul className="features-list text-end">
+//                       <li>إنشاء قائمة عبر رمز الاستجابة السريعة (QR)</li>
+//                       <li>تحديثات فورية للقائمة</li>
+//                       <li>دعم متعدد اللغات</li>
+//                       <li>تخصيص الهوية البصرية</li>
+//                     </ul>
+//                     <Button className='w-100'>اضف الي العربه</Button>
+//                   </Card.Body>
+//                 </Card>
+//               </Col>
+
+//               {/* Card 2 - أوربوس (Ourpos) */}
+//               <Col lg={4} md={6}>
+//                 <Card className="solution-card h-100">
+//                   <Card.Body className="text-center p-4">
+//                     <div className="solution-icon mb-3">
+//                       <span className="icon-text">a</span>
+//                     </div>
+//                     <Card.Title className="fw-bold mb-2">أوربوس</Card.Title>
+//                     <Card.Text className="mb-3">نظام نقاط بيع كامل قائم على السحابة</Card.Text>
+//                     <div className="price-section mb-3">
+//                       <div className="price fw-bold">495 / شهريا</div>
+//                       <div className="trial">تشمل تجربة مجانية مدتها 3 أشهر</div>
+//                     </div>
+//                     <ul className="features-list text-end">
+//                       <li>نظام نقاط بيع مستند إلى السحابة</li>
+//                       <li>إدارة المخزون</li>
+//                       <li>تقارير المبيعات</li>
+//                       <li>إدارة الموظفين</li>
+//                     </ul>
+//                     <Button className='w-100'>اضف الي العربه</Button>
+//                   </Card.Body>
+//                 </Card>
+//               </Col>
+
+//               {/* Card 3 - أورست (Ourrest) */}
+//               <Col lg={4} md={12}>
+//                 <Card className="solution-card h-100">
+//                   <Card.Body className="text-center p-4">
+//                     <div className="solution-icon mb-3">
+//                       <span className="icon-text">a</span>
+//                     </div>
+//                     <Card.Title className="fw-bold mb-2">أورست</Card.Title>
+//                     <Card.Text className="mb-3">حزمة إدارة المطاعم</Card.Text>
+//                     <div className="price-section mb-3">
+//                       <div className="price fw-bold">1,499 / شهريا</div>
+//                       <div className="trial">تجربة مجانية 3 أشهر متضمنة</div>
+//                     </div>
+//                     <ul className="features-list text-end">
+//                       <li>إدارة الطاولات</li>
+//                       <li>نظام عرض المطبخ</li>
+//                       <li>إدارة علاقات العملاء</li>
+//                       <li>إدارة الموظفين</li>
+//                     </ul>
+//                     <Button className='w-100'>اضف الي العربه</Button>
+//                   </Card.Body>
+//                 </Card>
+//               </Col>
+//             </Row>

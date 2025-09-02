@@ -5,19 +5,27 @@ import {
   FaInstagram, 
   FaTwitter, 
   FaLinkedinIn,
-  FaShoppingCart,
+  FaShoppingCart ,
   FaChevronUp
 } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="footer">
+    <footer className="footer py-5">
       <Container>
         {/* Newsletter Subscription Section */}
-        <div className="newsletter-section text-center py-5">
-          <h3 className="newsletter-title mb-2">اشترك في نشرتنا البريدية الان</h3>
-          <p className="newsletter-desc mb-4">سوف نرسل لك بريدا واحد في الاسبوع لن نقوم بازعاجك</p>
-          <div className="newsletter-form d-flex justify-content-center gap-3">
+        <Row>
+          <Col lg={6} md={12} sm={12} >
+          <div className="newsletter-section d-flex">
+          <div>
+            <h3 className="newsletter-title mb-2">اشترك في نشرتنا البريدية الان</h3>
+            <p className="newsletter-desc mb-4">سوف نرسل لك بريدا واحد في الاسبوع لن نقوم بازعاجك</p>
+          </div>
+        </div>
+          </Col>
+          <Col lg={6} md={12} sm={12} >
+          
+          <div className="newsletter-form d-flex gap-3">
             <Form.Control 
               type="email" 
               placeholder="ادخل بريدك الالكتروني للاشتراك" 
@@ -25,15 +33,17 @@ export default function Footer() {
             />
             <Button className="newsletter-btn">اشترك</Button>
           </div>
-        </div>
+        
+          </Col>
+        </Row>
 
         {/* Main Footer Content */}
         <Row className="footer-content py-5">
           {/* Brand Column */}
           <Col lg={3} md={6} className="mb-4">
             <div className="brand-section">
-              <h4 className="brand-logo mb-3">aurages</h4>
-              <p className="brand-tagline">تخطى الحدود واعبر افاق التطور</p>
+               <img src="AuragesLogo.png" alt="" width={100}/>
+              <p className="brand-tagline mt-2">تخطى الحدود واعبر افاق التطور</p>
             </div>
           </Col>
 
@@ -105,8 +115,8 @@ export default function Footer() {
         {/* Bottom Footer Bar */}
         <div className="footer-bottom">
           <div className="footer-separator mb-4"></div>
-          <Row className="align-items-center">
-            <Col md={6} className="text-md-start text-center mb-3 mb-md-0">
+          <Row className="bottom ">
+            <Col md={6} className="text-md-start  mb-3 mb-md-0">
               <div className="social-icons">
                 <a href="#" className="social-icon"><FaFacebookF /></a>
                 <a href="#" className="social-icon"><FaInstagram /></a>
@@ -114,7 +124,7 @@ export default function Footer() {
                 <a href="#" className="social-icon"><FaLinkedinIn /></a>
               </div>
             </Col>
-            <Col md={6} className="text-md-end text-center">
+            <Col md={6} className="text-md-end " dir="ltr">
               <div className="legal-links">
                 <a href="#" className="legal-link">سياسة الخصوصية</a>
                 <span className="mx-3">|</span>
@@ -134,8 +144,10 @@ export default function Footer() {
         
         {/* Shopping Cart */}
         <div className="shopping-cart">
-          <FaShoppingCart />
-          <span className="cart-badge">0</span>
+         
+          <div className="cart-badge">
+           <span> 0</span> <FaShoppingCart /> 
+          </div>
         </div>
       </div>
     </footer>

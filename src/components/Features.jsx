@@ -76,8 +76,11 @@ export default function Features() {
         </div>
         
         <Row className="g-4">
+          
           {features.map((feature, index) => (
-            <Col lg={2.4} md={4} sm={6} key={index}>
+            
+            <Col lg={2} md={4} sm={6} key={index}>
+              
               <Card className="feature-card h-100">
                 <Card.Body className="text-center p-4">
                   <div className="feature-icon mb-3">
@@ -88,7 +91,9 @@ export default function Features() {
                 </Card.Body>
               </Card>
             </Col>
+            
           ))}
+          
         </Row>
       </Container>
     </section>
