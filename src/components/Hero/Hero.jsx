@@ -9,11 +9,11 @@ export default function Hero() {
       <Carousel controls={false} indicators={false} fade interval={3000}>
         
         {/* Slide 1 */}
-        <Carousel.Item>
-          <div className="hero-slide">
+        {/* <Carousel.Item>
+          <div className="hero-slide mt-5 pt-5">
             <img
               className="d-block w-100"
-              src="./slide1.jpg"
+              src="./nat.png"
               alt="Second slide"
             />
             <div className="overlay2"></div>
@@ -34,16 +34,19 @@ export default function Hero() {
               </div>
             </div>
           </div>
-        </Carousel.Item>
+        </Carousel.Item> */}
+        {/* <Carousel.Item>
+
+        </Carousel.Item> */}
 
         {/* Slide 2 */}
-        <Carousel.Item>
+        {/* <Carousel.Item>
           <div className="hero-slide ">
            
-            <div className="info pe-5 me-5">
+            <div className="info pe-5 me-5"> */}
               {/* <img className="logo" src="./nationalLogo.png" alt="" width={400}/> */}
               
-              <h1 className="title">مستقبل تكنولوجيا المطاعم</h1>
+              {/* <h1 className="title">مستقبل تكنولوجيا المطاعم</h1>
               <p className="pt-5 subtitle1  mb-0">بمناسبه اليوم الوطني السعويدي 95 </p>
               <h2 className="">  خصم اكثر من <span className="numbrer">50%</span></h2>
               
@@ -63,17 +66,63 @@ export default function Hero() {
               </div>
             </div>
             </div>
-            <div className="image pt-5 mt-5">
+            <div className="image pt-5">
               <img src="./slide7.png" alt="" width={600} />
             </div>
            
            
           </div>
-        </Carousel.Item>
+        </Carousel.Item> */}
 
         {/* Slide 3 - اليوم الوطني 95 */}
       
+    
+<Carousel.Item>
+  <div className="hero-slide national-day-hero ">
+    <div className="logo"><img
 
+      className="d-block w-100"
+      src="./nationalLogo.png"
+      alt="Saudi National Day Celebration"
+      
+    /></div>
+    <div className="overlay-national-day"></div>
+    <div className="hero-content-national">
+      <div className="national-day-badge mb-3">
+        <span className="badge-text"> اليوم الوطني السعودي 94 </span>
+      </div>
+      <h1 className="national-day-title">
+        نحتفل معاً بـ <span className="highlight-green">95 عاماً</span> من التقدم والازدهار
+      </h1>
+      <p className="national-day-subtitle">
+        بمناسبة اليوم الوطني السعودي، نفتخر بخدمة المملكة بأحدث الحلول التقنية.
+        <br />
+        <strong>عروض خاصة على جميع أنظمتنا احتفالاً بهذه المناسبة العزيزة</strong>
+      </p>
+      
+      
+      
+      <div className="hero-buttons national-day-buttons">
+        <Button variant="success" size="lg" className="me-3 national-btn">
+          🎉 اكتشف العروض الخاصة
+        </Button>
+        <Button variant="outline-light" size="lg" className="national-btn-outline">
+          تواصل معنا
+        </Button>
+      </div>
+      
+      <div className="national-day-footer mt-4">
+        <p className="mb-0">
+          <span className="saudi-colors">🟢⚪🟢</span>
+          <strong>كل عام وأنتم بخير</strong>
+          <span className="saudi-colors">🟢⚪🟢</span>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  
+</Carousel.Item>
       </Carousel>
     </div>
   );

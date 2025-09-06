@@ -1,10 +1,11 @@
 
-export default function Aurest() {
+
+export default function Server() {
 
     return (
         
            <h1>
-            ayrest
+            Server
         </h1>
     )
 }  

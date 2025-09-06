@@ -7,7 +7,7 @@ import Features from "./Features";
 import CTA from "./CTA";
 
 import Solution from "./Solution"; 
-import Pricing from './../pricing/Pricing';
+import Pricing from './pricing/Pricing';
 
 
 export default function Home() {

@@ -2,8 +2,12 @@
 export default function Aurac() {
 
     return (
-        <>
-            <h1>aurac</h1>
-        </>
+        <div className="mt-5 pt-5">
+            <h1>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</h1>
+            <h1>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</h1>
+            <h1>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</h1>
+            <h1>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</h1>
+            <h1>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</h1>
+        </div>
     )
 }  

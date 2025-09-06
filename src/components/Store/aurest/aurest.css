@@ -1,0 +1,122 @@
+.aurest-hero-slide {
+  position: relative;
+  width: 100%;
+  height: 100vh; 
+  overflow: hidden;
+}
+
+.aurest-hero-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.aurest-hero-slide .overlay2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); 
+  z-index: 1;
+}
+
+.aurest-hero-slide .hero-content2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  z-index: 2;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.aurest-hero-slide .hero-content2 h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.aurest-hero-slide .hero-content2 p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  line-height: 1.8;
+}
+
+.aurest-hero-slide .hero-buttons .btn {
+  padding: 10px 25px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+}
+  
+/* ///////////////////////// */
+
+.aurest-pricing {
+  background: #f9f9fb;
+}
+.aurest-pricing h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.aurest-pricing .pricing-card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease-in-out;
+}
+
+.aurest-pricing .pricing-card.featured {
+  border: 2px solid #0d6efd;
+  transform: scale(1.05);
+}
+
+.aurest-pricing .pricing-card:hover {
+  border:  1px solid var(--text-color2);
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.aurest-pricing .pricing-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #0d6efd;
+}
+
+.aurest-pricing .pricing-card .price {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.aurest-pricing .pricing-card .price span {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.aurest-pricing .pricing-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.aurest-pricing .pricing-card ul li {
+  margin-bottom: 12px;
+  color: #444;
+  font-size: 1rem;
+}
+
+.product-title{
+  color: var(--primary-color);
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}

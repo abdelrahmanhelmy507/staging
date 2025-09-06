@@ -1,0 +1,51 @@
+.section-title {
+  font-size: 2rem;
+  color: var(--primary-color); 
+  position: relative;
+}
+
+/* .section-title::after {
+  position: absolute;
+  bottom: 0;
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;;
+  background: var(--primary-color); 
+  margin: 10px auto 0;
+  border-radius: 2px;
+} */
+
+.contact-info, 
+.contact-form {
+  background: #fff;
+  border: 1px solid #eee;
+}
+
+.icon-box {
+  background: var(--text-color2);
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 10px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 42px;
+  min-height: 42px;
+}
+;
+.contact-form h3 {
+  color: var(--primary-color);
+}
+
+.contact-form .form-control {
+  border-radius: 0.75rem;
+  border: 1px solid #ddd;
+  box-shadow: none;
+}
+
+.contact-form .form-control:focus {
+  border-color: var(--text-color2);
+  box-shadow: 0 0 0 0.2rem rgba(13,110,253,.25);
+}

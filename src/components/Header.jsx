@@ -1,21 +1,10 @@
-import React, { useState } from 'react';
-import './Header.css';
-import { Link } from 'react-router-dom';
-
-export default function Header () {
+import React, { useState } from "react";
+import "./Header.css";
+import { Link } from "react-router-dom";
+import { NavDropdown, Navbar, Container, Nav, Button } from "react-bootstrap";
+import { FaBars } from "react-icons/fa";
+export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  const navigationItems = [
-    {name : "الرئيسيه" , dropdown : []},
-    { name: 'متجر الانظمه والتطبيقات', dropdown:  ['اورمينيو' ,'اورست' ,"اوربس كلاود اوراك" ,  ] },
-    { name: 'الاجهزه والمعدات', dropdown:[ 'الطابعات' ]},
-    { name: 'الامن السيبراني', dropdown: ["شهدات SSL" , "امن موقعك الالكتروني" ,"النسخ الاحتياطي للموقع الالكتروني" ,"النسخ الاحتياطي"] },
-    { name: 'الحلول', dropdown: ["التصميم الغرافيكي" , "تطوير البرمجيات المخصصه" , "تصميم وتطوير"] },
-    { name: 'العروض', dropdown: []},
-    { name: 'الدعم', dropdown: [] },
-    { name: 'سله المنتجات', dropdown:[  ]},
-    { name: 'اللغه', dropdown: ['English']}
-  ];
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -26,33 +15,99 @@ export default function Header () {
   };
 
   return (
-    <header className={`header ${isMobileMenuOpen ? 'mobile-menu-open' : ''}`}>
+    <header className={`header ${isMobileMenuOpen ? "mobile-menu-open" : ""}`}>
       <div className="header-container">
         {/* Logo */}
         <div className="logo ms-4">
-          <img src="AuragesLogo.png" alt="" width={100}/>
+          <img src="AuragesLogo.png" alt="" width={100} />
         </div>
-          
 
         {/* Navigation */}
         <nav className="navigation">
           <ul className="nav-list">
-            {navigationItems.map((item, index) => (
-              <li key={index} className="nav-item">
-                <a href="#" className="nav-link" onClick={closeMobileMenu}>
-                  {item.name}
-                </a>
-                {item.dropdown.length !== 0 && (
-                  <div className="dropdown mb-4">
-                  <div className="dropdown-content">
-                    {item.dropdown.map((ele) =>{return (
-                      <p>{ele}</p>
-                    )})}
-                  </div>
+            <li className="nav-item">
+              <Link className="nav-link" to={"/aurages/"}>الرئيسيه</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to={'/aurages/store'}>متجر الانظمه والتطبيقات</Link>
+              <div className="dropdown mb-4">
+                <div className="dropdown-content">
+                  <Link to={"/aurages/store/aurest"}>اورست</Link>
                 </div>
-                )}
-              </li>
-            ))}
+                <div className="dropdown-content">
+                  <Link to={"/aurages/store/aurmenu"}>اورمينيو</Link>
+                </div>
+                <div className="dropdown-content">
+                  <Link to={"/aurages/store/auracc"}>اوراك</Link>
+                </div>
+                <div className="dropdown-content">
+                  <Link to={"/aurages/store/aurpos"}>اوربس كلاود </Link>
+                </div>
+              </div>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link">الاجهزه والمعدات</Link>
+
+              <div className="dropdown mb-4">
+                <div className="dropdown-content">
+                  <Link>الطابعات</Link>
+                </div>
+              </div>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to={'aurages/cybersecurity'}>الامن السيبراني</Link>
+
+              <div className="dropdown mb-4">
+                <div className="dropdown-content">
+                  <Link to={'aurages/cybersecurity/ssl'}> شهدات SSL</Link>
+                </div>
+                <div className="dropdown-content">
+                  <Link to={'aurages/cybersecurity/sitelock'}>امن موقعك الالكتروني</Link>
+                </div>
+                <div className="dropdown-content">
+                  <Link to={'aurages/cybersecurity/codeGuard'}> النسخ الاحتياطي للموقع الالكتروني</Link>
+                </div>
+                <div className="dropdown-content">
+                  <Link to={'aurages/cybersecurity/acronis'}> النسخ الاحتياطي</Link>
+                </div>
+              </div>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link">العروض</Link>
+
+              
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link">الحلول</Link>
+
+              <div className="dropdown mb-4">
+                <div className="dropdown-content">
+                  <Link>التصميم الغرافيكي</Link>
+                </div>
+                <div className="dropdown-content">
+                  <Link> تطوير البرمجيات المخصصه</Link>
+                </div>
+                <div className="dropdown-content">
+                  <Link> تصميم وتطوير" </Link>
+                </div>
+              </div>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to={'/aurages/contact'}>تواصل معنا</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link">سله المنتجات</Link>
+
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link"> اللغه</Link>
+
+              <div className="dropdown mb-4">
+                <div className="dropdown-content">
+                  <Link>english</Link>
+                </div>
+              </div>
+            </li>
           </ul>
         </nav>
 
@@ -71,6 +126,4 @@ export default function Header () {
       </div>
     </header>
   );
-};
-
-
+}

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import { 
   FaFacebookF, 
@@ -10,6 +10,10 @@ import {
 } from "react-icons/fa";
 
 export default function Footer() {
+    
+    
+
+
   return (
     <footer className="footer py-5">
       <Container>
