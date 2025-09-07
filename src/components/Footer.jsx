@@ -8,11 +8,22 @@ import {
   FaShoppingCart ,
   FaChevronUp
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
-    
-    
+      const [show, setShow] = useState(false);
+  useEffect(() => {
+    function handleScroll() {
+      if (window.scrollY > 300) {
+        setShow(true);   
+      } else {
+        setShow(false);  
+      }
+    }
 
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <footer className="footer py-5">
@@ -130,9 +141,9 @@ export default function Footer() {
             </Col>
             <Col md={6} className="text-md-end " dir="ltr">
               <div className="legal-links">
-                <a href="#" className="legal-link">سياسة الخصوصية</a>
+                <Link to = "/aurages/privacypolicy" className="legal-link">سياسة الخصوصية</Link>
                 <span className="mx-3">|</span>
-                <a href="#" className="legal-link">اتفاق قانوني</a>
+                <Link to = "/aurages/LegalAgreement" className="legal-link">اتفاق قانوني</Link>
               </div>
             </Col>
           </Row>
@@ -140,7 +151,9 @@ export default function Footer() {
       </Container>
 
       {/* Floating Elements */}
-      <div className="floating-elements">
+     {
+      show && (
+         <div className="floating-elements">
         {/* Scroll to Top Button */}
         <button className="scroll-top-btn">
           <FaChevronUp />
@@ -154,6 +167,8 @@ export default function Footer() {
           </div>
         </div>
       </div>
+      )
+     }
     </footer>
   );
 }

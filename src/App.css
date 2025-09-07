@@ -491,7 +491,7 @@ a{
 
 .floating-elements .scroll-top-btn {
     position: fixed;
-    bottom: 30px;
+    bottom: 60px;
     right: 15px;
     width: 45px;
     height: 45px;
@@ -522,7 +522,62 @@ a{
     scale: 1.1;
     box-shadow: 2px 2px  10px #0d5797e8 ;
 }
-/* 
+
+.legal-agreement {
+  background-color: #f9f9f9; /* خلفية فاتحة هادية */
+  color: #333;
+  font-family: "Arial", sans-serif;
+}
+
+.legal-agreement h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #0d6efd; /* أزرق بوتستراب */
+  margin-bottom: 2rem;
+}
+
+.legal-agreement h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #0d6efd;
+}
+
+.legal-agreement p {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.legal-agreement ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.legal-agreement li {
+  margin-bottom: 0.5rem;
+}
+
+.legal-agreement a {
+  color: #0d6efd;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .legal-agreement h1 {
+    font-size: 2rem;
+  }
+  .legal-agreement h3 {
+    font-size: 1.2rem;
+  }
+  .legal-agreement p,
+  .legal-agreement li {
+    font-size: 0.95rem;
+  }
+}
+
 
 
 

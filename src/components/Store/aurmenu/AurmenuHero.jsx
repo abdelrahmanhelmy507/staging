@@ -4,28 +4,29 @@ export default function AurmenuHero (){
 
     return(
         <>
-        <div className="aurmenu-hero-slide">
-           
-            <div className="info pe-5 me-5"> 
-               <h1 className="title">  قائمة أورمنيو الذكية</h1>
+       <div className="store-hero-slide ">
+            <img
+              className="d-block w-100"
+              src="../aurmenuhero.jpg"
+              alt="Second slide"
+            />
+            <div className="overlay"></div>
+            <div className="hero-content">
+              <h1>    نظام إدارة القوائم الذكي </h1>
               <p>
-               استعرض أطباقك ومشروباتك بطريقة مبتكرة، منظّمة، وسهلة التصفح لعملائك.
+                طريقتك الأسهل لإدارة وعرض القوائم بشكل ذكي وسريع يجذب عملاءك
+               
               </p>
               <div className="hero-buttons">
-                <Button variant="primary" size="lg" className="me-2">
+                <Button variant="primary" size="lg" className=" mx-2">
                   ابدأ الآن
                 </Button>
-                <Button  size="lg">
+                <Button  size="lg" className="mx-2">
                   شاهد العرض
                 </Button>
               </div>
             </div>
-            <div className="image pt-5 mt-5">
-              <img src="../aurmenu2.png" alt="" />
-            </div>
-           
-           
-        </div>
+          </div>
         </>
     )
 }

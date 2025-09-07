@@ -1,8 +1,3 @@
-import React from 'react';
-import { Container, Row, Col, Card, Button, Form } from 'react-bootstrap';
-
-
-
 
 import Filter from './filter';
 import HeroStore from './HeroStore';
@@ -117,9 +112,8 @@ export default function Store() {
         <div className="store-container ">
             < HeroStore />
             < StoreAbout/>
-              <Filter />
+            <Filter />
               
-            
         </div>
        
     );

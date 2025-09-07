@@ -55,9 +55,9 @@ export default function Header() {
               </div>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to={'aurages/cybersecurity'}>الامن السيبراني</Link>
+              <a className="nav-link" href="https://aurages.com/" target="blank">الامن السيبراني</a>
 
-              <div className="dropdown mb-4">
+              {/* <div className="dropdown mb-4">
                 <div className="dropdown-content">
                   <Link to={'aurages/cybersecurity/ssl'}> شهدات SSL</Link>
                 </div>
@@ -70,7 +70,7 @@ export default function Header() {
                 <div className="dropdown-content">
                   <Link to={'aurages/cybersecurity/acronis'}> النسخ الاحتياطي</Link>
                 </div>
-              </div>
+              </div> */}
             </li>
             <li className="nav-item">
               <Link className="nav-link">العروض</Link>
@@ -80,7 +80,7 @@ export default function Header() {
             <li className="nav-item">
               <Link className="nav-link">الحلول</Link>
 
-              <div className="dropdown mb-4">
+              {/* <div className="dropdown mb-4">
                 <div className="dropdown-content">
                   <Link>التصميم الغرافيكي</Link>
                 </div>
@@ -90,7 +90,7 @@ export default function Header() {
                 <div className="dropdown-content">
                   <Link> تصميم وتطوير" </Link>
                 </div>
-              </div>
+              </div> */}
             </li>
             <li className="nav-item">
               <Link className="nav-link" to={'/aurages/contact'}>تواصل معنا</Link>
@@ -113,8 +113,8 @@ export default function Header() {
 
         {/* Buttons */}
         <div className="header-buttons">
-          <button className="btn btn-login m-2">Login</button>
-          <button className="btn btn-signup m-1 ">Sign Up</button>
+          <button className="btn btn-login m-2">تسجيل</button>
+          <button className="btn btn-signup m-1 "> تسجيل الدخول </button>
         </div>
 
         {/* Mobile menu toggle */}

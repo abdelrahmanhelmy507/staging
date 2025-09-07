@@ -5,7 +5,6 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 import { BsFillCartCheckFill } from "react-icons/bs";
 import { FaRegHeart } from "react-icons/fa";
 
-
 import "../services.css";
 
 export default function Services() {
@@ -17,7 +16,7 @@ export default function Services() {
           <Col xl={4} md={6} sm={6} xs={12}>
             <div className="card">
               <div className="product-image">
-                <img src="./zeeyara-terrace.jpg" alt="" />
+                <img src="./aurmenu.png" alt="" />
               </div>
               <div className="text">
                 <h3 className="title" dir="ltr">
@@ -37,16 +36,16 @@ export default function Services() {
                   <IoMdStarOutline className="icon-star" />
                 </div>
                 <div className="icon">
-                 <BsFillCartCheckFill className="icon-cart1"/>
+                  <BsFillCartCheckFill className="icon-cart1" />
                   <span>
                     عمليات الشراء
-                    <br /> <span >300</span>
+                    <br /> <span>300</span>
                   </span>
                 </div>
               </div>
               <div className="pricing">
                 <div className="icons">
-                  < AiOutlineShoppingCart className="ms-3" />
+                  <AiOutlineShoppingCart className="ms-3" />
                   <FaRegHeart />
                 </div>
                 <div className="price mb-4">
@@ -59,7 +58,7 @@ export default function Services() {
           <Col xl={4} md={6} sm={6} xs={12}>
             <div className="card">
               <div className="product-image">
-                <img src="./zeeyara-terrace.jpg" alt="" />
+                <img src="./aurmenu.png" alt="" />
               </div>
               <div className="text">
                 <h3 className="title" dir="ltr">
@@ -79,16 +78,16 @@ export default function Services() {
                   <IoMdStarOutline className="icon-star" />
                 </div>
                 <div className="icon">
-                 <BsFillCartCheckFill className="icon-cart1"/>
+                  <BsFillCartCheckFill className="icon-cart1" />
                   <span>
                     عمليات الشراء
-                    <br /> <span >300</span>
+                    <br /> <span>300</span>
                   </span>
                 </div>
               </div>
               <div className="pricing">
                 <div className="icons">
-                  < AiOutlineShoppingCart className="ms-3" />
+                  <AiOutlineShoppingCart className="ms-3" />
                   <FaRegHeart />
                 </div>
                 <div className="price mb-4">
@@ -101,7 +100,7 @@ export default function Services() {
           <Col xl={4} md={6} sm={6} xs={12}>
             <div className="card">
               <div className="product-image">
-                <img src="./zeeyara-terrace.jpg" alt="" />
+                <img src="./aurmenu.png" alt="" />
               </div>
               <div className="text">
                 <h3 className="title" dir="ltr">
@@ -121,16 +120,16 @@ export default function Services() {
                   <IoMdStarOutline className="icon-star" />
                 </div>
                 <div className="icon">
-                 <BsFillCartCheckFill className="icon-cart1"/>
+                  <BsFillCartCheckFill className="icon-cart1" />
                   <span>
                     عمليات الشراء
-                    <br /> <span >300</span>
+                    <br /> <span>300</span>
                   </span>
                 </div>
               </div>
               <div className="pricing">
                 <div className="icons">
-                  < AiOutlineShoppingCart className="ms-3" />
+                  <AiOutlineShoppingCart className="ms-3" />
                   <FaRegHeart />
                 </div>
                 <div className="price mb-4">
@@ -143,7 +142,7 @@ export default function Services() {
           <Col xl={4} md={6} sm={6} xs={12}>
             <div className="card">
               <div className="product-image">
-                <img src="./zeeyara-terrace.jpg" alt="" />
+                <img src="./aurmenu.png" alt="" />
               </div>
               <div className="text">
                 <h3 className="title" dir="ltr">
@@ -163,16 +162,16 @@ export default function Services() {
                   <IoMdStarOutline className="icon-star" />
                 </div>
                 <div className="icon">
-                 <BsFillCartCheckFill className="icon-cart1"/>
+                  <BsFillCartCheckFill className="icon-cart1" />
                   <span>
                     عمليات الشراء
-                    <br /> <span >300</span>
+                    <br /> <span>300</span>
                   </span>
                 </div>
               </div>
               <div className="pricing">
                 <div className="icons">
-                  < AiOutlineShoppingCart className="ms-3" />
+                  <AiOutlineShoppingCart className="ms-3" />
                   <FaRegHeart />
                 </div>
                 <div className="price mb-4">
@@ -182,7 +181,6 @@ export default function Services() {
               </div>
             </div>
           </Col>
-         
         </Row>
       </Container>
     </section>

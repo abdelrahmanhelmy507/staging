@@ -44,6 +44,7 @@
 .services-section .icon{
     color : var(--text-color2);
     font-size: 1.3rem;
+    
 }
 .services-section .pricing{
     display: flex;
@@ -52,6 +53,7 @@
 }
 .services-section .pricing .icons{
     font-size: 2rem;
+    cursor: pointer;
 }
 .services-section .price p{
     color: var(--primary-dark);
@@ -63,3 +65,8 @@
     color: var(--paragraph-color);
     font-size: 1.5rem;
 }
+
+
+
+
+
