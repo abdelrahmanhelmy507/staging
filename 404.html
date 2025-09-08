@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Redirecting...</title>
     <script type="text/javascript">
-      // اسم الريبو بتاعك على GitHub
-      var repo = "aurages";
+      // اسم الريبو
+      var repo = "/aurages";
 
-      // إعادة التوجيه لملف index.html مع تمرير الرابط اللي المستخدم كتبه
-      var redirectTo =
-        window.location.protocol + "//" +
-        window.location.host + "/" + repo +
-        "/index.html?redirect=" + window.location.pathname;
+      // جيب الباث بدون اسم الريبو
+      var path = window.location.pathname.replace(repo, "");
 
-      window.location.replace(redirectTo);
+      // اعمل ريديركت للـ index.html مع الباث
+      window.location.replace(
+        repo +
+          "/index.html?redirect=" +
+          path +
+          window.location.search +
+          window.location.hash
+      );
     </script>
   </head>
   <body>
