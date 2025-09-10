@@ -7,7 +7,7 @@ export default function AurestHero (){
          <div className="aurest-hero-slide ">
             <img
               className="d-block w-100"
-              src=".././slide1.jpg"
+              src="/staging/images/slide1.jpg"
               alt=" slide"
             />
             <div className="overlay2"></div>

@@ -4,7 +4,6 @@
     =====================================
 */
 .hero-section {
-  font-family: 'IBM Plex Sans Arabic' ,sans-serif ;
   position: relative;
   height: 100vh;
   overflow: hidden;
@@ -50,10 +49,6 @@
   justify-content: space-between;
 }
 
-
-
-
-
 .hero-buttons {
   margin-top: 1.5rem;
   display: flex;
@@ -69,7 +64,7 @@
       font-family: 'IBM Plex Sans Arabic' , sans-serif ;
       position: relative;
       min-height: 600px;
-      background-image:url("/nat2.png") ;
+      background-image:url("/images/nat2.png") ;
       
       background-repeat: no-repeat ;
       background-size: cover;
@@ -224,7 +219,6 @@
       }
       .national-day-hero {
       position: relative;
-      background-image:url("/nat2.png") ;
       background-size: cover;
       background-position: center;
     }

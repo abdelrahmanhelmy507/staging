@@ -14,7 +14,7 @@ export default function AurposPlan() {
   return (
     <section className="aurest-pricing py-5">
       <Container>
-        <h2 className="text-center mb-5">خطط الأسعار</h2>
+        <h2 className="text-center fw-bold mb-5">خطط الأسعار</h2>
         <Row className="g-4">
           {/* LIGHT */}
           <Col lg={3} md={6} sm={12}>

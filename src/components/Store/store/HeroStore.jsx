@@ -8,7 +8,7 @@ export default  function  HeroStore () {
           <div className="store-hero-slide ">
             <img
               className="d-block w-100"
-              src="./storehero.jpg"
+              src="/staging/images/storehero.jpg"
               alt="Second slide"
             />
             <div className="overlay"></div>

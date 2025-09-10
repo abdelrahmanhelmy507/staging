@@ -7,7 +7,7 @@ export default function AurmenuHero (){
        <div className="store-hero-slide ">
             <img
               className="d-block w-100"
-              src="../aurmenuhero.jpg"
+              src="/staging/images/aurmenuhero.jpg"
               alt="Second slide"
             />
             <div className="overlay"></div>

@@ -8,16 +8,16 @@ export default function SideBar() {
 				<span>لوحة تحكم </span>
 			</div>
 			<Nav className="flex-column admin-nav" as="nav">
-				<NavLink to="/aurages/admin" end>
+				<NavLink to="/admin" end>
 					الرئيسية
 				</NavLink>
-				<NavLink to="/aurages/admin/users">
+				<NavLink to="/admin/users">
 					المستخدمون
 				</NavLink>
-				<NavLink to="/aurages/admin/products">
+				<NavLink to="/admin/products">
 					المنتجات
 				</NavLink>
-				<NavLink to="/aurages/admin/subscriptions">
+				<NavLink to="/admin/subscriptions">
 					الاشتراكات
 				</NavLink>
 			</Nav>

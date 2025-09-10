@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecting...</title>
+    <script>
+      (function () {
+        // غيّر هذا لو اسم الريبو مختلف
+        var repo = "/aurages";
+
+        // نحذف اسم الريبو من الباث الحالي لو موجود
+        var path = window.location.pathname.replace(repo, "");
+
+        // نضم الباث (مع query/hash) ونحوّل ل index.html مع redirect param
+        var target =
+          repo +
+          "/index.html?redirect=" +
+          encodeURIComponent(path + window.location.search + window.location.hash);
+
+        // استخدم replace عشان ما يتركش سجل تاريخ غير مرغوب
+        window.location.replace(target);
+      })();
+    </script>
+  </head>
+  <body>Redirecting...</body>
+</html>

@@ -6,7 +6,7 @@ export default function AurposHero() {
       <div className="store-hero-slide pt-5 ">
         <img
           className="d-block w-100"
-          src="../aurpos2.jpg"
+          src="/staging/images/aurpos2.jpg"
           alt="Second slide"
         />
         <div className="overlay"></div>

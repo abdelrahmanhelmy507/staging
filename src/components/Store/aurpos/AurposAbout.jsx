@@ -6,28 +6,28 @@ const features = [
   {
     title: "المحاسبة المتقدمة" ,
     desc: "استمتع بمحاسبة دقيقة وذكية توفر لك أتمتة متقدمة للتقارير المالية",
-    img: "../easy.jpg"
+    img: "../images/easy.jpg"
   },
   {
     title: " مساعد ذكي بالذكاء الاصطناعي",
     desc: "أداة قوية مدعمة بالذكاء الاصطناعي توفر رؤى دقيقة واستباقية",
-    img: "../flex.jpg"
+    img: "../images/flex.jpg"
   },
   {
     title: " إدارة الأصول ",
     desc: "تضمن لك إدارة الأصول الثابتة الدقة الكاملة في حساب قيمة الأصول وتقييم الاستثمارات.",
-    img: "../modern.jpg"
+    img: "../images/modern.jpg"
   },
   {
     title: "دعم متكامل",
     desc: "فريق دعم متاح دائمًا لمساعدتك وتلبية استفساراتك.",
-    img: "../support.jpg"
+    img: "../images/support.jpg"
   }
 ];
 
 export default function AurposAbout() {
   return (
-    <section className="features-section">
+    <section className="features-section pt-5">
       <Container>
         <h2 className="text-center mb-2 fw-bold">لماذا أوربوس</h2>
         <p className="text-center mb-4">الحل المثالي لمتابعة المخازن والحسابات</p>

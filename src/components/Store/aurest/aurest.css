@@ -72,12 +72,12 @@
 }
 
 .aurest-pricing .pricing-card.featured {
-  border: 2px solid #0d6efd;
+  /* border: 2px solid #0d6efd; */
   transform: scale(1.05);
 }
 
 .aurest-pricing .pricing-card:hover {
-  border:  1px solid var(--text-color2);
+  /* border:  1px solid var(--text-color2); */
   transform: translateY(-10px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }

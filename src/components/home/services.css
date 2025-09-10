@@ -1,0 +1,370 @@
+
+/* ======================================
+    3.services section 
+    =====================================
+*/
+/* .services-section {
+    background: var(--bg-color);
+}
+
+.services-section .card {
+    border-radius: 20px;
+    padding: 1rem 1.5rem;
+    scale: 1;
+}
+.services-section .card:hover{
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.501);
+    scale: 1.01;
+    border: 1px solid var(--text-color2);
+}
+.services-section .product-image{
+    width: 100%;
+}
+.services-section .product-image img{
+    width: 100%;
+    border-radius: 20px;
+}
+.services-section .title{
+    color: var(--primary-dark);
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+.services-section .description{
+    color: var(--paragraph-color);
+    margin: 1rem 0;
+}
+.services-section .rate {
+    display: flex;
+    justify-content: space-between;
+}
+.services-section .icon-star{
+    font-size: 1.6rem;
+    color: yellow;
+}
+.services-section .icon{
+    color : var(--text-color2);
+    font-size: 1.3rem;
+    
+}
+.services-section .pricing{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.services-section .pricing .icons{
+    font-size: 2rem;
+    cursor: pointer;
+}
+.services-section .price p{
+    color: var(--primary-dark);
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+.services-section .price del{
+    color: var(--paragraph-color);
+    font-size: 1.5rem;
+}
+
+
+
+ */
+
+
+
+
+
+         .services-section {
+            background: transparent;
+        }
+        
+        .services-section h2 {
+            color: white;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            font-size: 2.5rem;
+        }
+        
+        .services-section .card {
+            background: rgba(255, 255, 255, 0.95);
+            /* backdrop-filter: blur(20px); */
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 24px;
+            padding: 24px;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+        
+        .services-section .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, 
+                rgba(102, 126, 234, 0.1) 0%, 
+                rgba(118, 75, 162, 0.1) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 0;
+        }
+        
+        .services-section .card:hover::before {
+            opacity: 1;
+        }
+        
+        .services-section .card:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+            /* border-color: rgba(102, 126, 234, 0.3); */
+        }
+        
+        .services-section .card > * {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .services-section .product-image {
+            position: relative;
+            margin-bottom: 20px;
+            overflow: hidden;
+            border-radius: 16px;
+            height: 200px;
+            background: linear-gradient(45deg, #f8f9fa, #e9ecef);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .product-image img {
+            width: 80%;
+            height: 80%;
+            border-radius: 16px;
+            object-fit: contain;
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
+        }
+        
+        .card:hover .product-image img {
+            transform: scale(1.1) rotate(2deg);
+        }
+        
+        .text {
+            margin-bottom: 20px;
+        }
+        
+        .title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 8px;
+            transition: color 0.3s ease;
+        }
+        
+        .services-section .card:hover .title {
+            color: #667eea;
+        }
+        
+        .description {
+            color: #718096;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin: 0;
+        }
+        
+        .rate {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+            padding: 16px;
+            background: rgba(248, 250, 252, 0.8);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+        
+        .card:hover .rate {
+            background: rgba(102, 126, 234, 0.1);
+        }
+        
+        .star-rate {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        
+        .star-rate p {
+            margin: 0;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #4a5568;
+            margin-left: 8px;
+        }
+        
+        .icon-star {
+            color: #fbbf24;
+            font-size: 16px;
+            transition: transform 0.2s ease;
+        }
+        
+        .card:hover .icon-star {
+            transform: scale(1.2);
+            animation: sparkle 0.6s ease;
+        }
+        
+        @keyframes sparkle {
+            0%, 100% { transform: scale(1.2); }
+            50% { transform: scale(1.4); }
+        }
+        
+        .rate .icon {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.85rem;
+            color: #4a5568;
+        }
+        
+        .icon-cart1 {
+            color: #10b981;
+            font-size: 18px;
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover .icon-cart1 {
+            transform: scale(1.2);
+        }
+        
+        .rate .icon span span {
+            font-weight: 600;
+            color: #1a202c;
+        }
+        
+        .pricing {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .icons {
+            display: flex;
+            gap: 12px;
+        }
+        
+        .icons i,
+        .icons svg {
+            font-size: 45px;
+            color: #718096;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 50%;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
+            background: rgba(248, 250, 252, 0.8);
+        }
+        
+        .icons i:hover,
+        .icons svg:hover {
+            color: #667eea;
+            background: rgba(102, 126, 234, 0.1);
+            transform: translateY(-2px) scale(1.1);
+        }
+        
+        .price {
+            text-align: left;
+        }
+        
+        .price p {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1a202c;
+            margin: 0;
+            position: relative;
+        }
+        
+        .price p::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            transition: width 0.3s ease;
+        }
+        
+        .card:hover .price p::after {
+            width: 100%;
+        }
+        
+        .price del {
+            font-size: 1rem;
+            color: #a0aec0;
+            display: block;
+            margin-top: 4px;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .card {
+                margin-bottom: 20px;
+            }
+            
+            .services-section h2 {
+                font-size: 2rem;
+            }
+            
+            .rate {
+                flex-direction: column;
+                gap: 12px;
+                text-align: center;
+            }
+            
+            .pricing {
+                flex-direction: column;
+                gap: 16px;
+                text-align: center;
+            }
+        }
+        
+        /* Loading Animation */
+        .card {
+            animation: fadeInUp 0.6s ease forwards;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        
+        .card:nth-child(1) { animation-delay: 0.1s; }
+        .card:nth-child(2) { animation-delay: 0.2s; }
+        .card:nth-child(3) { animation-delay: 0.3s; }
+        .card:nth-child(4) { animation-delay: 0.4s; }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Container Enhancement */
+        .container {
+            max-width: 1200px;
+        }
+        
+        /* Glassmorphism Effect Enhancement */
+        .card {
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .card:hover {
+            background: rgba(255, 255, 255, 0.18);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }

@@ -7,7 +7,7 @@ export default function AuraccHero() {
       <div className="store-hero-slide ">
         <img
           className="d-block w-100"
-          src="../auracc3.jpg"
+          src="/staging/images/auracc3.jpg"
           alt="Second slide"
         />
         <div className="overlay"></div>

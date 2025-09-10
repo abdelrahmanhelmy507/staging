@@ -1,25 +1,34 @@
 
 import "bootstrap/dist/css/bootstrap.min.css";
-import Home from "./components/Home";
+import 'react-phone-input-2/lib/style.css';
+
+
+import Home from "./components/home/Home.jsx";
 import Aurmenu from "./components/Store/aurmenu/Aurmenu.jsx";
 import Aurest from './components/Store/aurest/Aurest.jsx'
 import Aurpos from "./components/Store/aurpos/Aurpos.jsx";
 import Aurac from "./components/Store/auracc/Aurac.jsx";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import Header from "./components/home/Header.jsx";
+import Footer from "./components/home/Footer.jsx";
 import "./App.css";
 import { BrowserRouter , Routes , Route , useLocation} from "react-router-dom";
 import Store from "./components/store/Store/Store.jsx";
 import ContactUs from "./components/ContactUs/ContactUs";
 import StoreOutlet from './components/Store/store/StoreOutlet.jsx'
-import LegalAgreement from "./components/LegalAgreement.jsx";
-import PrivacyPolicy from "./components/PrivacyPolicy.jsx";
+import LegalAgreement from "./components/home/LegalAgreement.jsx";
+import PrivacyPolicy from "./components/home/PrivacyPolicy.jsx";
 import Admin from "./components/admin/Admin.jsx";
 import Dashboard from "./components/admin/Dashboard.jsx";
 import UsersDashboard from "./components/admin/UsersDashboard.jsx";
 import ProductDashboard from "./components/admin/ProductDashboard.jsx";
 import SubscribesDashboard from "./components/admin/SubscribesDashboard.jsx";
 import ProductDetails from "./components/admin/ProductDetails.jsx";
+import ProductDetailsLanding from "./components/productDetails/productDetails.jsx";
+import ScrollToTop from "./components/ScrollToTop.jsx";
+import RedirectHandler from "./components/RedirectHandler.jsx";
+import Cart from "./components/cart/cart.jsx";
+import Login from "./components/Login.jsx";
+import Register from "./components/Register.jsx";
 
 
 
@@ -40,7 +49,7 @@ import ProductDetails from "./components/admin/ProductDetails.jsx";
 
 function Layout({ children }) {
   const location = useLocation();
-  const hideLayout = location.pathname.startsWith("/aurages/admin");
+  const hideLayout = location.pathname.startsWith("/admin");
 
   return (
     <>
@@ -53,11 +62,13 @@ function Layout({ children }) {
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/staging/">
+      <RedirectHandler />
+    <ScrollToTop />
       <Layout>
         <Routes>
-          <Route path="/aurages" element={<Home />} />
-          <Route path="/aurages/store" element={<StoreOutlet />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/store" element={<StoreOutlet />}>
             <Route index element={<Store />} />
             <Route path="aurmenu" element={<Aurmenu />} />
             <Route path="aurest" element={<Aurest />} />
@@ -65,7 +76,34 @@ export default function App() {
             <Route path="auracc" element={<Aurac />} />
           </Route>
 
-          {/* <Route path="/aurages/cybersecurity" element={<Syber />}>
+          <Route path="/products/:id" element={<ProductDetailsLanding />} />
+          <Route path="/cart" element ={<Cart/>}/>
+          <Route path="/login" element ={<Login />} />
+          <Route path="/register" element ={<Register />} />
+
+        
+
+          <Route path="/contact" element={<ContactUs />} />
+          <Route path="/LegalAgreement" element={<LegalAgreement />} />
+          <Route path="/privacypolicy" element={<PrivacyPolicy />} />
+
+          <Route path="/admin" element={<Admin />}>
+            <Route index element={<Dashboard />} />
+            <Route path="users" element={<UsersDashboard />} />
+            <Route path="products" element={<ProductDashboard />} />
+            <Route path="products/:id" element={<ProductDetails />} />
+            <Route path="subscriptions" element={<SubscribesDashboard />} />
+          </Route>
+        </Routes>
+      </Layout>
+    </BrowserRouter>
+  );
+}
+
+
+
+
+  {/* <Route path="/aurages/cybersecurity" element={<Syber />}>
             <Route path="cybersecurity/ssl" element={<SSL />} />
             <Route path="cybersecurity/sitelock" element={<SiteLock />} />
             <Route path="cybersecurity/codeguard" element={<CodeGuard />} />
@@ -78,20 +116,3 @@ export default function App() {
             <Route path="technical/applictionprograming" element={<ApplicationPrograming />} />
             <Route path="technical/websites" element={<Websites />} />
           </Route> */}
-
-          <Route path="/aurages/contact" element={<ContactUs />} />
-          <Route path="/aurages/LegalAgreement" element={<LegalAgreement />} />
-          <Route path="/aurages/privacypolicy" element={<PrivacyPolicy />} />
-
-          <Route path="/aurages/admin" element={<Admin />}>
-            <Route index element={<Dashboard />} />
-            <Route path="users" element={<UsersDashboard />} />
-            <Route path="products" element={<ProductDashboard />} />
-            <Route path="products/:id" element={<ProductDetails />} />
-            <Route path="subscriptions" element={<SubscribesDashboard />} />
-          </Route>
-        </Routes>
-      </Layout>
-    </BrowserRouter>
-  );
-}

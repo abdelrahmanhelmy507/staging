@@ -10,7 +10,7 @@ export default function Pricing() {
         {/* AurPOS */}
         <Col lg={6} md={6} sm={12}>
           <div className="pricing-card">
-            <img src="./aurpos2.jpg" alt="AurPOS" className="pricing-img" />
+            <img src="./images/aurpos2.jpg" alt="AurPOS" className="pricing-img" />
             <div className="overlay">
               <h3 className="fw-bold mb-2">AurPOS (أوربوس)</h3>
               <p>نظام نقاط بيع (Point of Sale) للمطاعم والكافيهات.</p>
@@ -29,7 +29,7 @@ export default function Pricing() {
         {/* AurMenu */}
         <Col lg={6} md={6} sm={12}>
           <div className="pricing-card">
-            <img src="./aurmenu3.jpg" alt="AurMenu" className="pricing-img" />
+            <img src="./images/aurmenu3.jpg" alt="AurMenu" className="pricing-img" />
             <div className="overlay">
               <h3 className="fw-bold mb-2">AurMenu (أورمينيو)</h3>
               <p>نظام المنيو الذكي (Digital Menu).</p>
@@ -49,7 +49,7 @@ export default function Pricing() {
         {/* AurRest */}
         <Col lg={6} md={6} sm={12}>
           <div className="pricing-card">
-            <img src="./aurest2.jpg" alt="AurRest" className="pricing-img" />
+            <img src="./images/aurest2.jpg" alt="AurRest" className="pricing-img" />
             <div className="overlay">
               <h3 className="fw-bold mb-2">AurRest (أورست)</h3>
               <p>النظام المتكامل لإدارة المطاعم.</p>
@@ -66,7 +66,7 @@ export default function Pricing() {
         {/* AurAcc */}
         <Col lg={6} md={6} sm={12}>
           <div className="pricing-card">
-            <img src="./storehero.jpg" alt="AurAcc" className="pricing-img" />
+            <img src="./images/storehero.jpg" alt="AurAcc" className="pricing-img" />
             <div className="overlay">
               <h3 className="fw-bold mb-2 ">AurAcc (أوراك)</h3>
               <p>النظام المالي و المحاسبي.</p>

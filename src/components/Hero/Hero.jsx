@@ -82,7 +82,7 @@ export default function Hero() {
     <div className="logo"><img
 
       className="d-block w-100"
-      src="./nationalLogo.png"
+      src="/staging/images/nationalLogo.png"
       alt="Saudi National Day Celebration"
       
     /></div>
