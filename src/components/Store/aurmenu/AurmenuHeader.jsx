@@ -52,7 +52,7 @@ const { t, i18n } = useTranslation();
                     
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link"to={"agentcontact"}>{t("تواصل معنا")}</Link>
+                    <Link className="nav-link" to={"agentcontact"}>{t("تواصل معنا")}</Link>
                     
                   </li>
               
@@ -99,64 +99,64 @@ const { t, i18n } = useTranslation();
         <div className="fixed">
           <ul>
             <li className="nav-item d-flex align-items-center justify-content-between">
-                    <Link className="nav-link" to={"/"}>
+                    <Link className="nav-link" to={"products/7"} onClick={() => { setShow(false) }}>
                       {t("اورمينيو البدايه")}
                     </Link>
                     <IoClose className="icon-close" onClick={() => { setShow(false) }} />
                   </li>
               
                   <li className="nav-item">
-                    <Link className="nav-link" to={"/store"}>
+                    <Link className="nav-link" to={"products/8"} onClick={() => { setShow(false) }}>
                       {t("  اورمينيو التقدم ")}
                     </Link>
                     
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link" to={"/store"}>
+                    <Link className="nav-link" to={"products/9"} onClick={() => { setShow(false) }}>
                       {t("  اورمينيو التميز ")}
                     </Link>
                     
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link" to={"/store"}>
+                    <Link className="nav-link" to={"products/9"} onClick={() => { setShow(false) }}>
                       {t("  اورمينيو الاحتراف ")}
                     </Link>
                     
                   </li>
               
                   <li className="nav-item">
-                    <Link className="nav-link">{t(" المزيد من اورمينيو")}</Link>
+                    <a className="nav-link" href="https://aurmenu.com/" target="blank">{t(" المزيد من اورمينيو")}</a>
                     
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link">{t("تواصل معنا")}</Link>
+                    <Link className="nav-link" to={"agentcontact"} onClick={() => { setShow(false) }}>{t("تواصل معنا")}</Link>
                     
                   </li>
               
                   
               
                   <li className="nav-item">
-                    <Link className="nav-link">{t("حول اورمنيو")}</Link>
+                    <Link className="nav-link" onClick={() => { setShow(false) }}>{t("حول اورمنيو")}</Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link">{t("المميزات")}</Link>
+                    <Link className="nav-link" onClick={() => { setShow(false) }}>{t("المميزات")}</Link>
                   </li>
               
                   
               
                   <li className="nav-item">
-                    <Link className="nav-link" to={"/contact"}>
+                    <Link className="nav-link" to={"support"} onClick={() => { setShow(false) }}>
                       {t("    مركز المساندة والدعم")}
                     </Link>
                   </li>
               
                   <li className="nav-item">
-                    <Link className="nav-link" to={"/cart"}>
+                    <Link className="nav-link" to={"education"} onClick={() => { setShow(false) }}>
                       {t(" التدريب والتعليم")}
                     </Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link" to={"/cart"}>
+                    <Link className="nav-link" to={"careers"} onClick={() => { setShow(false) }}>
                       {t("  التوظيف")}
                     </Link>
                   </li>
