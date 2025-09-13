@@ -18,11 +18,11 @@ export default function AurestHero (){
                 <br />
                 من الدفع عبر الهاتف إلى شاشات المطبخ، حوّل نشاطك الفندقي مع أوريجس.
               </p>
-              <div className="hero-buttons">
-                <Button variant="primary" size="lg" className="me-2">
+              <div className="hero-buttons ">
+                <Button variant="primary" size="lg" className="mx-2">
                   ابدأ الآن
                 </Button>
-                <Button  size="lg">
+                <Button  size="lg" variant="primary"  className="mx-2">
                   شاهد العرض
                 </Button>
               </div>

@@ -44,7 +44,10 @@
   margin-bottom: 30px;
   line-height: 1.8;
 }
-
+.aurest-hero-slide .hero-buttons{
+  display: flex;
+  flex-wrap: nowrap;
+}
 .aurest-hero-slide .hero-buttons .btn {
   padding: 10px 25px;
   font-size: 1.1rem;
@@ -119,4 +122,25 @@
   font-size: 2.5rem;
   margin-bottom: 1.5rem;
   font-weight: bold;
+}
+@media (max-width:1024px) {
+  .aurest-hero-slide .hero-content2 {
+  width: 100%;
+}
+.aurest-hero-slide .hero-content2 h1 {
+  font-size: 1.7rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.aurest-hero-slide .hero-content2 p {
+  font-size: 1rem;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.aurest-hero-slide .hero-buttons .btn {
+  width: 50%;
+
+}
 }

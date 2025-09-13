@@ -9,9 +9,12 @@ import {
   FaChevronUp
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 export default function Footer() {
-      const [show, setShow] = useState(false);
+  const { t, i18n } = useTranslation();
+  const [show, setShow] = useState(false);
+
   useEffect(() => {
     function handleScroll() {
       if (window.scrollY > 300) {
@@ -24,33 +27,33 @@ export default function Footer() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
- const scroll = () => {
-  window.scrollTo(0 , 0);
- }
+
+  const scroll = () => {
+    window.scrollTo(0 , 0);
+  };
+
   return (
     <footer className="footer py-5">
       <Container>
         {/* Newsletter Subscription Section */}
         <Row>
           <Col lg={6} md={12} sm={12} >
-          <div className="newsletter-section d-flex">
-          <div>
-            <h3 className="newsletter-title mb-2">اشترك في نشرتنا البريدية الان</h3>
-            <p className="newsletter-desc mb-4">سوف نرسل لك بريدا واحد في الاسبوع لن نقوم بازعاجك</p>
-          </div>
-        </div>
+            <div className="newsletter-section d-flex">
+              <div>
+                <h3 className="newsletter-title mb-2">{t("اشترك في نشرتنا البريدية الان")}</h3>
+                <p className="newsletter-desc mb-4">{t("سوف نرسل لك بريدا واحد في الاسبوع لن نقوم بازعاجك")}</p>
+              </div>
+            </div>
           </Col>
           <Col lg={6} md={12} sm={12} >
-          
-          <div className="newsletter-form d-flex gap-3">
-            <Form.Control 
-              type="email" 
-              placeholder="ادخل بريدك الالكتروني للاشتراك" 
-              className="newsletter-input"
-            />
-            <Button className="newsletter-btn">اشترك</Button>
-          </div>
-        
+            <div className="newsletter-form d-flex gap-3">
+              <Form.Control 
+                type="email" 
+                placeholder={t("ادخل بريدك الالكتروني للاشتراك")} 
+                className="newsletter-input"
+              />
+              <Button className="newsletter-btn">{t("اشترك")}</Button>
+            </div>
           </Col>
         </Row>
 
@@ -59,20 +62,20 @@ export default function Footer() {
           {/* Brand Column */}
           <Col lg={3} md={6} className="mb-4">
             <div className="brand-section">
-               <img src="images/AuragesLogo.png" alt="" width={100}/>
-              <p className="brand-tagline mt-2">تخطى الحدود واعبر افاق التطور</p>
+              <img src="/staging/images/AuragesLogo.png" alt="" width={100}/>
+              <p className="brand-tagline mt-2">{t("تخطى الحدود واعبر افاق التطور")}</p>
             </div>
           </Col>
 
           {/* Store Column */}
           <Col lg={2} md={6} className="mb-4">
             <div className="footer-column">
-              <h5 className="footer-column-title">المتجر</h5>
+              <h5 className="footer-column-title">{t("المتجر")}</h5>
               <ul className="footer-links">
-                <li><a href="#">متجر الاجهزة والمعدات</a></li>
-                <li><a href="#">أوربوس</a></li>
-                <li><a href="#">أورست</a></li>
-                <li><a href="#">أورمنيو</a></li>
+                <li><a href="#">{t("متجر الاجهزة والمعدات")}</a></li>
+                <li><a href="#">{t("أوربوس")}</a></li>
+                <li><a href="#">{t("أورست")}</a></li>
+                <li><a href="#">{t("أورمنيو")}</a></li>
               </ul>
             </div>
           </Col>
@@ -80,12 +83,12 @@ export default function Footer() {
           {/* Cyber Security Column */}
           <Col lg={2} md={6} className="mb-4">
             <div className="footer-column">
-              <h5 className="footer-column-title">الأمن السيبراني</h5>
+              <h5 className="footer-column-title">{t("الأمن السيبراني")}</h5>
               <ul className="footer-links">
-                <li><a href="#">شهادات SSL</a></li>
-                <li><a href="#">أمن موقعك الالكتروني</a></li>
-                <li><a href="#">النسخ الاحتياطي للمواقع الالكتروني</a></li>
-                <li><a href="#">النسخ الاحتياطي (acronis)</a></li>
+                <li><a href="#">{t("شهادات SSL")}</a></li>
+                <li><a href="#">{t("أمن موقعك الالكتروني")}</a></li>
+                <li><a href="#">{t("النسخ الاحتياطي للمواقع الالكتروني")}</a></li>
+                <li><a href="#">{t("النسخ الاحتياطي (acronis)")}</a></li>
               </ul>
             </div>
           </Col>
@@ -93,12 +96,12 @@ export default function Footer() {
           {/* Solutions Column */}
           <Col lg={2} md={6} className="mb-4">
             <div className="footer-column">
-              <h5 className="footer-column-title">الحلول</h5>
+              <h5 className="footer-column-title">{t("الحلول")}</h5>
               <ul className="footer-links">
-                <li><a href="#">باقات الدعم الفني المتقدم</a></li>
-                <li><a href="#">تصميم وتطوير المواقع</a></li>
-                <li><a href="#">التصميم الغرافيكي</a></li>
-                <li><a href="#">البرمجة المخصصة</a></li>
+                <li><a href="#">{t("باقات الدعم الفني المتقدم")}</a></li>
+                <li><a href="#">{t("تصميم وتطوير المواقع")}</a></li>
+                <li><a href="#">{t("التصميم الغرافيكي")}</a></li>
+                <li><a href="#">{t("البرمجة المخصصة")}</a></li>
               </ul>
             </div>
           </Col>
@@ -106,12 +109,12 @@ export default function Footer() {
           {/* Knowledge Base Column */}
           <Col lg={2} md={6} className="mb-4">
             <div className="footer-column">
-              <h5 className="footer-column-title">قاعدة المعرفة</h5>
+              <h5 className="footer-column-title">{t("قاعدة المعرفة")}</h5>
               <ul className="footer-links">
-                <li><a href="#">أوريجس</a></li>
-                <li><a href="#">أوربوس</a></li>
-                <li><a href="#">أورست</a></li>
-                <li><a href="#">أورمنيو</a></li>
+                <li><a href="#">{t("أوريجس")}</a></li>
+                <li><a href="#">{t("أوربوس")}</a></li>
+                <li><a href="#">{t("أورست")}</a></li>
+                <li><a href="#">{t("أورمنيو")}</a></li>
               </ul>
             </div>
           </Col>
@@ -119,11 +122,11 @@ export default function Footer() {
           {/* Help Column */}
           <Col lg={1} md={6} className="mb-4">
             <div className="footer-column">
-              <h5 className="footer-column-title">المساعدة</h5>
+              <h5 className="footer-column-title">{t("المساعدة")}</h5>
               <ul className="footer-links">
-                <li><a href="#">حجز موعد تواصل</a></li>
-                <li><a href="#">المدونة</a></li>
-                <li><a href="#">مركز الدعم</a></li>
+                <li><a href="#">{t("حجز موعد تواصل")}</a></li>
+                <li><a href="#">{t("المدونة")}</a></li>
+                <li><a href="#">{t("مركز الدعم")}</a></li>
               </ul>
             </div>
           </Col>
@@ -132,8 +135,8 @@ export default function Footer() {
         {/* Bottom Footer Bar */}
         <div className="footer-bottom">
           <div className="footer-separator mb-4"></div>
-          <Row className="bottom ">
-            <Col md={6} className="text-md-start  mb-3 mb-md-0">
+          <Row className="bottom">
+            <Col md={6} className="text-md-start mb-3 mb-md-0">
               <div className="social-icons">
                 <a href="#" className="social-icon"><FaFacebookF /></a>
                 <a href="#" className="social-icon"><FaInstagram /></a>
@@ -141,11 +144,11 @@ export default function Footer() {
                 <a href="#" className="social-icon"><FaLinkedinIn /></a>
               </div>
             </Col>
-            <Col md={6} className="text-md-end " dir="ltr">
+            <Col md={6} className="text-md-end" dir="ltr">
               <div className="legal-links">
-                <Link to = "/privacypolicy" className="legal-link">سياسة الخصوصية</Link>
+                <Link to="/privacypolicy" className="legal-link">{t("سياسة الخصوصية")}</Link>
                 <span className="mx-3">|</span>
-                <Link to = "/LegalAgreement" className="legal-link">اتفاق قانوني</Link>
+                <Link to="/LegalAgreement" className="legal-link">{t("اتفاق قانوني")}</Link>
               </div>
             </Col>
           </Row>
@@ -153,28 +156,21 @@ export default function Footer() {
       </Container>
 
       {/* Floating Elements */}
-     {
-      show && (
-         <div className="floating-elements">
-        {/* Scroll to Top Button */}
-        <button className="scroll-top-btn" onClick={() => scroll()}>
-          <FaChevronUp />
-        </button>
-        
-        {/* Shopping Cart */}
-        <div className="shopping-cart">
-         
-          <div className="cart-badge">
-           <span> 0</span> <FaShoppingCart /> 
+      {show && (
+        <div className="floating-elements">
+          {/* Scroll to Top Button */}
+          <button className="scroll-top-btn" onClick={() => scroll()}>
+            <FaChevronUp />
+          </button>
+          
+          {/* Shopping Cart */}
+          <div className="shopping-cart">
+            <div className="cart-badge">
+              <span>0</span> <FaShoppingCart /> 
+            </div>
           </div>
         </div>
-      </div>
-      )
-     }
+      )}
     </footer>
   );
 }
-
-
-
-

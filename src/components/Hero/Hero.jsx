@@ -1,9 +1,13 @@
 // components/Hero.jsx
-import React from "react";
+
+import { useTranslation } from 'react-i18next';
 import { Carousel, Button, Row, Col, Container } from "react-bootstrap";
 import './Hero.css'
 
 export default function Hero() {
+  const { t, i18n } = useTranslation();
+
+  
   return (
     <div className="hero-section">
       <Carousel controls={false} indicators={false} fade interval={3000}>
@@ -79,50 +83,46 @@ export default function Hero() {
     
 <Carousel.Item>
   <div className="hero-slide national-day-hero ">
-    <div className="logo"><img
-
-      className="d-block w-100"
-      src="/staging/images/nationalLogo.png"
-      alt="Saudi National Day Celebration"
-      
-    /></div>
+    <div className="logo">
+      <img
+        className="d-block w-100"
+        src="/staging/images/nationalLogo.png"
+        alt={t("اليوم الوطني السعودي")}
+      />
+    </div>
     <div className="overlay-national-day"></div>
     <div className="hero-content-national">
       <div className="national-day-badge mb-3">
-        <span className="badge-text"> اليوم الوطني السعودي 94 </span>
+        <span className="badge-text">{t("اليوم الوطني السعودي 94")}</span>
       </div>
       <h1 className="national-day-title">
-        نحتفل معاً بـ <span className="highlight-green">95 عاماً</span> من التقدم والازدهار
+        {t("نحتفل معاً بـ")} <span className="highlight-green">{t("95 عاماً")}</span> {t("من التقدم والازدهار")}
       </h1>
       <p className="national-day-subtitle">
-        بمناسبة اليوم الوطني السعودي، نفتخر بخدمة المملكة بأحدث الحلول التقنية.
-        <br />
-        <strong>عروض خاصة على جميع أنظمتنا احتفالاً بهذه المناسبة العزيزة</strong>
+        {t("بمناسبة اليوم الوطني السعودي، نفتخر بخدمة المملكة بأحدث الحلول التقنية.")} <br />
+        <strong>{t("عروض خاصة على جميع أنظمتنا احتفالاً بهذه المناسبة العزيزة")}</strong>
       </p>
-      
-      
-      
+
       <div className="hero-buttons national-day-buttons">
         <Button variant="success" size="lg" className="me-3 national-btn">
-          🎉 اكتشف العروض الخاصة
+          🎉 {t("اكتشف العروض الخاصة")}
         </Button>
         <Button variant="outline-light" size="lg" className="national-btn-outline">
-          تواصل معنا
+          {t("تواصل معنا")}
         </Button>
       </div>
-      
+
       <div className="national-day-footer mt-4">
         <p className="mb-0">
           <span className="saudi-colors">🟢⚪🟢</span>
-          <strong>كل عام وأنتم بخير</strong>
+          <strong>{t("كل عام وأنتم بخير")}</strong>
           <span className="saudi-colors">🟢⚪🟢</span>
         </p>
       </div>
     </div>
   </div>
-
-  
 </Carousel.Item>
+
       </Carousel>
     </div>
   );

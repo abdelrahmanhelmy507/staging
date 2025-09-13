@@ -44,6 +44,11 @@ import Register from "./components/Register.jsx";
 // import GraphicDesign from "./components/TechSolution/GraphicDesign";
 // import ApplicationPrograming from './components/TechSolution/ApplicationPrograming';
 // import Websites from './components/TechSolution/Websites';
+import AgentsContact from './components/Store/aurmenu/ContactPages/AgentsContact';
+import AurmenuOtlet from "./components/Store/aurmenu/AurmenuOutlit.jsx";
+import Careers from "./components/Store/aurmenu/ServicePages/Careers.jsx";
+import SupportCenter from "./components/Store/aurmenu/ServicePages/SupportCenter.jsx";
+import TrainingEducation from './components/Store/aurmenu/ServicePages/TrainingEducation';
 
 
 
@@ -70,12 +75,20 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/store" element={<StoreOutlet />}>
             <Route index element={<Store />} />
-            <Route path="aurmenu" element={<Aurmenu />} />
+            <Route path="aurmenu" element={<AurmenuOtlet />} >
+                        <Route index element={<Aurmenu />} />
+
+              <Route path="agentcontact" element={<AgentsContact />} />
+              <Route path="careers" element={<Careers />} />
+              <Route path="support" element={<SupportCenter />} />
+              <Route path="education" element={<TrainingEducation />} />
+              <Route path="products/:id" element={<ProductDetailsLanding />} />
+            </Route>
             <Route path="aurest" element={<Aurest />} />
             <Route path="aurpos" element={<Aurpos />} />
             <Route path="auracc" element={<Aurac />} />
           </Route>
-
+          
           <Route path="/products/:id" element={<ProductDetailsLanding />} />
           <Route path="/cart" element ={<Cart/>}/>
           <Route path="/login" element ={<Login />} />

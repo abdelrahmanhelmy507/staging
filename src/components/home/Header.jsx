@@ -1,23 +1,24 @@
-import React, { useState } from "react";
+
 import "./Header.css";
 import { Link } from "react-router-dom";
-import { NavDropdown, Navbar, Container, Nav, Button } from "react-bootstrap";
+import {  Button } from "react-bootstrap";
 import { IoClose } from "react-icons/io5";
 import { MdMenu } from "react-icons/md";
+import React, { Suspense , useEffect, useState}  from 'react';
+import { useTranslation } from 'react-i18next';
 export default function Header() {
+  const { t, i18n } = useTranslation();
   const [show, setShow] = useState(false);
 
-  // const toggleMobileMenu = () => {
-  //   setIsMobileMenuOpen(!isMobileMenuOpen);
-  // };
 
-  // const closeMobileMenu = () => {
-  //   setIsMobileMenuOpen(false);
-  // };
+  const changeLang = () => {
+    i18n.language === "ar" ? i18n.changeLanguage("en")  : i18n.changeLanguage("ar")
+  }
+
 
   return (
-    <header className="header">
-      <div className="header-container">
+    <header className="header ">
+      <div className="header-container ">
         {/* Logo */}
         <div className="logo ms-4">
           <Link to={"/"}><img src="/staging/images/AuragesLogo.png" alt="" width={100} /></Link>
@@ -25,88 +26,100 @@ export default function Header() {
 
         {/* Navigation */}
         <nav className="navigation">
-          <ul className="nav-list">
-            <li className="nav-item">
-              <Link className="nav-link" to={"/"}>
-                الرئيسيه
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to={"/store"}>
-                متجر الانظمه والتطبيقات
-              </Link>
-              <div className="dropdown ">
-                <div className="dropdown-content">
-                  <Link to={"/store/aurest"} className="nav-link">اورست</Link>
-                </div>
-                <div className="dropdown-content">
-                  <Link to={"/store/aurmenu"} className="nav-link">اورمينيو</Link>
-                </div>
-                <div className="dropdown-content">
-                  <Link to={"/store/auracc"} className="nav-link">اوراك</Link>
-                </div>
-                <div className="dropdown-content">
-                  <Link to={"/store/aurpos"} className="nav-link">اوربس كلاود </Link>
-                </div>
-              </div>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link">الاجهزه والمعدات</Link>
+  <ul className="nav-list">
+    <li className="nav-item">
+      <Link className="nav-link" to={"/"}>
+        {t("الرئيسيه")}
+      </Link>
+    </li>
 
-              <div className="dropdown ">
-                <div className="dropdown-content">
-                  <Link className="nav-link">الطابعات</Link>
-                </div>
-              </div>
-            </li>
-            <li className="nav-item">
-              <a
-                className="nav-link"
-                href="https://aurages.net/"
-                target="blank"
-              >
-                الامن السيبراني
-              </a>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link">العروض</Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to={"/admin"}>
-                ادمن{" "}
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to={"/contact"}>
-                تواصل معنا
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to={"/cart"}>
-                سله المنتجات
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" > اللغه</Link>
-
-              <div className="dropdown ">
-                <div className="dropdown-content">
-                  <Link className="nav-link">english</Link>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </nav>
-
-        {/* Buttons */}
-        <div className="header-buttons">
-          <Link to={"/login"}>
-            <Button className="btn btn-signup m-1">تسجيل</Button>
-          </Link>
-          <Link to={"/register"}>
-            <Button className="btn btn-signup m-1 "> تسجيل الدخول </Button>
+    <li className="nav-item">
+      <Link className="nav-link" to={"/store"}>
+        {t("متجر الانظمه والتطبيقات")}
+      </Link>
+      <div className="dropdown">
+        <div className="dropdown-content">
+          <Link to={"/store/aurest"} className="nav-link">
+            {t("اورست")}
           </Link>
         </div>
+        <div className="dropdown-content">
+          <Link to={"/store/aurmenu"} className="nav-link">
+            {t("اورمينيو")}
+          </Link>
+        </div>
+        <div className="dropdown-content">
+          <Link to={"/store/auracc"} className="nav-link">
+            {t("اوراك")}
+          </Link>
+        </div>
+        <div className="dropdown-content">
+          <Link to={"/store/aurpos"} className="nav-link">
+            {t("اوربس كلاود")}
+          </Link>
+        </div>
+      </div>
+    </li>
+
+    <li className="nav-item">
+      <Link className="nav-link">{t("الاجهزه والمعدات")}</Link>
+      <div className="dropdown">
+        <div className="dropdown-content">
+          <Link className="nav-link">{t("الطابعات")}</Link>
+        </div>
+      </div>
+    </li>
+
+    <li className="nav-item">
+      <a
+        className="nav-link"
+        href="https://aurages.net/"
+        target="blank"
+      >
+        {t("الامن السيبراني")}
+      </a>
+    </li>
+
+    <li className="nav-item">
+      <Link className="nav-link">{t("العروض")}</Link>
+    </li>
+
+    <li className="nav-item">
+      <Link className="nav-link" to={"/admin"}>
+        {t("ادمن")}
+      </Link>
+    </li>
+
+    <li className="nav-item">
+      <Link className="nav-link" to={"/contact"}>
+        {t("تواصل معنا")}
+      </Link>
+    </li>
+
+    <li className="nav-item">
+      <Link className="nav-link" to={"/cart"}>
+        {t("سله المنتجات")}
+      </Link>
+    </li>
+
+    <li className="nav-item">
+      <Link className="nav-link" onClick={changeLang}>
+        {i18n.language === "en" ? t("العربيه") : t("الانجليزيه")}
+      </Link>
+    </li>
+  </ul>
+</nav>
+
+{/* Buttons */}
+<div className="header-buttons">
+  <Link to={"/login"}>
+    <Button className="btn btn-signup m-1">{t("تسجيل")}</Button>
+  </Link>
+  <Link to={"/register"}>
+    <Button className="btn btn-signup m-1">{t("تسجيل الدخول")}</Button>
+  </Link>
+</div>
+
 
         {/* Mobile menu toggle */}
         <div className="mobile-menu-toggle">
@@ -119,68 +132,77 @@ export default function Header() {
       </div>
 
       {show && (
-        <div className="fixed">
-          <ul>
-            <li className="nav-item d-flex align-items-center justify-content-between">
-              <Link className="nav-link" to={"/"} onClick={()=>{setShow(false)}}>
-                الرئيسيه
-              </Link>
-              <IoClose className="icon-close" onClick={()=>{setShow(false)}}/>
-            </li>
-            <li>
-              <Link className="nav-link" to={"/store"} onClick={()=>{setShow(false)}}>
-                متجر الانظمه والتطبيقات
-              </Link>
-            </li>
-            <li>
-              <Link className="nav-link" to={"/store/aurest"} onClick={()=>{setShow(false)}}>
-                اورست
-              </Link>
-            </li>
-            <li>
-              <Link className="nav-link" to={"/store/aurmenu"} onClick={()=>{setShow(false)}}>
-                اورمينيو
-              </Link>
-            </li>
-            <li>
-              <Link className="nav-link" to={"/store/auracc"} onClick={()=>{setShow(false)}}>
-                اوراك
-              </Link>
-            </li>
-            <li>
-              <Link className="nav-link" to={"/store/aurpos"} onClick={()=>{setShow(false)}}>
-                اوربس كلاود
-              </Link>
-            </li>
-            <li>
-              <Link className="nav-link" onClick={()=>{setShow(false)}}>الاجهزه والمعدات</Link>
-            </li>
-            <li>
-              <Link className="nav-link" onClick={()=>{setShow(false)}}>الطابعات</Link>
-            </li>
-            <li>
-              <Link className="nav-link" to={"/contact"} onClick={()=>{setShow(false)}}>
-                تواصل معنا
-              </Link>
-            </li>
-            <li>
-              <Link className="nav-link" to={"/cart"} onClick={()=>{setShow(false)}}>
-                سله المنتجات
-              </Link>
-            </li>
-            <li>
-              <Link className="nav-link" onClick={()=>{setShow(false)}}> اللغه</Link>
-            </li>
-            <li>
-             <Link to={"/login"} >
-            <Button className="btn btn-signup mb-1" onClick={()=>{setShow(false)}}>تسجيل</Button>
-            <Button className="btn btn-signup m-1 " onClick={()=>{setShow(false)}}> تسجيل الدخول </Button>
-          </Link>
-            </li>
-           
-          </ul>
-        </div>
-      )}
+  <div className="fixed">
+    <ul>
+      <li className="nav-item d-flex align-items-center justify-content-between">
+        <Link className="nav-link" to={"/"} onClick={() => { setShow(false) }}>
+          {t("الرئيسيه")}
+        </Link>
+        <IoClose className="icon-close" onClick={() => { setShow(false) }} />
+      </li>
+      <li>
+        <Link className="nav-link" to={"/store"} onClick={() => { setShow(false) }}>
+          {t("متجر الانظمه والتطبيقات")}
+        </Link>
+      </li>
+      <li>
+        <Link className="nav-link" to={"/store/aurest"} onClick={() => { setShow(false) }}>
+          {t("اورست")}
+        </Link>
+      </li>
+      <li>
+        <Link className="nav-link" to={"/store/aurmenu"} onClick={() => { setShow(false) }}>
+          {t("اورمينيو")}
+        </Link>
+      </li>
+      <li>
+        <Link className="nav-link" to={"/store/auracc"} onClick={() => { setShow(false) }}>
+          {t("اوراك")}
+        </Link>
+      </li>
+      <li>
+        <Link className="nav-link" to={"/store/aurpos"} onClick={() => { setShow(false) }}>
+          {t("اوربس كلاود")}
+        </Link>
+      </li>
+      <li>
+        <Link className="nav-link" onClick={() => { setShow(false) }}>
+          {t("الاجهزه والمعدات")}
+        </Link>
+      </li>
+      <li>
+        <Link className="nav-link" onClick={() => { setShow(false) }}>
+          {t("الطابعات")}
+        </Link>
+      </li>
+      <li>
+        <Link className="nav-link" to={"/contact"} onClick={() => { setShow(false) }}>
+          {t("تواصل معنا")}
+        </Link>
+      </li>
+      <li>
+        <Link className="nav-link" to={"/cart"} onClick={() => { setShow(false) }}>
+          {t("سله المنتجات")}
+        </Link>
+      </li>
+      <li>
+        <Link className="nav-link" onClick={() => { changeLang()}}>
+          {i18n.language === "en" ? t("العربيه") : t("الانجليزيه")}
+        </Link>
+      </li>
+      <li>
+        <Link to={"/login"}>
+          <Button className="btn btn-signup mb-1" onClick={() => { setShow(false) }}>
+            {t("تسجيل")}
+          </Button>
+          <Button className="btn btn-signup m-1 " onClick={() => { setShow(false) }}>
+            {t("تسجيل الدخول")}
+          </Button>
+        </Link>
+      </li>
+    </ul>
+  </div>
+)}
     </header>
   );
 }

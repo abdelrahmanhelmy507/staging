@@ -1,0 +1,561 @@
+/* Aurmenu Landing Page Styles */
+
+/* Header Styles */
+.aurmenu-header {
+background-color:#E6E6E6 ;
+   position: fixed;
+  left: 0;
+  right: 0;
+  top: 60px;
+  z-index: 1000;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: .5rem 0;
+}
+/* About Section Styles */
+
+
+/* Right Sidebar Styles */
+.aurmenu-products-sidebar {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  position: sticky;
+  top: 10rem;
+  height: fit-content;
+}
+
+.aurmenu-products-sidebar .sidebar-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.aurmenu-products-sidebar .sidebar-header h4 {
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.aurmenu-products-sidebar .sidebar-header p {
+  color: #666;
+  margin-bottom: 0;
+  font-size: 0.9rem;
+}
+
+.aurmenu-products-sidebar .sidebar-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.aurmenu-products-sidebar .sidebar-item {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid #f0f0f0;
+}
+
+.aurmenu-products-sidebar .sidebar-item:hover {
+  background: #f8f9fa;
+  border-color: #007bff;
+  transform: translateX(-5px);
+}
+
+.aurmenu-products-sidebar .item-icon {
+  font-size: 1.5rem;
+  color: #007bff;
+  margin-left: 1rem;
+  flex-shrink: 0;
+}
+
+.item-content {
+  flex-grow: 1;
+}
+
+.aurmenu-products-sidebar .item-title {
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  font-size: 0.9rem;
+}
+
+.item-description {
+  color: #666;
+  margin-bottom: 0;
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
+.item-arrow {
+  color: #007bff;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+/* Footer Styles */
+.aurmenu-footer {
+  background: var(--bg-light) !important;
+  color: var(--primary-color);
+}
+
+.footer-subtitle {
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.footer-description {
+  color: var(--primary-color);
+  line-height: 1.6;
+}
+
+.contact-info .contact-item {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.5rem;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.social-link {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-link:hover {
+  color: var(--text-color2);
+}
+.licence{
+  color: var(--primary-color);
+}
+
+/* Contact Pages Styles */
+.customer-contact-page,
+.agents-contact-page {
+  background: #f8f9fa;
+  min-height: 100vh;
+  padding-top: 10rem;
+}
+
+.page-title {
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.page-subtitle {
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.contact-form {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.form-label {
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.form-control-custom {
+  border-radius: 10px;
+  border: 2px solid #e9ecef;
+  padding: 0.75rem 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-control-custom:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0,123,255,0.25);
+}
+
+.phone-input {
+  border-radius: 10px;
+  border: 2px solid #e9ecef;
+}
+
+.phone-input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0,123,255,0.25);
+}
+
+.submit-btn {
+  border-radius: 10px;
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+}
+
+.contact-info {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  margin-top: 2rem;
+}
+
+.contact-item {
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.contact-icon {
+  font-size: 2.5rem;
+  color: #007bff;
+  margin-bottom: 1rem;
+}
+
+.contact-item h5 {
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.contact-item p {
+  color: #666;
+  margin-bottom: 0.25rem;
+}
+
+/* Product Details Styles */
+.contact-card {
+  background: white;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 2rem;
+}
+
+.contact-method {
+  margin-bottom: 1rem;
+}
+
+/* Package Pages Styles */
+.package-page {
+  background: #f8f9fa;
+  min-height: 100vh;
+}
+
+.package-header {
+  border: none;
+  border-radius: 15px;
+  margin-bottom: 2rem;
+}
+
+.package-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.package-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.package-subtitle {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  margin-bottom: 1rem;
+}
+
+.package-badge {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+}
+
+.package-price {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.package-description {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.recommended-for {
+  color: #007bff;
+  font-weight: 600;
+}
+
+.feature-item {
+  margin-bottom: 1rem;
+}
+
+.limitation-item {
+  margin-bottom: 1rem;
+}
+
+.cta-card {
+  background: white;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 2rem;
+}
+
+.cta-actions {
+  margin-bottom: 1.5rem;
+}
+
+/* Service Pages Styles */
+.support-center-page,
+.training-education-page,
+.careers-page {
+  background: #f8f9fa;
+  min-height: 100vh;
+}
+
+.support-icon,
+.training-icon,
+.careers-icon {
+  font-size: 4rem;
+  color: #007bff;
+  margin-bottom: 1rem;
+}
+
+.support-option-card,
+.course-card,
+.webinar-card,
+.certification-card,
+.position-card,
+.value-card,
+.benefit-card {
+  background: white;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+}
+
+.support-option-card:hover,
+.course-card:hover,
+.webinar-card:hover,
+.certification-card:hover,
+.position-card:hover,
+.value-card:hover,
+.benefit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.support-option-icon,
+.course-icon,
+.cert-icon,
+.benefit-icon,
+.value-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin: 0 auto;
+}
+
+.course-meta,
+.webinar-meta,
+.position-meta {
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.meta-item {
+  margin-bottom: 0.5rem;
+}
+
+.course-actions,
+.position-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.learning-path {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.path-step {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+  min-width: 200px;
+}
+
+.step-number {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #007bff;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.step-content h5 {
+  margin-bottom: 0.25rem;
+  color: #333;
+}
+
+.step-content p {
+  margin-bottom: 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.path-arrow {
+  font-size: 1.5rem;
+  color: #007bff;
+  font-weight: bold;
+}
+
+.cta-card {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  border: none;
+  border-radius: 15px;
+  color: white;
+}
+
+.cta-card h3 {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.cta-card p {
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 1.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .learning-path {
+    flex-direction: column;
+  }
+  
+  .path-arrow {
+    transform: rotate(90deg);
+  }
+  
+  .pricing-card.ultimate {
+    transform: none;
+  }
+  
+  .sticky-top {
+    position: relative !important;
+    top: auto !important;
+  }
+  
+  /* Mobile sidebar adjustments */
+  .aurmenu-products-sidebar {
+    position: relative;
+    top: auto;
+    margin-top: 2rem;
+  }
+  
+  .sidebar-item {
+    padding: 0.75rem;
+  }
+  
+  .item-icon {
+    font-size: 1.2rem;
+    margin-left: 0.75rem;
+  }
+  
+  .item-title {
+    font-size: 0.85rem;
+  }
+  
+  .item-description {
+    font-size: 0.75rem;
+  }
+  
+  /* Mobile packages header */
+  .package-card {
+    padding: 1rem;
+  }
+  
+  .package-icon {
+    font-size: 2rem;
+  }
+  
+  .package-price .price {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  
+  .hero-content p {
+    font-size: 1rem;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+  }
+  
+  .page-title {
+    font-size: 1.8rem;
+  }
+  
+  .contact-form {
+    padding: 1.5rem;
+  }
+  
+  .product-info {
+    padding: 1.5rem;
+  }
+}
