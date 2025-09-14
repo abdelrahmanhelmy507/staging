@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import {  Button } from "react-bootstrap";
 import { IoClose } from "react-icons/io5";
 import { MdMenu } from "react-icons/md";
-import React, { Suspense , useEffect, useState}  from 'react';
+import React, { Suspense , useState}  from 'react';
 import { useTranslation } from 'react-i18next';
 export default function Header() {
   const { t, i18n } = useTranslation();

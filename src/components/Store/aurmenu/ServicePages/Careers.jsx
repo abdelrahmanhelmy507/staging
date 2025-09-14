@@ -215,7 +215,7 @@ export default function Careers() {
   ];
 
   return (
-    <div className="careers-page py-5">
+    <div className="careers-page py-5 mt-5">
       <Container>
         <Row>
           <Col lg={12}>
