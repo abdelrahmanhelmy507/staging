@@ -85,7 +85,7 @@ export default function SupportCenter() {
   ];
 
   return (
-    <div className="support-center-page py-5">
+    <div className="support-center-page ">
       <Container>
         <Row>
           <Col lg={12}>
@@ -238,3 +238,4 @@ export default function SupportCenter() {
     </div>
   );
 }
+

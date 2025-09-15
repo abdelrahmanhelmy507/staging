@@ -3,7 +3,7 @@ import "./aurpos.css";
 export default function AurposHero() {
   return (
     <>
-      <div className="store-hero-slide pt-5 ">
+      <div className="store-hero-slide ">
         <img
           className="d-block w-100"
           src="/staging/images/aurpos2.jpg"

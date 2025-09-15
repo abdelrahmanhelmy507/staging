@@ -340,7 +340,7 @@ export default function ProductDetailsLanding() {
   const [activeSize, setActiveSize] = useState(product.sizes?.[0] || "قياسي");
 
   return (
-    <div className="product-details-page py-5 mt-5">
+    <div className="product-details-page ">
       <HeroSection
         product={product}
         activeImage={activeImage}

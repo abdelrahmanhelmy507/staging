@@ -211,3 +211,4 @@ The project uses a comprehensive CSS file (`aurmenu.css`) that includes:
 - Implement lazy loading
 - Add PWA features
 - Integrate with backend APIs
+

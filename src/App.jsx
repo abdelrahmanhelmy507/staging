@@ -49,6 +49,12 @@ import AurmenuOtlet from "./components/Store/aurmenu/AurmenuOutlit.jsx";
 import Careers from "./components/Store/aurmenu/ServicePages/Careers.jsx";
 import SupportCenter from "./components/Store/aurmenu/ServicePages/SupportCenter.jsx";
 import TrainingEducation from './components/Store/aurmenu/ServicePages/TrainingEducation';
+import AurestOutlet from "./components/Store/aurest/AurestOutlet.jsx";
+import AurposOtlet from "./components/Store/aurpos/AurposOutlet.jsx";
+import Auracc from "./components/Store/auracc/Aurac.jsx";
+import AuraccOutlet from "./components/Store/auracc/AuraccOutlet.jsx";
+import AurmenuAboutPage from "./components/Store/aurmenu/AurmenuAboutPage.jsx";
+import AurmenuFeaturesPage from "./components/Store/aurmenu/AurmenuFeaturesPage.jsx";
 
 
 
@@ -83,10 +89,40 @@ export default function App() {
               <Route path="support" element={<SupportCenter />} />
               <Route path="education" element={<TrainingEducation />} />
               <Route path="products/:id" element={<ProductDetailsLanding />} />
+              <Route path="about" element ={<AurmenuAboutPage />} />
+              <Route path="features" element={<AurmenuFeaturesPage />} />
             </Route>
-            <Route path="aurest" element={<Aurest />} />
-            <Route path="aurpos" element={<Aurpos />} />
-            <Route path="auracc" element={<Aurac />} />
+            <Route path="aurest" element={<AurestOutlet />} >
+                        <Route index element={<Aurest />} />
+
+              <Route path="agentcontact" element={<AgentsContact />} />
+              <Route path="careers" element={<Careers />} />
+              <Route path="support" element={<SupportCenter />} />
+              <Route path="education" element={<TrainingEducation />} />
+              <Route path="products/:id" element={<ProductDetailsLanding />} />
+            </Route>
+            <Route path="aurpos" element={<AurposOtlet />} >
+                        <Route index element={<Aurpos />} />
+
+              <Route path="agentcontact" element={<AgentsContact />} />
+              <Route path="careers" element={<Careers />} />
+              <Route path="support" element={<SupportCenter />} />
+              <Route path="education" element={<TrainingEducation />} />
+              <Route path="products/:id" element={<ProductDetailsLanding />} />
+            </Route>
+            <Route path="auracc" element={<AuraccOutlet />} >
+                        <Route index element={<Auracc />} />
+
+              <Route path="agentcontact" element={<AgentsContact />} />
+              <Route path="careers" element={<Careers />} />
+              <Route path="support" element={<SupportCenter />} />
+              <Route path="education" element={<TrainingEducation />} />
+              <Route path="products/:id" element={<ProductDetailsLanding />} />
+            </Route>
+
+            
+           
+           
           </Route>
           
           <Route path="/products/:id" element={<ProductDetailsLanding />} />

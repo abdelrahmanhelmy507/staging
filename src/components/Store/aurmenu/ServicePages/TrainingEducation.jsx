@@ -116,7 +116,7 @@ export default function TrainingEducation() {
   ];
 
   return (
-    <div className="training-education-page py-5">
+    <div className="training-education-page">
       <Container>
         <Row>
           <Col lg={12}>
@@ -326,3 +326,4 @@ export default function TrainingEducation() {
     </div>
   );
 }
+

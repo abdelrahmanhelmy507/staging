@@ -27,95 +27,96 @@ export default function AurmenuHeader() {
   return (
     <>
       <header className="aurmenu-header navbar-container ">
-        <div className=" aurmenu-header-content d-flex align-items-center justify-content-between">
+        <div className=" aurmenu-header-content d-flex align-items-center justify-content-between container">
           {/* <div className="logo ms-4">
             <Link to={"./"}>
               <img src="/staging/images/aurmenu-logo.png" alt="" width={100} />
             </Link>
           </div> */}
-          <button className="scroll-btn left d-xl-none" onClick={() => scroll("right")}>
+          <button className="scroll-btn left d-xl-none" onClick={() => scroll("left")}>
       <BiSolidLeftArrow />
 
 
       </button>
           {/* Desktop Nav */}
-          <nav ref={scrollRef} className="mx-5 aurmenu-nav nav-scroll">
-            <ul className="nav-list d-flex align-items-center gap-3">
-              <li className="nav-item d-flex align-items-center gap-1">
-                <FaRocket /> 
+          <nav ref={scrollRef} className=" aurmenu-nav nav-scroll">
+            <ul className="nav-list d-flex align-items-center  gap-2">
+              <li className="nav-item nav-item2">
+                <FaRocket className="icon"/> 
                 <Link className="nav-link" to={"products/7"}>
                   {t("اورمينيو البدايه")}
                 </Link>
               </li>
 
-              <li className="nav-item d-flex align-items-center gap-1">
-                <FaMedal />
+              <li className="nav-item nav-item2">
+                <FaMedal className="icon"/>
                 <Link className="nav-link" to={"products/8"}>
                   {t("اورمينيو التقدم")}
                 </Link>
               </li>
 
-              <li className="nav-item d-flex align-items-center gap-1">
-                <FaCrown />
+              <li className="nav-item nav-item2">
+                <FaCrown  className="icon" />
                 <Link className="nav-link" to={"products/9"}>
                   {t("اورمينيو التميز")}
                 </Link>
               </li>
 
-              <li className="nav-item d-flex align-items-center gap-1">
-                <MdOutlineExplore />
+              <li className="nav-item nav-item2">
+                <MdOutlineExplore  className="icon" />
                 <Link className="nav-link" to={"products/10"}>
                   {t("اورمينيو الاحتراف")}
                 </Link>
               </li>
 
-              <li className="nav-item d-flex align-items-center gap-1">
-                <MdOutlineHome />
+              <li className="nav-item nav-item2">
+                <MdOutlineHome  className="icon"/>
                 <a className="nav-link" href="https://aurmenu.com/" target="blank">
                   {t("المزيد من اورمينيو")}
                 </a>
               </li>
 
-              <li className="nav-item d-flex align-items-center gap-1">
-                <MdOutlineInfo />
+              <li className=" nav-item2">
+                <MdOutlineInfo  className="icon"/>
                 <Link className="nav-link" to={"agentcontact"}>
                   {t("تواصل معنا")}
                 </Link>
+                
               </li>
 
-              <li className="nav-item d-flex align-items-center gap-1">
-                <MdOutlineInfo />
-                <Link className="nav-link">{t("حول اورمنيو")}</Link>
+              <li className="nav-item nav-item2">
+                <MdOutlineInfo  className="icon"/>
+                <Link className="nav-link" to={"about"}>{t("حول اورمنيو")}</Link>
               </li>
 
-              <li className="nav-item d-flex align-items-center gap-1">
-                <MdOutlineStar />
-                <Link className="nav-link">{t("المميزات")}</Link>
+              <li className="nav-item nav-item2">
+                <MdOutlineStar  className="icon"/>
+                <Link className="nav-link" to={"features"}>{t("المميزات")}</Link>
               </li>
 
-              <li className="nav-item d-flex align-items-center gap-1">
-                <MdOutlineSupportAgent />
+              <li className="nav-item nav-item2">
+                <MdOutlineSupportAgent  className="icon"/>
                 <Link className="nav-link" to={"support"}>
                   {t("مركز المساندة والدعم")}
                 </Link>
               </li>
 
-              <li className="nav-item d-flex align-items-center gap-1">
-                <MdOutlineSchool />
+              <li className="nav-item nav-item2">
+                <MdOutlineSchool  className="icon"/>
                 <Link className="nav-link" to={"education"}>
                   {t("التدريب والتعليم")}
                 </Link>
               </li>
 
-              <li className="nav-item d-flex align-items-center gap-1">
-                <MdOutlineWork />
+              <li className="nav-item nav-item2">
+                <MdOutlineWork  className="icon"/>
                 <Link className="nav-link" to={"careers"}>
                   {t("التوظيف")}
                 </Link>
               </li>
             </ul>
           </nav>
-<button className="scroll-btn right d-xl-none" onClick={() => scroll("left")}>
+<button className="scroll-btn right d-xl-none" onClick={() => scroll("right")}>
         <BiSolidRightArrow />
 
       </button>

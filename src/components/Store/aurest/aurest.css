@@ -1,10 +1,24 @@
+.aurest-icon{
+  font-size: 2rem;
+  color: #F1A748;
+}
+.aurest-nav-link:hover{
+  color: #F1A748 !important;
+}
 .aurest-hero-slide {
   position: relative;
   width: 100%;
   height: 100vh; 
   overflow: hidden;
+  padding-top: 170px;
 }
-
+.aurest-btn{
+  background-color: #F1A748;
+}
+.aurest-btn:hover{
+ opacity: .9;
+ background-color: #F1A748 !important;
+}
 .aurest-hero-slide img {
   width: 100%;
   height: 100%;

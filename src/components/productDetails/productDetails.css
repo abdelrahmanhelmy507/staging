@@ -1,10 +1,12 @@
+.product-details-page{
+    padding-top: 10rem;
+}
 .product-hero-section {
     position: relative;
     height: 100vh;
     overflow: hidden;
     padding: 0 2rem;
-    background-color: var(--bg-color);
-    
+    background-color: var(--bg-color);    
 }
 .hero-gallery {
     height: 80%; 

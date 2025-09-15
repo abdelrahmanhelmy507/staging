@@ -82,7 +82,7 @@ export default function AurmenuFeatures() {
     <section className="aurmenu-features py-5">
       <Container>
         <div className="text-center mb-5">
-          <h2 className="section-title">مميزات نظام أورمينيو</h2>
+          <h2 className="section-title text-center">مميزات نظام أورمينيو</h2>
           <p className="section-subtitle">
             اكتشف المميزات المتقدمة التي تجعل أورمينيو الحل الأمثل لإدارة قوائم مطعمك
           </p>
@@ -92,7 +92,7 @@ export default function AurmenuFeatures() {
           {features.map((feature, index) => (
             <Col lg={4} md={6} sm={12} key={index}>
               <div className="feature-card h-100 text-center p-2">
-                <div className="feature-icon">
+                <div className="feature-icon" >
                   {feature.icon}
                 </div>
                 <h4 className="feature-title">{feature.title}</h4>
