@@ -72,7 +72,7 @@ export default function AurmenuFooter() {
           <Col lg={2} md={6} sm={12}>
             <div className="footer-section">
               <h6 className="footer-subtitle mb-3">روابط سريعة</h6>
-              <ul className="footer-links list-unstyled">
+              <ul className="aurmenu-footer-links list-unstyled">
                 {quickLinks.map((link, index) => (
                   <li key={index} className="mb-2">
                     <a href={link.href} className="footer-link">
@@ -88,7 +88,7 @@ export default function AurmenuFooter() {
           <Col lg={2} md={6} sm={12}>
             <div className="footer-section">
               <h6 className="footer-subtitle mb-3">الباقات</h6>
-              <ul className="footer-links list-unstyled">
+              <ul className=" aurmenu-footer-links list-unstyled">
                 {packages.map((pkg, index) => (
                   <li key={index} className="mb-2">
                     <a href={pkg.href} className="footer-link">
@@ -104,7 +104,7 @@ export default function AurmenuFooter() {
           <Col lg={2} md={6} sm={12}>
             <div className="footer-section">
               <h6 className="footer-subtitle mb-3">الخدمات</h6>
-              <ul className="footer-links list-unstyled">
+              <ul className="aurmenu-footer-links list-unstyled">
                 {services.map((service, index) => (
                   <li key={index} className="mb-2">
                     <a href={service.href} className="footer-link">
@@ -120,7 +120,7 @@ export default function AurmenuFooter() {
           <Col lg={2} md={6} sm={12}>
             <div className="footer-section">
               <h6 className="footer-subtitle mb-3">التواصل</h6>
-              <ul className="footer-links list-unstyled">
+              <ul className="aurmenu-footer-links list-unstyled">
                 {contactLinks.map((contact, index) => (
                   <li key={index} className="mb-2">
                     <a href={contact.href} className="footer-link">

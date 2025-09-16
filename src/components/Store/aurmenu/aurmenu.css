@@ -1,5 +1,7 @@
 /* Aurmenu Landing Page Styles */
-
+.aurmenu-hero-p{
+  padding-top: 170px !important;
+}
 /* Header Styles */
 .aurmenu-header {
   background-color:#E6E6E6 ;
@@ -68,6 +70,17 @@
 
 .scroll-btn.right {
   right: 0;
+}
+
+.aurmenu-logo{
+  /* background-color: red; */
+  /* width: 20px !important; */
+  /* position: absolute;
+  top: 30%;
+  right: 10%; */
+  width: 250px !important;
+  height: fit-content ;
+  z-index: 1000;
 }
 
 /* About Section Styles */
@@ -186,7 +199,18 @@
 .footer-links li {
   margin-bottom: 0.5rem;
 }
-
+.aurmenu-footer-links a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-size: 0.95rem;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+.aurmenu-footer-links a:hover {
+  color: #70AEFF;
+  opacity: 1;
+  padding-right: 5px;
+}
 .social-links {
   display: flex;
   justify-content: center;
@@ -201,7 +225,7 @@
 }
 
 .social-link:hover {
-  color: var(--text-color2);
+  color: #70AEFF;
 }
 .licence{
   color: var(--primary-color);
@@ -370,14 +394,7 @@
   margin-bottom: 1rem;
 }
 
-.cta-card {
-  background: white;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  position: sticky;
-  top: 2rem;
-}
+
 
 .cta-actions {
   margin-bottom: 1.5rem;
@@ -506,11 +523,8 @@
   font-weight: bold;
 }
 
-.cta-card {
-  background: linear-gradient(135deg, #007bff, #0056b3);
-  border: none;
-  border-radius: 15px;
-  color: white;
+.cta-card:hover {
+  background-color: #70AEFF;
 }
 
 .cta-card h3 {
@@ -522,16 +536,48 @@
   color: rgba(255,255,255,0.9);
   margin-bottom: 1.5rem;
 }
-.feature-icon {
+.aurmenu-feature-icon {
   width: 50px;
   height: 50px;
-  background: #70AEFF;
+  background: #70AEFF ;
+  color: #FFF;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto 1.5rem;
   transition: all 0.3s ease;
+  
+}
+.aurmenu-feature-card {
+  background-color: var(--primary-light);
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.aurmenu-feature-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background:#70AEFF;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.aurmenu-feature-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+.aurmenu-feature-card:hover::before {
+  transform: scaleX(1);
 }
 /* About Page Styles */
 .aurmenu-about-page {
@@ -1110,7 +1156,12 @@
     font-size: 2rem;
   }
 }
-
+.aurmenu-color{
+  color: #70AEFF;
+}
+.aurmenu-bg-color{
+  background-color: #70AEFF;
+}
 /* Features Page Styles */
 .aurmenu-features-page {
   padding-top: 180px;

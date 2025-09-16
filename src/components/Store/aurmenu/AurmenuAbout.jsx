@@ -13,7 +13,7 @@ export default function AurmenuAbout() {
         <Row className="g-4">
           <Col lg={4} md={6} sm={12}>
             <div className="about-card">
-              <div className="icon"><FaMobileAlt style={{color : "#007DA9"}}/></div>
+              <div className="icon"><FaMobileAlt className="aurmenu-color"/></div>
               <h3>تجربة عميل سلسة</h3>
               <p>واجهة سهلة وبسيطة تتيح للعميل تصفح الأصناف بسرعة.</p>
             </div>
@@ -21,7 +21,7 @@ export default function AurmenuAbout() {
 
           <Col lg={4} md={6} sm={12}>
             <div className="about-card">
-              <div className="icon"><FaSyncAlt style={{color : "#007DA9"}}/></div>
+              <div className="icon"><FaSyncAlt className="aurmenu-color"/></div>
               <h3>تحديث لحظي</h3>
               <p>أضف أو عدّل الأطباق والأسعار في أي وقت بسهولة.</p>
             </div>
@@ -29,7 +29,7 @@ export default function AurmenuAbout() {
 
           <Col lg={4} md={6} sm={12}>
             <div className="about-card">
-              <div className="icon"><FaPalette style={{color : "#007DA9"}}/></div>
+              <div className="icon"><FaPalette className="aurmenu-color"/></div>
               <h3>تصميم عصري</h3>
               <p>منيو جذاب متوافق مع هوية مطعمك أو كافيهك.</p>
             </div>
@@ -37,7 +37,7 @@ export default function AurmenuAbout() {
 
           <Col lg={4} md={6} sm={12}>
             <div className="about-card">
-              <div className="icon"><FaGlobe style={{color : "#007DA9"}}/></div>
+              <div className="icon"><FaGlobe className="aurmenu-color"/></div>
               <h3>دعم لغات متعددة</h3>
               <p>قدّم منيو بلغات مختلفة لتناسب جميع عملائك.</p>
             </div>
@@ -45,7 +45,7 @@ export default function AurmenuAbout() {
 
           <Col lg={4} md={6} sm={12}>
             <div className="about-card">
-              <div className="icon"><FaCashRegister style={{color : "#007DA9"}}/></div>
+              <div className="icon"><FaCashRegister className="aurmenu-color"/></div>
               <h3>تكامل مع نقاط البيع</h3>
               <p>ارتباط مباشر مع نظام أورست لإدارة الطلبات والفواتير.</p>
             </div>
@@ -53,7 +53,7 @@ export default function AurmenuAbout() {
 
           <Col lg={4} md={6} sm={12}>
             <div className="about-card">
-              <div className="icon"><FaChartBar style={{color : "#007DA9"}}/></div>
+              <div className="icon"><FaChartBar className="aurmenu-color"/></div>
               <h3>إحصائيات وتقارير</h3>
               <p>تعرف على أكثر الأطباق مبيعاً لتحسين قراراتك.</p>
             </div>

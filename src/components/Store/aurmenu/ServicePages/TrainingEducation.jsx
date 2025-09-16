@@ -24,7 +24,6 @@ export default function TrainingEducation() {
       students: 1250,
       rating: 4.8,
       icon: <FaBook />,
-      color: "primary"
     },
     {
       title: "إدارة المنتجات والقوائم",
@@ -35,7 +34,6 @@ export default function TrainingEducation() {
       students: 890,
       rating: 4.9,
       icon: <FaBook />,
-      color: "primary"
     },
     {
       title: "التقارير والتحليلات",
@@ -46,7 +44,6 @@ export default function TrainingEducation() {
       students: 650,
       rating: 4.7,
       icon: <FaBook />,
-      color: "primary"
     },
     {
       title: "التكامل مع أنظمة أخرى",
@@ -57,7 +54,6 @@ export default function TrainingEducation() {
       students: 420,
       rating: 4.6,
       icon: <FaBook />,
-      color: "primary"
     }
   ];
 
@@ -111,7 +107,6 @@ export default function TrainingEducation() {
       requirements: "شهادة متقدمة + دورة تدريب المدربين",
       validity: "5 سنوات",
       icon: <FaCertificate />,
-      color: "primary"
     }
   ];
 
@@ -122,9 +117,9 @@ export default function TrainingEducation() {
           <Col lg={12}>
             <div className="text-center mb-5">
               <div className="training-icon mb-3">
-                <FaGraduationCap />
+                <FaGraduationCap className="aurmenu-color"/>
               </div>
-              <h1 className="page-title">التدريب والتعليم</h1>
+              <h1 className="page-title aurmenu-color">التدريب والتعليم</h1>
               <p className="page-subtitle">
                 طور مهاراتك في استخدام أورمينيو من خلال دوراتنا التدريبية الشاملة، 
                 الندوات الإلكترونية، والشهادات المعتمدة. استثمر في تعليمك واجعل مطعمك أكثر نجاحاً.
@@ -136,14 +131,14 @@ export default function TrainingEducation() {
         {/* Courses Section */}
         <Row className="mb-5">
           <Col lg={12}>
-            <h2 className="section-title text-center mb-4">الدورات التدريبية</h2>
+            <h2 className="section-title text-center mb-4 aurmenu-color">الدورات التدريبية</h2>
           </Col>
           {courses.map((course, index) => (
             <Col lg={6} md={12} key={index} className="mb-3">
               <Card className="course-card h-100">
                 <Card.Body>
                   <div className="d-flex align-items-start">
-                    <div className={`course-icon bg-${course.color} text-white me-3`}>
+                    <div className={`course-icon aurmenu-bg-color text-white mx-3`}>
                       {course.icon}
                     </div>
                     <div className="flex-grow-1">
@@ -175,7 +170,7 @@ export default function TrainingEducation() {
                       </div>
 
                       <div className="course-actions">
-                        <Button variant={course.color} className="me-2">
+                        <Button variant={course.color} className="me-2 aurmenu-bg-color">
                           <FaPlay className="me-1" />
                           ابدأ الآن
                         </Button>
@@ -228,7 +223,7 @@ export default function TrainingEducation() {
                     </div>
                   </div>
 
-                  <Button variant="primary" className="w-100">
+                  <Button variant="primary" className="w-100 aurmenu-bg-color">
                     {webinar.status === "مباشر" ? "انضم الآن" : "سجل الآن"}
                   </Button>
                 </Card.Body>
@@ -246,7 +241,7 @@ export default function TrainingEducation() {
             <Col lg={4} md={6} sm={12} key={index}>
               <Card className="certification-card h-100 text-center">
                 <Card.Body>
-                  <div className={`cert-icon bg-${cert.color} text-white mb-3`}>
+                  <div className={`cert-icon aurmenu-bg-color text-white mb-3`}>
                     {cert.icon}
                   </div>
                   <Card.Title>{cert.title}</Card.Title>
@@ -262,7 +257,7 @@ export default function TrainingEducation() {
                     <p className="small">{cert.validity}</p>
                   </div>
 
-                  <Button variant={cert.color}>
+                  <Button className="aurmenu-bg-color">
                     ابدأ المسار
                   </Button>
                 </Card.Body>
@@ -281,7 +276,7 @@ export default function TrainingEducation() {
               <Card.Body>
                 <div className="learning-path">
                   <div className="path-step">
-                    <div className="step-number">1</div>
+                    <div className="step-number aurmenu-bg-color">1</div>
                     <div className="step-content">
                       <h5>أساسيات أورمينيو</h5>
                       <p>تعلم الأساسيات والمفاهيم الأساسية</p>
@@ -291,7 +286,7 @@ export default function TrainingEducation() {
                   <div className="path-arrow">→</div>
                   
                   <div className="path-step">
-                    <div className="step-number">2</div>
+                    <div className="step-number aurmenu-bg-color">2</div>
                     <div className="step-content">
                       <h5>إدارة المنتجات</h5>
                       <p>تعلم كيفية إدارة منتجاتك وقوائمك</p>
@@ -301,7 +296,7 @@ export default function TrainingEducation() {
                   <div className="path-arrow">→</div>
                   
                   <div className="path-step">
-                    <div className="step-number">3</div>
+                    <div className="step-number aurmenu-bg-color">3</div>
                     <div className="step-content">
                       <h5>التقارير والتحليلات</h5>
                       <p>استفد من البيانات لتحسين الأداء</p>
@@ -311,7 +306,7 @@ export default function TrainingEducation() {
                   <div className="path-arrow">→</div>
                   
                   <div className="path-step">
-                    <div className="step-number">4</div>
+                    <div className="step-number aurmenu-bg-color">4</div>
                     <div className="step-content">
                       <h5>التكامل المتقدم</h5>
                       <p>ربط أورمينيو مع أنظمة أخرى</p>

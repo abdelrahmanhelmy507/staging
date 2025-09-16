@@ -91,8 +91,8 @@ export default function AurmenuFeatures() {
         <Row className="g-4">
           {features.map((feature, index) => (
             <Col lg={4} md={6} sm={12} key={index}>
-              <div className="feature-card h-100 text-center p-2">
-                <div className="feature-icon" >
+              <div className="aurmenu-feature-card h-100 text-center p-2">
+                <div className="aurmenu-feature-icon " >
                   {feature.icon}
                 </div>
                 <h4 className="feature-title">{feature.title}</h4>

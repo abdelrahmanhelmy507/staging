@@ -221,7 +221,7 @@ export default function Careers() {
           <Col lg={12}>
             <div className="text-center mb-5">
               <div className="careers-icon mb-3">
-                <FaBriefcase />
+                <FaBriefcase className="aurmenu-color"/>
               </div>
               <h1 className="page-title">الوظائف المتاحة</h1>
               <p className="page-subtitle">
@@ -325,10 +325,10 @@ export default function Careers() {
                   </div>
 
                   <div className="position-actions">
-                    <Button variant="primary" className="me-2">
+                    <Button variant="primary" className="me-2 aurmenu-bg-color">
                       تقدم الآن
                     </Button>
-                    <Button variant="outline-primary">
+                    <Button variant="outline" className="aurmenu-color">
                       عرض التفاصيل
                     </Button>
                   </div>
@@ -341,7 +341,7 @@ export default function Careers() {
         {/* Call to Action */}
         <Row className="mt-5">
           <Col lg={12}>
-            <Card className="cta-card bg-primary text-white text-center">
+            <Card className="cta-card aurmenu-bg-color text-white text-center">
               <Card.Body>
                 <h3>لم تجد الوظيفة المناسبة؟</h3>
                 <p className="mb-4">

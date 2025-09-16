@@ -89,9 +89,9 @@ export default function SupportCenter() {
       <Container>
         <Row>
           <Col lg={12}>
-            <div className="text-center mb-5">
+            <div className="text-center mb-5 ">
               <div className="support-icon mb-3">
-                <FaHeadset />
+                <FaHeadset className="aurmenu-color"/>
               </div>
               <h1 className="page-title">مركز الدعم</h1>
               <p className="page-subtitle">
@@ -109,9 +109,9 @@ export default function SupportCenter() {
           </Col>
           {supportOptions.map((option, index) => (
             <Col lg={4} md={6} sm={12} key={index}>
-              <Card className={`support-option-card h-100 border-${option.color}`}>
+              <Card className={`support-option-card h-100 `}>
                 <Card.Body className="text-center">
-                  <div className={`support-option-icon bg-${option.color} text-white mb-3`}>
+                  <div className={`support-option-icon aurmenu-bg-color text-white mb-3`}>
                     {option.icon}
                   </div>
                   <Card.Title>{option.title}</Card.Title>
@@ -123,7 +123,7 @@ export default function SupportCenter() {
                       {option.hours}
                     </div>
                   </div>
-                  <Button variant={option.color} className="mt-3">
+                  <Button variant={option.color} className="mt-3 aurmenu-bg-color">
                     تواصل الآن
                   </Button>
                 </Card.Body>
@@ -150,18 +150,18 @@ export default function SupportCenter() {
                       className="form-control" 
                       placeholder="ابحث عن حل لمشكلتك..."
                     />
-                    <Button variant="primary">بحث</Button>
+                    <Button className="aurmenu-bg-color">بحث</Button>
                   </div>
                 </div>
 
                 <div className="quick-links">
                   <h5>الروابط السريعة:</h5>
                   <div className="d-flex flex-wrap gap-2">
-                    <Button variant="outline-primary" size="sm">إعداد النظام</Button>
-                    <Button variant="outline-primary" size="sm">إدارة المنتجات</Button>
-                    <Button variant="outline-primary" size="sm">مشاكل الدفع</Button>
-                    <Button variant="outline-primary" size="sm">التكامل مع POS</Button>
-                    <Button variant="outline-primary" size="sm">النسخ الاحتياطي</Button>
+                    <Button variant="outline"className="aurmenu-color" size="sm">إعداد النظام</Button>
+                    <Button variant="outline"className="aurmenu-color" size="sm">إدارة المنتجات</Button>
+                    <Button variant="outline"className="aurmenu-color" size="sm">مشاكل الدفع</Button>
+                    <Button variant="outline"className="aurmenu-color" size="sm">التكامل مع POS</Button>
+                    <Button variant="outline"className="aurmenu-color" size="sm">النسخ الاحتياطي</Button>
                   </div>
                 </div>
               </Card.Body>
@@ -226,7 +226,7 @@ export default function SupportCenter() {
                   </div>
                   <Card.Title>{resource.title}</Card.Title>
                   <Card.Text>{resource.description}</Card.Text>
-                  <Button variant="outline-primary">
+                  <Button variant="outline" className="aurmenu-color">
                     عرض المورد
                   </Button>
                 </Card.Body>

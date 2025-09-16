@@ -28,7 +28,7 @@ i18n.on("languageChanged", (lng) => {
   }
 });
 if (typeof document !== "undefined") {
-  const lng = i18n.resolvedLanguage || i18n.language || "en";
+  const lng = i18n.resolvedLanguage || i18n.language || "ar";
   document.documentElement.lang = lng;
   document.documentElement.dir = lng === "ar" ? "rtl" : "ltr";
 }

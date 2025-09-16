@@ -1,4 +1,4 @@
-import { Container, Row, Col, Card } from "react-bootstrap";
+import { Container, Row, Col, Card , Button } from "react-bootstrap";
 import { 
   FaBullhorn, 
   FaChartLine, 
@@ -360,10 +360,10 @@ export default function AurmenuFeaturesPage() {
                 انضم إلى آلاف المطاعم والمقاهي التي تثق في أورمينيو لتحسين تجربة عملائها
               </p>
               <div className="d-flex flex-column flex-sm-row gap-3 justify-content-center">
-                <button className="btn btn-light btn-lg px-4">
+                <button className="btn btn-light btn-lg px-4 aurmenu-color">
                   ابدأ التجربة المجانية
                 </button>
-                <button className="btn btn-outline-light btn-lg px-4">
+                <button className="btn btn-light aurmenu-color">
                   شاهد العرض التوضيحي
                 </button>
               </div>

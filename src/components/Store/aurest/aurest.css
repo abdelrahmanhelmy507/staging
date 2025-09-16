@@ -27,7 +27,7 @@
 
 .aurest-hero-slide .overlay2 {
   position: absolute;
-  top: 0;
+  top: 180px;
   left: 0;
   width: 100%;
   height: 100%;
@@ -39,7 +39,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%,-30%);
   text-align: center;
   color: #fff;
   z-index: 2;
