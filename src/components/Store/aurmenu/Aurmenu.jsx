@@ -15,6 +15,7 @@ export default function Aurmenu() {
         
         <AurmenuHero />
         {/* <AurmenuPackagesHeader /> */}
+              {/* <AurmenuPricing /> */}
         
         <Container fluid className="main-content">
           <Row>
@@ -24,7 +25,6 @@ export default function Aurmenu() {
             <Col lg={9} md={12}>
               <AurmenuAbout />
               <AurmenuFeatures />
-              {/* <AurmenuPricing /> */}
             </Col>
           </Row>
         </Container>

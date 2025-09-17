@@ -29,24 +29,24 @@ export default function AurestHeader() {
   return (
     <>
       <header className="aurmenu-header navbar-container ">
-        <div className=" aurmenu-header-content d-flex align-items-center justify-content-between">
+        <div className=" aurmenu-header-contentd-flex align-items-center justify-content-between aurest-container ">
           {/* <div className="logo ms-4">
             <Link to={"./"}>
               <img src="/staging/images/aurmenu-logo.png" alt="" width={100} />
             </Link>
           </div> */}
-          <button className="scroll-btn left d-2xl-none" onClick={() => scroll("left")}>
+          <button className="scroll-btn left  d-2xl-none" onClick={() => scroll("left")}>
       <BiSolidLeftArrow />
 
 
       </button>
           {/* Desktop Nav */}
-         <nav ref={scrollRef} className="mx-5 aurmenu-nav nav-scroll">
+         <nav ref={scrollRef} className=" aurmenu-nav nav-scroll">
   <ul className="nav-list d-flex align-items-center gap-3">
     <li className="nav-item nav-item2">
       <FaRocket className="aurest-icon  aurest-nav-link"/> 
       <Link className="nav-link" to={"products/7"}>
-        {t("هايبر أورست لايت")}
+        {t("أورست لايت")}
       </Link>
     </li>
 
@@ -60,7 +60,7 @@ export default function AurestHeader() {
     <li className="nav-item nav-item2">
       <RiComputerLine className="aurest-icon " />
       <Link className="nav-link  aurest-nav-link" to={"products/10"}>
-        {t("هايبر أورست بيسك")}
+        {t("أورست بيسك")}
       </Link>
     </li>
 
@@ -74,7 +74,7 @@ export default function AurestHeader() {
     <li className="nav-item nav-item2">
       <RiCpuLine className="aurest-icon"/>
       <a className="nav-link  aurest-nav-link" href="https://aurmenu.com/" target="blank">
-        {t("هايبر أورست برو")}
+        {t("أورست برو")}
       </a>
     </li>
 
@@ -88,7 +88,7 @@ export default function AurestHeader() {
     <li className="nav-item nav-item2">
       <FaServer className="aurest-icon"/>
       <a className="nav-link  aurest-nav-link" href="https://aurmenu.com/" target="blank">
-        {t("هايبر أورست التيمت")}
+        {t("أورست التيمت")}
       </a>
     </li>
 
@@ -126,7 +126,7 @@ export default function AurestHeader() {
     <li className="nav-item nav-item2">
       <MdOutlineSupportAgent className="aurest-icon"/>
       <Link className="nav-link  aurest-nav-link" to={"support"}>
-        {t("مركز المساندة والدعم")}
+        {t("المساندة والدعم")}
       </Link>
     </li>
 
@@ -146,7 +146,7 @@ export default function AurestHeader() {
   </ul>
 </nav>
 
-<button className="scroll-btn right d-2xl-none" onClick={() => scroll("right")}>
+<button className="scroll-btn right  d-2xl-none" onClick={() => scroll("right")}>
         <BiSolidRightArrow />
 
       </button>

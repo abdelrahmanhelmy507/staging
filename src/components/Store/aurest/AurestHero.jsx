@@ -1,33 +1,34 @@
-import { Button } from 'react-bootstrap'
-import './aurest.css'
-export default function AurestHero (){
+import { Button } from 'react-bootstrap';
+import { useTranslation } from 'react-i18next';
+import './aurest.css';
 
-    return(
-        <>
-         <div className="aurest-hero-slide ">
-            <img
-              className="d-block w-100"
-              src="/staging/images/slide1.jpg"
-              alt=" slide"
-            />
-            <div className="overlay2"></div>
-            <div className="hero-content2">
-              <h1>  أنظمة أورست الفعالة في إدارة المطاعم تناسب احتياجات مشاريعك اليومية</h1>
-              <p>
-               مع نظام أورست، ستحصل على باقة كبرى من المميزات والتطويرات المستمرة
-                <br />
-                من الدفع عبر الهاتف إلى شاشات المطبخ، حوّل نشاطك الفندقي مع أوريجس.
-              </p>
-              <div className="hero-buttons ">
-                <Button variant="primary" size="lg" className="mx-2 aurest-btn">
-                  ابدأ الآن
-                </Button>
-                <Button  size="lg" variant="primary"  className="mx-2 aurest-btn">
-                  شاهد العرض
-                </Button>
-              </div>
-            </div>
-          </div>
-        </>
-    )
+export default function AurestHero() {
+  const { t } = useTranslation();
+
+  return (
+    <div className="aurest-hero-slide">
+      <img
+        className="d-block w-100"
+        src="/staging/images/slide1.jpg"
+        alt={t('أنظمة أورست الفعالة في إدارة المطاعم تناسب احتياجات مشاريعك اليومية')}
+      />
+      <div className="overlay2"></div>
+      <div className="hero-content2">
+        <img src="/staging/images/aurest-logo.png" alt="" className="aurmenu-logo mb-4"/>
+        <h1>{t('أنظمة أورست الفعالة في إدارة المطاعم تناسب احتياجات مشاريعك اليومية')}</h1>
+        <p>
+          {t("مع نظام أورست، ستحصل على باقة كبرى من المميزات والتطويرات المستمرة من الدفع عبر الهاتف إلى شاشات المطبخ، حوّل نشاطك الفندقي مع أوريجس.")}<br />
+          
+        </p>
+        <div className="hero-buttons">
+          <Button variant="primary" size="lg" className="mx-2 aurest-btn">
+            {t('ابدأ الان')}
+          </Button>
+          <Button variant="primary" size="lg" className="mx-2 aurest-btn">
+            {t('شاهد العرض')}
+          </Button>
+        </div>
+      </div>
+    </div>
+  );
 }

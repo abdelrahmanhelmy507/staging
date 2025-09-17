@@ -95,12 +95,12 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%);
+      transform: translate(-50%, -40%);
       text-align: center;
       color: white;
       z-index: 2;
       max-width: 800px;
-      padding: 2rem;
+      padding: 2rem; 
     }
     
     .national-day-badge {
@@ -184,7 +184,10 @@
       padding-top: 1rem;
       margin-top: 2rem;
     }
-    
+    .national-day-footer:last-child{
+      font-size: 1.3rem;
+      font-weight: 500;
+    }
     .saudi-colors {
       font-size: 1.2rem;
       margin: 0 0.5rem;
@@ -211,6 +214,7 @@
       }
     .national-day-hero {
       background-position: center;
+      background-color: #fff;
     }
     }
     @media (max-width: 768px) {
@@ -221,6 +225,7 @@
       position: relative;
       background-size: cover;
       background-position: center;
+      
     }
      
      .national-day-title {
@@ -236,6 +241,7 @@
       
       .hero-content-national {
         padding: .3rem;
+        width: 90%;
       }
       
        .national-btn-outline {

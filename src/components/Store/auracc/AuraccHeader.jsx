@@ -11,7 +11,7 @@ import { MdDevicesOther, MdOutlineLaptopMac, MdOutlineContactMail, MdLanguage, M
 import { RiComputerLine, RiCpuLine } from "react-icons/ri";
 import { AiOutlineInfoCircle } from "react-icons/ai";
 import { BiSolidLeftArrow , BiSolidRightArrow  } from "react-icons/bi";
-
+import "./auracc.css"
 
 export default function AuraccHeader() {
   const { t } = useTranslation();
@@ -29,7 +29,7 @@ export default function AuraccHeader() {
   return (
     <>
       <header className="aurmenu-header navbar-container ">
-        <div className=" aurmenu-header-content d-flex align-items-center justify-content-between container">
+        <div className=" aurmenu-header-content d-flex align-items-center justify-content-center auracc-container " >
           {/* <div className="logo ms-4">
             <Link to={"./"}>
               <img src="/staging/images/aurmenu-logo.png" alt="" width={100} />
@@ -41,60 +41,60 @@ export default function AuraccHeader() {
 
       </button>
           {/* Desktop Nav */}
-         <nav ref={scrollRef} className="mx-5 aurmenu-nav nav-scroll ">
-  <ul className="nav-list d-flex align-items-center gap-3">
+         <nav ref={scrollRef} className=" aurmenu-nav nav-scroll ">
+  <ul className="nav-list d-flex align-items-center justify-c gap-3 ">
     
 
 
     <li className="nav-item nav-item2">
-      <RiCpuLine className="aurpos-icon"/>
-      <Link className="nav-link"  target="blank">
-        {t("  المواصفات الفنية")}
+      <RiCpuLine className="aurpos-icon auracc-color" />
+      <Link className="nav-link auracc-nav-link"  target="blank">
+        {t("المواصفات الفنية")}
       </Link>
     </li>
 
     
     <li className="nav-item nav-item2">
-      <MdOutlineContactMail className="aurpos-icon"/>
-      <Link className="nav-link" to={"agentcontact"}>
+      <MdOutlineContactMail className="aurpos-icon auracc-color "/>
+      <Link className="nav-link auracc-nav-link" to={"agentcontact"}>
         {t("تواصل معنا")}
       </Link>
     </li>
 
     <li className="nav-item nav-item2">
-      <MdLanguage className="aurpos-icon"/>
-      <a href="https://aurpos.com/" target="blank" className="nav-link">
+      <MdLanguage className="aurpos-icon auracc-color"/>
+      <a href="https://aurpos.com/" target="blank" className="nav-link auracc-nav-link">
         {t("المزيد من أوربوس")}
       </a>
     </li>
 
     <li className="nav-item nav-item2">
-      <AiOutlineInfoCircle className="aurpos-icon"/>
-      <Link className="nav-link">{t("حول أوربس")}</Link>
+      <AiOutlineInfoCircle className="aurpos-icon auracc-color"/>
+      <Link className="nav-link auracc-nav-link">{t("حول أوربس")}</Link>
     </li>
 
     <li className="nav-item nav-item2">
-      <MdOutlineStar className="aurpos-icon"/>
-      <Link className="nav-link">{t("المميزات")}</Link>
+      <MdOutlineStar className="aurpos-icon auracc-color"/>
+      <Link className="nav-link auracc-nav-link">{t("المميزات")}</Link>
     </li>
 
     <li className="nav-item nav-item2">
-      <MdOutlineSupportAgent className="aurpos-icon"/>
-      <Link className="nav-link" to={"support"}>
-        {t("مركز المساندة والدعم")}
+      <MdOutlineSupportAgent className="aurpos-icon auracc-color"/>
+      <Link className="nav-link auracc-nav-link" to={"support"}>
+        {t("المساندة والدعم")}
       </Link>
     </li>
 
     <li className="nav-item nav-item2">
-      <MdOutlineSchool className="aurpos-icon"/>
-      <Link className="nav-link" to={"education"}>
+      <MdOutlineSchool className="aurpos-icon auracc-color"/>
+      <Link className="nav-link auracc-nav-link" to={"education"}>
         {t("التدريب والتعليم")}
       </Link>
     </li>
 
     <li className="nav-item nav-item2">
-      <MdWorkOutline className="aurpos-icon"/>
-      <Link className="nav-link" to={"careers"}>
+      <MdWorkOutline className="aurpos-icon auracc-color"/>
+      <Link className="nav-link auracc-nav-link" to={"careers"}>
         {t("التوظيف")}
       </Link>
     </li>

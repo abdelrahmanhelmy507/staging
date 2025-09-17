@@ -2,6 +2,10 @@
   font-size: 2rem;
   color: #007DA9;
 }
+.aurpos-container{
+  width: 80%;
+  margin: auto;
+}
 .feature-card2 {
   position: relative;
   height: 350px;
@@ -37,4 +41,11 @@
  
 .feature-card2:hover{
   scale: 1.1;
+}
+
+@media (max-width: 678px) {
+  .aurpos-container{
+  width: 90%;
+  margin: auto;
+}
 }

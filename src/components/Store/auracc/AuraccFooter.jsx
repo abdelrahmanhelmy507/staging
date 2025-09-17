@@ -1,73 +1,49 @@
 import { Container, Row, Col } from "react-bootstrap";
 import { 
-  FaPhone, 
-  FaEnvelope, 
-  FaMapMarkerAlt, 
   FaFacebook, 
   FaTwitter, 
   FaInstagram, 
   FaLinkedin,
   FaYoutube
 } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
 export default function AuraccFooter() {
+  const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
 
-  
-
   const packages = [
-    { name: "اوربوس الاساسية ", href: "/aurmenu/package/start" },
-    { name: " اوربوس الفضيه ", href: "/aurmenu/package/progress" },
-    { name: "  اوربوس الموسع ", href: "/aurmenu/package/excellence" },
-    { name: "اوربوس المخصص  ", href: "/aurmenu/package/professional" }
+    { name: t("المواصفات الفنية"), href: "/aurmenu/package/start" }
   ];
 
   const services = [
-    { name: "مركز الدعم", href: "/aurmenu/support" },
-    { name: "التدريب والتعليم", href: "/aurmenu/training" },
-    { name: "الوظائف", href: "/aurmenu/careers" }
+    { name: t("مركز الدعم"), href: "/aurmenu/support" },
+    { name: t("التدريب والتعليم"), href: "/aurmenu/training" },
+    { name: t("الوظائف"), href: "/aurmenu/careers" }
   ];
 
   const contactLinks = [
-    { name: "اتصل بنا", href: "/aurmenu/contact/customer" },
-    { name: "وكلاء وموزعون", href: "/aurmenu/contact/agents" }
+    { name: t("اتصل بنا"), href: "/aurmenu/contact/customer" },
+    { name: t("وكلاء وموزعون"), href: "/aurmenu/contact/agents" }
   ];
 
   return (
     <footer className="aurmenu-footer bg-dark text-light py-5">
       <Container>
         <Row className="g-4">
-          {/* Company Info */}
           <Col lg={4} md={6} sm={12}>
             <div className="footer-section">
               <img src="/staging/images/auracc-logo.png" width={120} alt="" className="mb-3" />
               <p className="footer-description mb-4">
-                نصنع تجربة تحول رقمي أكثر استقراراً وتهيئة لمزيد من التطور، ما يجعلنا نضمن رضا عملائنا الدائم.
+                {t("نصنع تجربة تحول رقمي أكثر استقراراً وتهيئة لمزيد من التطور، ما يجعلنا نضمن رضا عملائنا الدائم.")}
               </p>
-              
             </div>
           </Col>
-
-          {/* Quick Links */}
-          {/* <Col lg={2} md={6} sm={12}>
-            <div className="footer-section">
-              <h6 className="footer-subtitle mb-3"> الإضافات</h6>
-              <ul className="footer-links list-unstyled">
-                {quickLinks.map((link, index) => (
-                  <li key={index} className="mb-2">
-                    <a href={link.href} className="footer-link">
-                      {link.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </Col> */}
 
           {/* Packages */}
           <Col lg={2} md={6} sm={12}>
             <div className="footer-section">
-              <h6 className="footer-subtitle mb-3">الباقات</h6>
+              <h6 className="footer-subtitle mb-3">{t("الباقات")}</h6>
               <ul className="footer-links list-unstyled">
                 {packages.map((pkg, index) => (
                   <li key={index} className="mb-2">
@@ -83,7 +59,7 @@ export default function AuraccFooter() {
           {/* Services */}
           <Col lg={2} md={6} sm={12}>
             <div className="footer-section">
-              <h6 className="footer-subtitle mb-3">الخدمات</h6>
+              <h6 className="footer-subtitle mb-3">{t("الخدمات")}</h6>
               <ul className="footer-links list-unstyled">
                 {services.map((service, index) => (
                   <li key={index} className="mb-2">
@@ -99,7 +75,7 @@ export default function AuraccFooter() {
           {/* Contact */}
           <Col lg={2} md={6} sm={12}>
             <div className="footer-section">
-              <h6 className="footer-subtitle mb-3">التواصل</h6>
+              <h6 className="footer-subtitle mb-3">{t("التواصل")}</h6>
               <ul className="footer-links list-unstyled">
                 {contactLinks.map((contact, index) => (
                   <li key={index} className="mb-2">
@@ -119,7 +95,7 @@ export default function AuraccFooter() {
           <Col md={6} sm={12}>
             <div className="footer-bottom licence">
               <p className="mb-0">
-                © {currentYear} أوربوس. جميع الحقوق محفوظة.
+                © {currentYear} {t("أوراك")}. {t("جميع الحقوق محفوظة")}
               </p>
             </div>
           </Col>

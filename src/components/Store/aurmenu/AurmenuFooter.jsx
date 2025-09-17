@@ -1,42 +1,41 @@
 import { Container, Row, Col } from "react-bootstrap";
 import { 
-  FaPhone, 
-  FaEnvelope, 
-  FaMapMarkerAlt, 
   FaFacebook, 
   FaTwitter, 
   FaInstagram, 
   FaLinkedin,
   FaYoutube
 } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
 export default function AurmenuFooter() {
+  const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
 
   const quickLinks = [
-    { name: "الصفحة الرئيسية", href: "/" },
-    { name: "حول أورمينيو", href: "/aurmenu#about" },
-    { name: "المميزات", href: "/aurmenu#features" },
-    { name: "الخطط والأسعار", href: "/aurmenu#pricing" },
-    { name: "الإضافات", href: "/aurmenu#addons" }
+    { name: t("الصفحة الرئيسية"), href: "/" },
+    { name: t("حول أورمينيو"), href: "/aurmenu#about" },
+    { name: t("المميزات"), href: "/aurmenu#features" },
+    { name: t("الخطط والأسعار"), href: "/aurmenu#pricing" },
+    { name: t("الإضافات"), href: "/aurmenu#addons" }
   ];
 
   const packages = [
-    { name: "أورمينيو ستارت", href: "/aurmenu/package/start" },
-    { name: "أورمينيو بروجريس", href: "/aurmenu/package/progress" },
-    { name: "أورمينيو إكسيلنس", href: "/aurmenu/package/excellence" },
-    { name: "أورمينيو بروفيشنال", href: "/aurmenu/package/professional" }
+    { name: t("أورمينيو ستارت"), href: "/aurmenu/package/start" },
+    { name: t("أورمينيو بروجريس"), href: "/aurmenu/package/progress" },
+    { name: t("أورمينيو إكسيلنس"), href: "/aurmenu/package/excellence" },
+    { name: t("أورمينيو بروفيشنال"), href: "/aurmenu/package/professional" }
   ];
 
   const services = [
-    { name: "مركز الدعم", href: "/aurmenu/support" },
-    { name: "التدريب والتعليم", href: "/aurmenu/training" },
-    { name: "الوظائف", href: "/aurmenu/careers" }
+    { name: t("مركز الدعم"), href: "/aurmenu/support" },
+    { name: t("التدريب والتعليم"), href: "/aurmenu/training" },
+    { name: t("الوظائف"), href: "/aurmenu/careers" }
   ];
 
   const contactLinks = [
-    { name: "اتصل بنا", href: "/aurmenu/contact/customer" },
-    { name: "وكلاء وموزعون", href: "/aurmenu/contact/agents" }
+    { name: t("اتصل بنا"), href: "/aurmenu/contact/customer" },
+    { name: t("وكلاء وموزعون"), href: "/aurmenu/contact/agents" }
   ];
 
   return (
@@ -48,30 +47,15 @@ export default function AurmenuFooter() {
             <div className="footer-section">
               <img src="/staging/images/aurmenu-logo.png" width={120} alt="" className="mb-3" />
               <p className="footer-description mb-4">
-                نظام إدارة القوائم الذكي الذي يساعد مطعمك على تقديم تجربة مميزة لعملائك 
-                وزيادة مبيعاتك من خلال تقنيات متقدمة وواجهة سهلة الاستخدام.
+                {t("نظام إدارة القوائم الذكي الذي يساعد مطعمك على تقديم تجربة مميزة لعملائك وزيادة مبيعاتك من خلال تقنيات متقدمة وواجهة سهلة الاستخدام.")}
               </p>
-              {/* <div className="contact-info">
-                <div className="contact-item d-flex align-items-center mb-2">
-                  <FaPhone className="me-2" />
-                  <span>+966 50 123 4567</span>
-                </div>
-                <div className="contact-item d-flex align-items-center mb-2">
-                  <FaEnvelope className="me-2" />
-                  <span>info@aurmenu.com</span>
-                </div>
-                <div className="contact-item d-flex align-items-center">
-                  <FaMapMarkerAlt className="me-2" />
-                  <span>الرياض، المملكة العربية السعودية</span>
-                </div>
-              </div> */}
             </div>
           </Col>
 
           {/* Quick Links */}
           <Col lg={2} md={6} sm={12}>
             <div className="footer-section">
-              <h6 className="footer-subtitle mb-3">روابط سريعة</h6>
+              <h6 className="footer-subtitle mb-3">{t("روابط سريعة")}</h6>
               <ul className="aurmenu-footer-links list-unstyled">
                 {quickLinks.map((link, index) => (
                   <li key={index} className="mb-2">
@@ -87,8 +71,8 @@ export default function AurmenuFooter() {
           {/* Packages */}
           <Col lg={2} md={6} sm={12}>
             <div className="footer-section">
-              <h6 className="footer-subtitle mb-3">الباقات</h6>
-              <ul className=" aurmenu-footer-links list-unstyled">
+              <h6 className="footer-subtitle mb-3">{t("الباقات")}</h6>
+              <ul className="aurmenu-footer-links list-unstyled">
                 {packages.map((pkg, index) => (
                   <li key={index} className="mb-2">
                     <a href={pkg.href} className="footer-link">
@@ -103,7 +87,7 @@ export default function AurmenuFooter() {
           {/* Services */}
           <Col lg={2} md={6} sm={12}>
             <div className="footer-section">
-              <h6 className="footer-subtitle mb-3">الخدمات</h6>
+              <h6 className="footer-subtitle mb-3">{t("الخدمات")}</h6>
               <ul className="aurmenu-footer-links list-unstyled">
                 {services.map((service, index) => (
                   <li key={index} className="mb-2">
@@ -119,7 +103,7 @@ export default function AurmenuFooter() {
           {/* Contact */}
           <Col lg={2} md={6} sm={12}>
             <div className="footer-section">
-              <h6 className="footer-subtitle mb-3">التواصل</h6>
+              <h6 className="footer-subtitle mb-3">{t("التواصل")}</h6>
               <ul className="aurmenu-footer-links list-unstyled">
                 {contactLinks.map((contact, index) => (
                   <li key={index} className="mb-2">
@@ -139,7 +123,7 @@ export default function AurmenuFooter() {
           <Col md={6} sm={12}>
             <div className="footer-bottom licence">
               <p className="mb-0">
-                © {currentYear} أورمينيو. جميع الحقوق محفوظة.
+                © {currentYear} {t("أورمينيو. جميع الحقوق محفوظة.")}
               </p>
             </div>
           </Col>

@@ -1,4 +1,8 @@
 /* Aurmenu Landing Page Styles */
+.aurmenu-continer{
+  width: 90%;
+  margin: auto;
+}
 .aurmenu-hero-p{
   padding-top: 170px !important;
 }
@@ -17,7 +21,7 @@
 
 .navbar-container {
   /* position: relative;[ */
-  width: 100%;
+  /* width: 100%; */
   overflow: hidden;
 }
 
@@ -91,10 +95,11 @@
   background: white;
   border-radius: 15px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  padding: 1.5rem;
+  padding:  1.5rem;
   position: sticky;
-  top: 10rem;
+  top: 12rem;
   height: fit-content;
+  margin-top: 2rem;
 }
 
 .aurmenu-products-sidebar .sidebar-header {
@@ -732,39 +737,6 @@
   color: white;
 }
 
-.qr-code {
-  position: absolute;
-  bottom: -20px;
-  left: -20px;
-  z-index: 10;
-}
-
-.qr-placeholder {
-  width: 60px;
-  height: 60px;
-  background: #333;
-  border: 3px solid #70AEFF;
-  border-radius: 8px;
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: repeat(8, 1fr);
-  gap: 1px;
-  padding: 2px;
-}
-
-.qr-placeholder::before {
-  content: '';
-  grid-column: 1 / 4;
-  grid-row: 1 / 4;
-  background: white;
-}
-
-.qr-placeholder::after {
-  content: '';
-  grid-column: 6 / 9;
-  grid-row: 6 / 9;
-  background: white;
-}
 
 .mobile-mockup {
   width: 120px;
@@ -1187,4 +1159,97 @@
 }
 .Action{
   background-color: #70AEFF;
+}
+
+
+
+
+
+.aurhero-section2 {
+  text-align: center;
+  padding: 60px 20px;
+  background: #fff; /* تقدر تغير الخلفية حسب التصميم */
+}
+
+.hero-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero-subtitle {
+  font-size: 20px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.hero-title {
+  font-size: 32px;
+  font-weight: bold;
+  color: #222;
+  margin: 15px 0;
+}
+
+.highlight {
+  color: #e63946; /* لون مميز */
+}
+
+/* ===== Animated Headline ===== */
+.hero-animated {
+  font-size: 24px;
+  margin: 20px 0;
+  height: 40px;
+  overflow: hidden;
+  position: relative;
+}
+
+.animated-text {
+  display: inline-block;
+  animation: slide 8s infinite;
+}
+
+.animated-text span {
+  display: block;
+  line-height: 40px;
+}
+
+.static-text {
+  margin-right: 10px;
+  color: #444;
+  font-weight: 500;
+}
+
+@keyframes slide {
+  0%, 20% {
+    transform: translateY(0);
+  }
+  25%, 45% {
+    transform: translateY(-40px);
+  }
+  50%, 70% {
+    transform: translateY(-80px);
+  }
+  75%, 95% {
+    transform: translateY(-120px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* ===== CTA Button ===== */
+.hero-btn a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: #0077ff;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.hero-btn a:hover {
+  background: #005ecc;
 }

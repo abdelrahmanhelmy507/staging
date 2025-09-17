@@ -20,7 +20,7 @@ export default function Aurpos() {
             <Col lg={9} md={12}>
               <AurposAbout />
              <AurposPlan />
-          <AurposProducts />
+          {/* <AurposProducts /> */}
               {/* <AurmenuPricing /> */}
             </Col>
           </Row>

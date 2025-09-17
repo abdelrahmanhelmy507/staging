@@ -9,7 +9,7 @@ export default function AurestPricing() {
           {/* LIGHT */}
           <Col lg={3} md={6} sm={12}>
             <div className="pricing-card">
-              <h3>الباقة LIGHT</h3>
+              <h3 className="aurest-color">الباقة LIGHT</h3>
               <p className="price">
                 33.25<span> $ / شهريًا</span>
               </p>

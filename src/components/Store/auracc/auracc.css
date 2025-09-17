@@ -1,0 +1,61 @@
+.auracc-container{
+    width: 90%;
+    margin: auto;
+}
+
+.auracc-color{
+    color:#90A19D ;
+}
+.auracc-nav-link:hover{
+  color: #90A19D !important;
+}
+.auracc-about-card {
+  position: relative;
+  background: #fff;
+  border-radius: 14px;
+  text-align: center;
+  padding: 2rem 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.auracc-about-card:hover {
+  transform: translateY(-6px);
+}
+
+.auracc-about-card .icon {
+  font-size: 2rem;
+  color: #007bff;
+  margin-bottom: 1rem;
+}
+
+.auracc-about-card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.aauracc-about-cardd p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+}
+.auracc-about-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(144, 161, 157, 0.178);
+  transform: translateX(100%);
+  transition: transform 0.4s ease;
+  z-index: 0;
+}
+
+.auracc-about-card:hover::after {
+  transform: translateX(0);
+}
+
+.auracc-about-card * {
+  position: relative;
+  z-index: 1;
+}

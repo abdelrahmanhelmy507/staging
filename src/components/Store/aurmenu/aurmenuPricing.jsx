@@ -213,5 +213,6 @@ export default function AurmenuPricing() {
         </Row>
       </Container>
     </section>
+    
   );
 }

@@ -27,7 +27,7 @@ export default function AurmenuHeader() {
   return (
     <>
       <header className="aurmenu-header navbar-container ">
-        <div className=" aurmenu-header-content d-flex align-items-center justify-content-between container">
+        <div className=" aurmenu-header-content d-flex align-items-center justify-content-center aurmenu-container">
           {/* <div className="logo ms-4">
             <Link to={"./"}>
               <img src="/staging/images/aurmenu-logo.png" alt="" width={100} />
@@ -40,32 +40,32 @@ export default function AurmenuHeader() {
       </button>
           {/* Desktop Nav */}
           <nav ref={scrollRef} className=" aurmenu-nav nav-scroll">
-            <ul className="nav-list d-flex align-items-center  gap-2">
+            <ul className="nav-list d-flex align-items-center  gap-3">
               <li className="nav-item nav-item2">
                 <FaRocket className="icon"/> 
                 <Link className="nav-link" to={"products/7"}>
-                  {t("اورمينيو البدايه")}
+                  {t("أورمينيو البدايه")}
                 </Link>
               </li>
 
               <li className="nav-item nav-item2">
                 <FaMedal className="icon"/>
                 <Link className="nav-link" to={"products/8"}>
-                  {t("اورمينيو التقدم")}
+                  {t("أورمينيو التقدم")}
                 </Link>
               </li>
 
               <li className="nav-item nav-item2">
                 <FaCrown  className="icon" />
                 <Link className="nav-link" to={"products/9"}>
-                  {t("اورمينيو التميز")}
+                  {t("أورمينيو التميز")}
                 </Link>
               </li>
 
               <li className="nav-item nav-item2">
                 <MdOutlineExplore  className="icon" />
                 <Link className="nav-link" to={"products/10"}>
-                  {t("اورمينيو الاحتراف")}
+                  {t("أورمينيو الاحتراف")}
                 </Link>
               </li>
 
@@ -97,7 +97,7 @@ export default function AurmenuHeader() {
               <li className="nav-item nav-item2">
                 <MdOutlineSupportAgent  className="icon"/>
                 <Link className="nav-link" to={"support"}>
-                  {t("مركز المساندة والدعم")}
+                  {t("المساندة والدعم")}
                 </Link>
               </li>
 

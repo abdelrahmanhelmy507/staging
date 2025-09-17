@@ -19,7 +19,7 @@ export default function Aurest() {
             <Col lg={9} md={12}>
               <AurestAbout />
         <AurestPricing />
-        <AurestProducts />
+        {/* <AurestProducts /> */}
               {/* <AurmenuPricing /> */}
             </Col>
           </Row>
