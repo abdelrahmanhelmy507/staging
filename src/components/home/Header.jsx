@@ -1,15 +1,17 @@
 import "./Header.css";
 import { Link } from "react-router-dom";
 import { Button, Col, Row } from "react-bootstrap";
-import { IoClose } from "react-icons/io5";
+import { IoClose, IoArrowBack } from "react-icons/io5";
 import { MdMenu } from "react-icons/md";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import React, { Suspense, useState } from "react";
 import { useTranslation } from "react-i18next";
+
 export default function Header() {
   const { t, i18n } = useTranslation();
   const [show, setShow] = useState(false);
   const [expandedMenu, setExpandedMenu] = useState(null);
+  const [currentSubModal, setCurrentSubModal] = useState(null);
 
   const changeLang = () => {
     i18n.language === "ar"
@@ -24,6 +26,19 @@ export default function Header() {
   const closeModal = () => {
     setShow(false);
     setExpandedMenu(null);
+    setCurrentSubModal(null);
+  };
+
+  const openSubModal = (modalName) => {
+    setCurrentSubModal(modalName);
+  };
+
+  const closeSubModal = () => {
+    setCurrentSubModal(null);
+  };
+
+  const handleLinkClick = () => {
+    closeModal();
   };
 
   return (
@@ -53,33 +68,6 @@ export default function Header() {
               </Link>
             </li>
 
-            {/* <li className="nav-item">
-              <Link className="nav-link" to={"/store"}>
-                {t("  أورمينيو")}
-              </Link>
-              <div className="dropdown">
-                <div className="dropdown-content">
-                  <Link to={"/store/aurest"} className="nav-link">
-                    {t("اورست")}
-                  </Link>
-                </div>
-                <div className="dropdown-content">
-                  <Link to={"/store/aurmenu"} className="nav-link">
-                    {t("اورمينيو")}
-                  </Link>
-                </div>
-                <div className="dropdown-content">
-                  <Link to={"/store/auracc"} className="nav-link">
-                    {t("اوراك")}
-                  </Link>
-                </div>
-                <div className="dropdown-content">
-                  <Link to={"/store/aurpos"} className="nav-link">
-                    {t("اوربوس ")}
-                  </Link>
-                </div>
-              </div>
-            </li> */}
             <li className="nav-item">
               <Link className="nav-link" to={"/store/aurmenu"}>
                 {t("أورمينيو")}
@@ -89,7 +77,7 @@ export default function Header() {
                   <Col lg={2} md={6} sm={12}></Col>
                   <Col lg={1} md={6} sm={12}></Col>
                   <Col className="dropdown-col" lg={2} md={6} sm={12}>
-                     <p>{t("استكشاف الجميع")}</p>
+                     <Link to={"store/aurmenu"}><p>{t("استكشاف الجميع")}</p></Link>
                     <ul className="dropdown-ul">
                       <li>
                         <Link
@@ -188,7 +176,7 @@ export default function Header() {
                   <Col lg={2} md={6} sm={12}></Col>
                   <Col lg={1} md={6} sm={12}></Col>
                   <Col className="dropdown-col" lg={2} md={6} sm={12}>
-                    <p>{t("استكشاف الجميع")}</p>
+                    <Link to={"store/aurest"}><p>{t("استكشاف الجميع")}</p></Link>
                     <ul className="dropdown-ul">
                       <li>
                         <Link to={"/store/aurest"} className="aurest">{t("جميع الباقات")}</Link>
@@ -301,7 +289,7 @@ export default function Header() {
                   <Col lg={2} md={6} sm={12}></Col>
                   <Col lg={1} md={6} sm={12}></Col>
                   <Col className="dropdown-col" lg={2} md={6} sm={12}>
-                    <p>{t("استكشاف الجميع")}</p>
+                   <Link to={"store/aurpos"}><p>{t("استكشاف الجميع")}</p></Link>
                     <ul className="dropdown-ul ">
                       <li>
                         {" "}
@@ -388,7 +376,7 @@ export default function Header() {
                   <Col lg={2} md={6} sm={12}></Col>
                   <Col lg={1} md={6} sm={12}></Col>
                   <Col className="dropdown-col" lg={2} md={6} sm={12}>
-                    <p>{t("استكشاف الجميع")}</p>
+                   <Link to={"store/auracc"}><p>{t("استكشاف الجميع")}</p></Link>
                     <ul className="dropdown-ul ">
                       <li>
                         {" "}
@@ -483,8 +471,8 @@ export default function Header() {
           </Link>
         </div>
       </div>
-
-      {show && (
+              
+      {show && !currentSubModal && (
         <div className="fixed">
           <div className="mobile-menu-container">
             <div className="mobile-menu-header">
@@ -502,373 +490,41 @@ export default function Header() {
             </div>
             
             <div className="mobile-menu-content">
-              {/* أورمينيو */}
+              {/* Main menu items */}
               <div className="mobile-menu-item">
                 <div 
                   className="mobile-menu-main-link"
-                  onClick={() => toggleAccordion('aurmenu')}
+                  onClick={() => openSubModal('aurmenu')}
                 >
                   <span className="nav-link">{t("أورمينيو")}</span>
-                  {expandedMenu === 'aurmenu' ? <FaChevronUp /> : <FaChevronDown />}
                 </div>
-                {expandedMenu === 'aurmenu' && (
-                  <div className="mobile-dropdown-content">
-                    <div className="mobile-dropdown-section">
-                      <p className="mobile-dropdown-title">{t("استكشاف الجميع")}</p>
-                      <ul className="dropdown-ul">
-                        <li>
-                          <Link to={"/store/aurmenu/products/7"} className="aurmenu" onClick={closeModal}>
-                            {t("أورمينيو البدايه")}
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to={"/store/aurmenu/products/8"} className="aurmenu" onClick={closeModal}>
-                            {t(" أورمينيو التقدم")}
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to={"/store/aurmenu/products/9"} className="aurmenu" onClick={closeModal}>
-                            {t("أورمينيو التميز")}
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to={"/store/aurmenu/products/10"} className="aurmenu" onClick={closeModal}>
-                           {t(" أورمينيو الاحتراف")}
-                          </Link>
-                        </li>
-                      </ul>
-                    </div>
-                    <div className="mobile-dropdown-section">
-                      <p className="mobile-dropdown-title">إضافات اورمنيو</p>
-                      <ul className="dropdown-ul">
-                        <li>
-                          <Link className="aurmenu" onClick={closeModal}>المزيد من الإضافات</Link>
-                        </li>
-                        <li>
-                          <Link className="aurmenu" onClick={closeModal}>جهاز استقبال طلبات أورمينيو</Link>
-                        </li>
-                        <li>
-                          <Link className="aurmenu" onClick={closeModal}>جهاز الإشعارات</Link>
-                        </li>
-                        <li>
-                          <Link className="aurmenu" onClick={closeModal}>طباعة QR Code</Link>
-                        </li>
-                        <li>
-                          <Link className="aurmenu" onClick={closeModal}>أجهزة NFC</Link>
-                        </li>
-                        <li>
-                          <Link className="aurmenu" onClick={closeModal}>حلول التسويق</Link>
-                        </li>
-                      </ul>
-                    </div>
-                    <div className="mobile-dropdown-section">
-                      <p className="mobile-dropdown-title">المزيد من اورمنيو</p>
-                      <ul className="dropdown-ul">
-                        <li>
-                          <Link to={"/store/aurmenu/agentcontact"} className="aurmenu" onClick={closeModal}>
-                            تواصل معنا
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to={"/store/aurmenu/about"} className="aurmenu" onClick={closeModal}>حول اورمنيو</Link>
-                        </li>
-                        <li>
-                          <Link to={"/store/aurmenu/features"} className="aurmenu" onClick={closeModal}>المميزات</Link>
-                        </li>
-                        <li>
-                          <Link to={"/store/aurmenu/support"} className="aurmenu" onClick={closeModal}>
-                            مركز المساندة والدعم
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to={"/store/aurmenu/education"} className="aurmenu" onClick={closeModal}>
-                            التدريب والتعليم
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to={"/store/aurmenu/careers"} className="aurmenu" onClick={closeModal}>التوظيف</Link>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                )}
               </div>
 
-              {/* أوريست */}
               <div className="mobile-menu-item">
                 <div 
                   className="mobile-menu-main-link"
-                  onClick={() => toggleAccordion('aurest')}
+                  onClick={() => openSubModal('aurest')}
                 >
                   <span className="nav-link">{t("أوريست")}</span>
-                  {expandedMenu === 'aurest' ? <FaChevronUp /> : <FaChevronDown />}
                 </div>
-                {expandedMenu === 'aurest' && (
-                  <div className="mobile-dropdown-content">
-                    <div className="mobile-dropdown-section">
-                      <p className="mobile-dropdown-title">استكشاف الجميع</p>
-                      <ul className="dropdown-ul">
-                        <li>
-                          <Link to={"/store/aurest"} className="aurest" onClick={closeModal}>جميع الباقات</Link>
-                        </li>
-                        <li>
-                          <Link to={"/store/aurmenu/products/7"} className="aurest" onClick={closeModal}>
-                            {t("هايبر أورست لايت")}
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to={"/store/aurmenu/products/7"} className="aurest" onClick={closeModal}>
-                            {t("أجهزة أورست لايت")}
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to={"/store/aurmenu/products/8"} className="aurest" onClick={closeModal}>
-                            {t("هايبر أورست بيسك")}
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to={"/store/aurmenu/products/8"} className="aurest" onClick={closeModal}>
-                            {t("أجهزة أورست بيسك")}
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to={"/store/aurmenu/products/9"} className="aurest" onClick={closeModal}>
-                            {t("هايبر أورست برو")}
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to={"/store/aurmenu/products/9"} className="aurest" onClick={closeModal}>
-                            {t("أجهزة أورست برو")}
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to={"/store/aurmenu/products/10"} className="aurest" onClick={closeModal}>
-                            {t("هايبر أورست التيمت")}
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to={"/store/aurmenu/products/10"} className="aurest" onClick={closeModal}>
-                            {t("أجهزة أورست التيمت")}
-                          </Link>
-                        </li>
-                      </ul>
-                    </div>
-                    <div className="mobile-dropdown-section">
-                      <p className="mobile-dropdown-title" > {t("إضافات اورست")}      </p> 
-                      <ul className="dropdown-ul">
-                         <li>
-                        <Link className="aurest" onClick={closeModal}>{t("أجهزة الطابعات")}</Link>
-                      </li>
-                      <li>
-                        <Link className="aurest" onClick={closeModal}>{t("شاشات المطبخ")}</Link>
-                      </li>
-                      <li>
-                        <Link className="aurest" onClick={closeModal}>{t("كابتن أورست")}</Link>
-                      </li>
-                      <li>
-                        <Link className="aurest" onClick={closeModal}>{t("شاشة الجرد")}</Link>
-                      </li>
-                      <li>
-                        <Link className="aurest" onClick={closeModal}>{t("شاشة الانتظار")}</Link>
-                      </li>
-                      <li>
-                        <Link className="aurest" onClick={closeModal}>{t("حلول تسويقية")}</Link>
-                      </li>
-                      </ul>
-                    </div>
-                    <div className="mobile-dropdown-section">
-                      <p className="mobile-dropdown-title">{t("المزيد من اورست")}  </p>
-                      <ul className="dropdown-ul">
-                        <li>
-                        <Link to={"/store/aurest/agentcontact"}className="aurest">
-                          {" "}
-                          {t("تواصل معنا")}{" "}
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to={"/store/aurest/about"}className="aurest" onClick={closeModal}>{t("حول اورست")}</Link>
-                      </li>
-                      <li>
-                        <Link to={"/store/aurest/features"}className="aurest"onClick={closeModal}>{t("المميزات")}</Link>
-                      </li>
-                      <li>
-                        <Link to={"/store/aurest/support"}className="aurest"onClick={closeModal}>
-                          {t("مركز المساندة والدعم")}
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to={"/store/aurest/education"}className="aurest"onClick={closeModal}>
-                          {t("التدريب والتعليم")}
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to={"/store/aurest/careers"}className="aurest"onClick={closeModal}>{t("التوظيف")}</Link>
-                      </li>
-                      </ul>
-                    </div>
-                  </div>
-                )}
               </div>
 
-              {/* أوربوس */}
               <div className="mobile-menu-item">
                 <div 
                   className="mobile-menu-main-link"
-                  onClick={() => toggleAccordion('aurpos')}
+                  onClick={() => openSubModal('aurpos')}
                 >
                   <span className="nav-link">{t("أوربوس")}</span>
-                  {expandedMenu === 'aurpos' ? <FaChevronUp /> : <FaChevronDown />}
                 </div>
-                {expandedMenu === 'aurpos' && (
-                  <div className="mobile-dropdown-content">
-                    <div className="mobile-dropdown-section">
-                      <p className="mobile-dropdown-title">استكشاف الجميع</p>
-                      <ul className="dropdown-ul">
-                        <li>
-                        {" "}
-                        <Link to={"/store/aurpos/products/7"} className="aurpos" onClick={closeModal}>
-                          {t("اوربوس الاساسية")}
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to={"/store/aurpos/products/8"}className="aurpos"onClick={closeModal}>
-                          {" "}
-                          {t("اوربوس الفضية")}{" "}
-                        </Link>{" "}
-                      </li>
-                      <li>
-                        {" "}
-                        <Link to={"/store/aurpos/products/9"}className="aurpos"onClick={closeModal}>
-                          {t("اوربوس الموسع")}{" "}
-                        </Link>
-                      </li>
-                      <li>
-                        {" "}
-                        <Link to={"/store/aurpos/products/10"}className="aurpos"onClick={closeModal}>
-                          {t("اوربوس المخصص")}
-                        </Link>
-                      </li>
-                      </ul>
-                    </div>
-                    <div className="mobile-dropdown-section">
-                      <p className="mobile-dropdown-title">  </p>
-                      <ul className="dropdown-ul">
-                        <li>
-                        <Link className="aurpos">{t("اوربوس AurPOS Go All 6")} </Link>
-                      </li>
-                      <li>
-                        <Link className="aurpos">{t("اوربوس موبايل")} </Link>
-                      </li>
-                      <li>
-                        <Link className="aurpos">{t("اوربوس AurPOS Go All 4")} </Link>
-                      </li>
-                      <li>
-                        <Link className="aurpos">{t("حلول تسويقية")} </Link>
-                      </li>
-                      </ul>
-                    </div>
-                    <div className="mobile-dropdown-section">
-                      <p className="mobile-dropdown-title">المزيد من اوراك</p>
-                      <ul className="dropdown-ul">
-                        <li>
-                          <Link to={"/store/aurmenu/agentcontact"} className="aurpos" onClick={closeModal}>
-                            تواصل معنا
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to={"/store/aurmenu/about"} className="aurpos" onClick={closeModal}>حول اورمنيو</Link>
-                        </li>
-                        <li>
-                          <Link to={"/store/aurmenu/features"} className="aurpos" onClick={closeModal}>المميزات</Link>
-                        </li>
-                        <li>
-                          <Link to={"/store/aurmenu/support"} className="aurpos" onClick={closeModal}>
-                            مركز المساندة والدعم
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to={"/store/aurmenu/education"} className="aurpos" onClick={closeModal}>
-                            التدريب والتعليم
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to={"/store/aurmenu/careers"} className="aurpos" onClick={closeModal}>التوظيف</Link>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                )}
               </div>
 
-              {/* أوراك */}
               <div className="mobile-menu-item">
                 <div 
                   className="mobile-menu-main-link"
-                  onClick={() => toggleAccordion('auracc')}
+                  onClick={() => openSubModal('auracc')}
                 >
                   <span className="nav-link">{t("أوراك")}</span>
-                  {expandedMenu === 'auracc' ? <FaChevronUp /> : <FaChevronDown />}
                 </div>
-                {expandedMenu === 'auracc' && (
-                  <div className="mobile-dropdown-content">
-                    <div className="mobile-dropdown-section">
-                      <p className="mobile-dropdown-title">استكشاف الجميع</p>
-                      <ul className="dropdown-ul">
-                        <li>
-                          <Link to={"/store/aurmenu/products/7"} className="auracc" onClick={closeModal}>
-                            المواصفات الفنية
-                          </Link>
-                        </li>
-                      </ul>
-                    </div>
-                    <div className="mobile-dropdown-section">
-                      <p className="mobile-dropdown-title">إضافات اوراك</p>
-                      <ul className="dropdown-ul">
-                        <li>
-                          <Link className="auracc" onClick={closeModal}>حلول المنشآت الصغيرة والمتوسطة</Link>
-                        </li>
-                        <li>
-                          <Link className="auracc" onClick={closeModal}>اوراك لنقاط البيع</Link>
-                        </li>
-                        <li>
-                          <Link className="auracc" onClick={closeModal}>حلول مخصصة</Link>
-                        </li>
-                        <li>
-                          <Link className="auracc" onClick={closeModal}>حلول تسويقية</Link>
-                        </li>
-                      </ul>
-                    </div>
-                    <div className="mobile-dropdown-section">
-                      <p className="mobile-dropdown-title">المزيد من اوراك</p>
-                      <ul className="dropdown-ul">
-                        <li>
-                          <Link to={"/store/aurmenu/agentcontact"} className="auracc" onClick={closeModal}>
-                            تواصل معنا
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to={"/store/aurmenu/about"} className="auracc" onClick={closeModal}>حول اوراك</Link>
-                        </li>
-                        <li>
-                          <Link to={"/store/aurmenu/features"} className="auracc" onClick={closeModal}>المميزات</Link>
-                        </li>
-                        <li>
-                          <Link to={"/store/aurmenu/support"} className="auracc" onClick={closeModal}>
-                            مركز المساندة والدعم
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to={"/store/aurmenu/education"} className="auracc" onClick={closeModal}>
-                            التدريب والتعليم
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to={"/store/aurmenu/careers"} className="auracc" onClick={closeModal}>التوظيف</Link>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                )}
               </div>
 
               {/* Other Links */}
@@ -912,37 +568,395 @@ export default function Header() {
           </div>
         </div>
       )}
+
+      {/* Sub-modals */}
+      {currentSubModal === 'aurmenu' && (
+        <div className="fixed">
+          <div className="mobile-menu-container">
+            <div className="mobile-menu-header">
+              <div className="mobile-menu-back-button" onClick={closeSubModal}>
+                <IoArrowBack className="back-icon" />
+                <span>{t("العودة")}</span>
+              </div>
+              {/* <h3 className="sub-modal-title">{t("أورمينيو")}</h3> */}
+              <IoClose
+                className="icon-close"
+                onClick={closeModal}
+              />
+            </div>
+            
+            <div className="mobile-menu-content">
+              <div className="mobile-dropdown-section">
+                <Link to={"store/aurmenu"} onClick={closeModal}><p className="mobile-dropdown-title">{t("استكشاف الجميع")}</p></Link>
+                <ul className="dropdown-ul">
+                  <li>
+                    <Link to={"/store/aurmenu/products/7"} className="aurmenu" onClick={handleLinkClick}>
+                      {t("أورمينيو البدايه")}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={"/store/aurmenu/products/8"} className="aurmenu" onClick={handleLinkClick}>
+                      {t("أورمينيو التقدم")}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={"/store/aurmenu/products/9"} className="aurmenu" onClick={handleLinkClick}>
+                      {t("أورمينيو التميز")}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={"/store/aurmenu/products/10"} className="aurmenu" onClick={handleLinkClick}>
+                      {t("أورمينيو الاحتراف")}
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+              <div className="mobile-dropdown-section">
+                <p className="mobile-dropdown-title">{t("إضافات اورمنيو")}</p>
+                <ul className="dropdown-ul">
+                  <li>
+                    <Link className="aurmenu" onClick={handleLinkClick}>{t("المزيد من الإضافات")}</Link>
+                  </li>
+                  <li>
+                    <Link className="aurmenu" onClick={handleLinkClick}>{t("جهاز أورمينيو استقبال الطلبات")}</Link>
+                  </li>
+                  <li>
+                    <Link className="aurmenu" onClick={handleLinkClick}>{t("جهاز أورمينيو الإشعارات")}</Link>
+                  </li>
+                  <li>
+                    <Link className="aurmenu" onClick={handleLinkClick}>{t("طباعة رمز QR")}</Link>
+                  </li>
+                  <li>
+                    <Link className="aurmenu" onClick={handleLinkClick}>{t("أجهزة NFC")}</Link>
+                  </li>
+                  <li>
+                    <Link className="aurmenu" onClick={handleLinkClick}>{t("حلول تسويقية")}</Link>
+                  </li>
+                </ul>
+              </div>
+              <div className="mobile-dropdown-section">
+                <p className="mobile-dropdown-title">{t("المزيد من اورمينيو")}</p>
+                <ul className="dropdown-ul">
+                  <li>
+                    <Link to={"/store/aurmenu/agentcontact"} className="aurmenu" onClick={handleLinkClick}>
+                      {t("تواصل معنا")}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={"/store/aurmenu/about"} className="aurmenu" onClick={handleLinkClick}>{t("حول اورمنيو")}</Link>
+                  </li>
+                  <li>
+                    <Link to={"/store/aurmenu/features"} className="aurmenu" onClick={handleLinkClick}>{t("المميزات")}</Link>
+                  </li>
+                  <li>
+                    <Link to={"/store/aurmenu/support"} className="aurmenu" onClick={handleLinkClick}>
+                      {t("مركز المساندة والدعم")}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={"/store/aurmenu/education"} className="aurmenu" onClick={handleLinkClick}>
+                      {t("التدريب والتعليم")}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={"/store/aurmenu/careers"} className="aurmenu" onClick={handleLinkClick}>{t("التوظيف")}</Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {currentSubModal === 'aurest' && (
+        <div className="fixed">
+          <div className="mobile-menu-container">
+            <div className="mobile-menu-header">
+              <div className="mobile-menu-back-button" onClick={closeSubModal}>
+                <IoArrowBack className="back-icon" />
+                <span>{t("العودة")}</span>
+              </div>
+              {/* <h3 className="sub-modal-title">{t("أوريست")}</h3> */}
+              <IoClose
+                className="icon-close"
+                onClick={closeModal}
+              />
+            </div>
+            
+            <div className="mobile-menu-content">
+              <div className="mobile-dropdown-section">
+                <Link to={"store/aurest"} onClick={closeModal}><p className="mobile-dropdown-title">{t("استكشاف الجميع")}</p></Link>
+                <ul className="dropdown-ul">
+                  <li>
+                    <Link to={"/store/aurest"} className="aurest" onClick={handleLinkClick}>{t("جميع الباقات")}</Link>
+                  </li>
+                  <li>
+                    <Link to={"/store/aurest/products/7"} className="aurest" onClick={handleLinkClick}>
+                      {t("هايبر أورست لايت")}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={"/store/aurest/products/7"} className="aurest" onClick={handleLinkClick}>
+                      {t("أجهزة أورست لايت")}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={"/store/aurest/products/8"} className="aurest" onClick={handleLinkClick}>
+                      {t("هايبر أورست بيسك")}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={"/store/aurest/products/8"} className="aurest" onClick={handleLinkClick}>
+                      {t("أجهزة أورست بيسك")}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={"/store/aurest/products/9"} className="aurest" onClick={handleLinkClick}>
+                      {t("هايبر أورست برو")}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={"/store/aurest/products/9"} className="aurest" onClick={handleLinkClick}>
+                      {t("أجهزة أورست برو")}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={"/store/aurest/products/10"} className="aurest" onClick={handleLinkClick}>
+                      {t("هايبر أورست التيمت")}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={"/store/aurest/products/10"} className="aurest" onClick={handleLinkClick}>
+                      {t("أجهزة أورست التيمت")}
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+              <div className="mobile-dropdown-section">
+                <p className="mobile-dropdown-title">{t("إضافات اورست")}</p>
+                <ul className="dropdown-ul">
+                  <li>
+                    <Link className="aurest" onClick={handleLinkClick}>{t("أجهزة الطابعات")}</Link>
+                  </li>
+                  <li>
+                    <Link className="aurest" onClick={handleLinkClick}>{t("شاشات المطبخ")}</Link>
+                  </li>
+                  <li>
+                    <Link className="aurest" onClick={handleLinkClick}>{t("كابتن أورست")}</Link>
+                  </li>
+                  <li>
+                    <Link className="aurest" onClick={handleLinkClick}>{t("شاشة الجرد")}</Link>
+                  </li>
+                  <li>
+                    <Link className="aurest" onClick={handleLinkClick}>{t("شاشة الانتظار")}</Link>
+                  </li>
+                  <li>
+                    <Link className="aurest" onClick={handleLinkClick}>{t("حلول تسويقية")}</Link>
+                  </li>
+                </ul>
+              </div>
+              <div className="mobile-dropdown-section">
+                <p className="mobile-dropdown-title">{t("المزيد من اورست")}</p>
+                <ul className="dropdown-ul">
+                  <li>
+                    <Link to={"/store/aurest/agentcontact"} className="aurest" onClick={handleLinkClick}>
+                      {t("تواصل معنا")}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={"/store/aurest/about"} className="aurest" onClick={handleLinkClick}>{t("حول اورست")}</Link>
+                  </li>
+                  <li>
+                    <Link to={"/store/aurest/features"} className="aurest" onClick={handleLinkClick}>{t("المميزات")}</Link>
+                  </li>
+                  <li>
+                    <Link to={"/store/aurest/support"} className="aurest" onClick={handleLinkClick}>
+                      {t("مركز المساندة والدعم")}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={"/store/aurest/education"} className="aurest" onClick={handleLinkClick}>
+                      {t("التدريب والتعليم")}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={"/store/aurest/careers"} className="aurest" onClick={handleLinkClick}>{t("التوظيف")}</Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {currentSubModal === 'aurpos' && (
+        <div className="fixed">
+          <div className="mobile-menu-container">
+            <div className="mobile-menu-header">
+              <div className="mobile-menu-back-button" onClick={closeSubModal}>
+                <IoArrowBack className="back-icon" />
+                <span>{t("العودة")}</span>
+              </div>
+              {/* <h3 className="sub-modal-title">{t("أوربوس")}</h3> */}
+              <IoClose
+                className="icon-close"
+                onClick={closeModal}
+              />
+            </div>
+            
+            <div className="mobile-menu-content">
+              <div className="mobile-dropdown-section">
+                <Link to={"store/aurpos"} onClick={closeModal}><p className="mobile-dropdown-title">{t("استكشاف الجميع")}</p></Link>
+                <ul className="dropdown-ul">
+                  <li>
+                    <Link to={"/store/aurpos/products/7"} className="aurpos" onClick={handleLinkClick}>
+                      {t("اوربوس الاساسية")}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={"/store/aurpos/products/8"} className="aurpos" onClick={handleLinkClick}>
+                      {t("اوربوس الفضية")}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={"/store/aurpos/products/9"} className="aurpos" onClick={handleLinkClick}>
+                      {t("اوربوس الموسع")}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={"/store/aurpos/products/10"} className="aurpos" onClick={handleLinkClick}>
+                      {t("اوربوس المخصص")}
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+              <div className="mobile-dropdown-section">
+                <p className="mobile-dropdown-title">{t("إضافات أوربوس")}</p>
+                <ul className="dropdown-ul">
+                  <li>
+                    <Link className="aurpos" onClick={handleLinkClick}>{t("اوربوس AurPOS Go All 6")}</Link>
+                  </li>
+                  <li>
+                    <Link className="aurpos" onClick={handleLinkClick}>{t("اوربوس موبايل")}</Link>
+                  </li>
+                  <li>
+                    <Link className="aurpos" onClick={handleLinkClick}>{t("اوربوس AurPOS Go All 4")}</Link>
+                  </li>
+                  <li>
+                    <Link className="aurpos" onClick={handleLinkClick}>{t("حلول تسويقية")}</Link>
+                  </li>
+                </ul>
+              </div>
+              <div className="mobile-dropdown-section">
+                <p className="mobile-dropdown-title">{t("المزيد من اوربوس")}</p>
+                <ul className="dropdown-ul">
+                  <li>
+                    <Link to={"/store/aurpos/agentcontact"} className="aurpos" onClick={handleLinkClick}>
+                      {t("تواصل معنا")}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={"/store/aurpos/about"} className="aurpos" onClick={handleLinkClick}>{t("حول اوربوس")}</Link>
+                  </li>
+                  <li>
+                    <Link to={"/store/aurpos/features"} className="aurpos" onClick={handleLinkClick}>{t("المميزات")}</Link>
+                  </li>
+                  <li>
+                    <Link to={"/store/aurpos/support"} className="aurpos" onClick={handleLinkClick}>
+                      {t("مركز المساندة والدعم")}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={"/store/aurpos/education"} className="aurpos" onClick={handleLinkClick}>
+                      {t("التدريب والتعليم")}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={"/store/aurpos/careers"} className="aurpos" onClick={handleLinkClick}>{t("التوظيف")}</Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {currentSubModal === 'auracc' && (
+        <div className="fixed">
+          <div className="mobile-menu-container">
+            <div className="mobile-menu-header">
+              <div className="mobile-menu-back-button" onClick={closeSubModal}>
+                <IoArrowBack className="back-icon" />
+                <span>{t("العودة")}</span>
+              </div>
+              {/* <h3 className="sub-modal-title">{t("أوراك")}</h3> */}
+              <IoClose
+                className="icon-close"
+                onClick={closeModal}
+              />
+            </div>
+            
+            <div className="mobile-menu-content">
+              <div className="mobile-dropdown-section">
+                <Link to={"store/auracc"} onClick={closeModal}><p className="mobile-dropdown-title">{t("استكشاف الجميع")}</p></Link>
+                <ul className="dropdown-ul">
+                  <li>
+                    <Link to={"/store/auracc/products/7"} className="auracc" onClick={handleLinkClick}>
+                      {t("المواصفات الفنية")}
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+              <div className="mobile-dropdown-section">
+                <p className="mobile-dropdown-title">{t("إضافات اوراك")}</p>
+                <ul className="dropdown-ul">
+                  <li>
+                    <Link className="auracc" onClick={handleLinkClick}>{t("حلول المنشآت الصغيرة والمتوسطة")}</Link>
+                  </li>
+                  <li>
+                    <Link className="auracc" onClick={handleLinkClick}>{t("اوراك لنقاط البيع")}</Link>
+                  </li>
+                  <li>
+                    <Link className="auracc" onClick={handleLinkClick}>{t("حلول مخصصة")}</Link>
+                  </li>
+                  <li>
+                    <Link className="auracc" onClick={handleLinkClick}>{t("حلول تسويقية")}</Link>
+                  </li>
+                </ul>
+              </div>
+              <div className="mobile-dropdown-section">
+                <p className="mobile-dropdown-title">{t("المزيد من اوراك")}</p>
+                <ul className="dropdown-ul">
+                  <li>
+                    <Link to={"/store/auracc/agentcontact"} className="auracc" onClick={handleLinkClick}>
+                      {t("تواصل معنا")}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={"/store/auracc/about"} className="auracc" onClick={handleLinkClick}>{t("حول اوراك")}</Link>
+                  </li>
+                  <li>
+                    <Link to={"/store/auracc/features"} className="auracc" onClick={handleLinkClick}>{t("المميزات")}</Link>
+                  </li>
+                  <li>
+                    <Link to={"/store/auracc/support"} className="auracc" onClick={handleLinkClick}>
+                      {t("مركز المساندة والدعم")}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={"/store/auracc/education"} className="auracc" onClick={handleLinkClick}>
+                      {t("التدريب والتعليم")}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to={"/store/auracc/careers"} className="auracc" onClick={handleLinkClick}>{t("التوظيف")}</Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </header>
   );
-}
-
-{
-  /* <div className="dropdown mb-4">
-                <div className="dropdown-content">
-                  <Link to={'aurages/cybersecurity/ssl'}> شهدات SSL</Link>
-                </div>
-                <div className="dropdown-content">
-                  <Link to={'aurages/cybersecurity/sitelock'}>امن موقعك الالكتروني</Link>
-                </div>
-                <div className="dropdown-content">
-                  <Link to={'aurages/cybersecurity/codeGuard'}> النسخ الاحتياطي للموقع الالكتروني</Link>
-                </div>
-                <div className="dropdown-content">
-                  <Link to={'aurages/cybersecurity/acronis'}> النسخ الاحتياطي</Link>
-                </div>
-              </div> */
-}
-
-{
-  /* <div className="dropdown mb-4">
-                <div className="dropdown-content">
-                  <Link>التصميم الغرافيكي</Link>
-                </div>
-                <div className="dropdown-content">
-                  <Link> تطوير البرمجيات المخصصه</Link>
-                </div>
-                <div className="dropdown-content">
-                  <Link> تصميم وتطوير" </Link>
-                </div>
-              </div> */
 }

@@ -7,7 +7,7 @@ export default function AurmenuSidebar() {
   const navigate = useNavigate();
 
   const addonItems = [
-    { id: "order-receiver", title: t("جهاز استقبال طلبات أورمينيو"), description: t("جهاز مخصص لاستقبال الطلبات من العملاء") },
+    { id: "20", title: t("جهاز استقبال طلبات أورمينيو"), description: t("جهاز مخصص لاستقبال الطلبات من العملاء") },
     { id: "notifications-device", title: t("جهاز الإشعارات"), description: t("نظام إشعارات متقدم للطلبات الجديدة") },
     { id: "qr-printing", title: t("طباعة QR Code"), description: t("خدمة طباعة أكواد QR للقوائم") },
     { id: "nfc-devices", title: t("أجهزة NFC"), description: t("تقنية NFC للدفع والتفاعل السريع") },
@@ -16,7 +16,7 @@ export default function AurmenuSidebar() {
   ];
 
   const handleItemClick = (itemId) => {
-    navigate(`/aurmenu/product/${itemId}`);
+    navigate(`product/${itemId}`);
   };
 
   return (

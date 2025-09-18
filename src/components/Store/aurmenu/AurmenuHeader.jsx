@@ -41,76 +41,80 @@ export default function AurmenuHeader() {
           {/* Desktop Nav */}
           <nav ref={scrollRef} className=" aurmenu-nav nav-scroll">
             <ul className="nav-list d-flex align-items-center  gap-3">
-              <li className="nav-item nav-item2">
-                <FaRocket className="icon"/> 
+              <li className="nav-item nav-item2 ">
                 <Link className="nav-link" to={"products/7"}>
+                <FaRocket className="icon d-block m-auto mb-1"/> 
                   {t("أورمينيو البدايه")}
                 </Link>
               </li>
 
               <li className="nav-item nav-item2">
-                <FaMedal className="icon"/>
                 <Link className="nav-link" to={"products/8"}>
+                <FaMedal className="icon  d-block m-auto mb-1"/>
                   {t("أورمينيو التقدم")}
                 </Link>
               </li>
 
               <li className="nav-item nav-item2">
-                <FaCrown  className="icon" />
                 <Link className="nav-link" to={"products/9"}>
+                <FaCrown  className="icon d-block m-auto mb-1" />
                   {t("أورمينيو التميز")}
                 </Link>
               </li>
 
               <li className="nav-item nav-item2">
-                <MdOutlineExplore  className="icon" />
                 <Link className="nav-link" to={"products/10"}>
+                <MdOutlineExplore  className="icon d-block m-auto mb-1" />
                   {t("أورمينيو الاحتراف")}
                 </Link>
               </li>
 
               <li className="nav-item nav-item2">
-                <MdOutlineHome  className="icon"/>
                 <a className="nav-link" href="https://aurmenu.com/" target="blank">
+                <MdOutlineHome  className="icon d-block m-auto mb-1"/>
                   {t("المزيد من اورمينيو")}
                 </a>
               </li>
 
               <li className=" nav-item2">
-                <MdOutlineInfo  className="icon"/>
                 <Link className="nav-link" to={"agentcontact"}>
+                <MdOutlineInfo  className="icon d-block m-auto mb-1"/>
                   {t("تواصل معنا")}
                 </Link>
                 
               </li>
 
               <li className="nav-item nav-item2">
-                <MdOutlineInfo  className="icon"/>
-                <Link className="nav-link" to={"about"}>{t("حول اورمنيو")}</Link>
+                <Link className="nav-link" to={"about"}>
+                <MdOutlineInfo  className="icon d-block m-auto mb-1"/>
+                {t("حول اورمنيو")}
+                </Link>
               </li>
 
               <li className="nav-item nav-item2">
-                <MdOutlineStar  className="icon"/>
-                <Link className="nav-link" to={"features"}>{t("المميزات")}</Link>
+                <Link className="nav-link" to={"features"}>
+                <MdOutlineStar  className="icon d-block m-auto mb-1"/>
+                {t("المميزات")}
+                </Link>
               </li>
 
               <li className="nav-item nav-item2">
-                <MdOutlineSupportAgent  className="icon"/>
                 <Link className="nav-link" to={"support"}>
+                <MdOutlineSupportAgent  className="icon d-block m-auto mb-1"/>
                   {t("المساندة والدعم")}
                 </Link>
               </li>
 
               <li className="nav-item nav-item2">
-                <MdOutlineSchool  className="icon"/>
                 <Link className="nav-link" to={"education"}>
+                <MdOutlineSchool  className="icon d-block m-auto mb-1"/>
                   {t("التدريب والتعليم")}
                 </Link>
               </li>
 
               <li className="nav-item nav-item2">
-                <MdOutlineWork  className="icon"/>
                 <Link className="nav-link" to={"careers"}>
+                <MdOutlineWork  className="icon d-block m-auto mb-1"/>
                   {t("التوظيف")}
                 </Link>
               </li>

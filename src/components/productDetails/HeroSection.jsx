@@ -4,6 +4,10 @@ import RatingStars from "./RatingStars";
 
 export default function HeroSection({ product, activeImage, setActiveImage, quantity, setQuantity }) {
   return (
+    <>
+    <section className="pt-3">
+      
+    </section>
     <section className="product-hero-section py-5">
      
         <Row className="g-4 align-items-center" >
@@ -74,6 +78,7 @@ export default function HeroSection({ product, activeImage, setActiveImage, quan
         
       
     </section>
+    </>
   );
 }
 

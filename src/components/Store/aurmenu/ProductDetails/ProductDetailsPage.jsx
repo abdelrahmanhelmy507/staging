@@ -7,13 +7,9 @@ import {
   FaShoppingCart, 
   FaPhone,
   FaEnvelope,
-  FaWifi,
-  FaBatteryFull,
-  FaMobileAlt,
-  FaPrint,
   FaQrcode,
   FaBell,
-  FaNfcSymbol,
+  // FaNfcSymbol,
   FaBullhorn,
   FaPlus
 } from "react-icons/fa";
@@ -23,7 +19,7 @@ export default function ProductDetailsPage() {
   const navigate = useNavigate();
 
   const products = {
-    "order-receiver": {
+    "20": {
       title: "جهاز استقبال طلبات أورمينيو",
       subtitle: "جهاز مخصص لاستقبال الطلبات من العملاء",
       image: "/images/aurmenu-device.jpg",
@@ -51,7 +47,7 @@ export default function ProductDetailsPage() {
         "الأبعاد": "25 x 18 x 2 cm",
         "الوزن": "800g"
       },
-      icon: <FaDeviceMobile />
+      // icon: <FaDeviceMobile />
     },
     "notifications-device": {
       title: "جهاز الإشعارات الذكي",
@@ -141,7 +137,7 @@ export default function ProductDetailsPage() {
         "اللون": "أسود/أبيض",
         "الضمان": "سنتان"
       },
-      icon: <FaNfcSymbol />
+      // icon: <FaNfcSymbol />
     },
     "marketing-solutions": {
       title: "حلول التسويق المتقدمة",
@@ -205,7 +201,7 @@ export default function ProductDetailsPage() {
     }
   };
 
-  const product = products[productId];
+  const product = products[0];
 
   if (!product) {
     return (
@@ -230,7 +226,7 @@ export default function ProductDetailsPage() {
               onClick={() => navigate('/aurmenu')}
               className="mb-4"
             >
-              <FaArrowLeft className="me-2" />
+              <FaArrowLeft className="me-2 " />
               العودة لأورمينيو
             </Button>
           </Col>

@@ -47,54 +47,58 @@ export default function AuraccHeader() {
 
 
     <li className="nav-item nav-item2">
-      <RiCpuLine className="aurpos-icon auracc-color" />
       <Link className="nav-link auracc-nav-link"  target="blank">
+      <RiCpuLine className="aurpos-icon auracc-color d-block m-auto mb-1" />
         {t("المواصفات الفنية")}
       </Link>
     </li>
 
     
     <li className="nav-item nav-item2">
-      <MdOutlineContactMail className="aurpos-icon auracc-color "/>
       <Link className="nav-link auracc-nav-link" to={"agentcontact"}>
+      <MdOutlineContactMail className="aurpos-icon auracc-color d-block m-auto mb-1 "/>
         {t("تواصل معنا")}
       </Link>
     </li>
 
     <li className="nav-item nav-item2">
-      <MdLanguage className="aurpos-icon auracc-color"/>
       <a href="https://aurpos.com/" target="blank" className="nav-link auracc-nav-link">
-        {t("المزيد من أوربوس")}
+      <MdLanguage className="aurpos-icon auracc-color d-block m-auto mb-1"/>
+        {t("المزيد من أوراك")}
       </a>
     </li>
 
     <li className="nav-item nav-item2">
-      <AiOutlineInfoCircle className="aurpos-icon auracc-color"/>
-      <Link className="nav-link auracc-nav-link">{t("حول أوربس")}</Link>
+      <Link className="nav-link auracc-nav-link">
+      <AiOutlineInfoCircle className="aurpos-icon auracc-color d-block m-auto mb-1"/>
+      {t("حول أوربس")}
+      </Link>
     </li>
 
     <li className="nav-item nav-item2">
-      <MdOutlineStar className="aurpos-icon auracc-color"/>
-      <Link className="nav-link auracc-nav-link">{t("المميزات")}</Link>
+      <Link className="nav-link auracc-nav-link">
+      <MdOutlineStar className="aurpos-icon auracc-color d-block m-auto mb-1"/>
+      {t("المميزات")}
+      </Link>
     </li>
 
     <li className="nav-item nav-item2">
-      <MdOutlineSupportAgent className="aurpos-icon auracc-color"/>
       <Link className="nav-link auracc-nav-link" to={"support"}>
+      <MdOutlineSupportAgent className="aurpos-icon auracc-color d-block m-auto mb-1"/>
         {t("المساندة والدعم")}
       </Link>
     </li>
 
     <li className="nav-item nav-item2">
-      <MdOutlineSchool className="aurpos-icon auracc-color"/>
       <Link className="nav-link auracc-nav-link" to={"education"}>
+      <MdOutlineSchool className="aurpos-icon auracc-color d-block m-auto mb-1"/>
         {t("التدريب والتعليم")}
       </Link>
     </li>
 
     <li className="nav-item nav-item2">
-      <MdWorkOutline className="aurpos-icon auracc-color"/>
       <Link className="nav-link auracc-nav-link" to={"careers"}>
+      <MdWorkOutline className="aurpos-icon auracc-color d-block m-auto mb-1"/>
         {t("التوظيف")}
       </Link>
     </li>

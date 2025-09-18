@@ -1,6 +1,8 @@
 .pricing-content {
   position: relative;
   padding: 2rem 0;
+  width: 85%;
+  margin: auto;
 }
 
 .pricing-card {

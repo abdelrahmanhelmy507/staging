@@ -8,7 +8,7 @@ export default function Pricing() {
 
   return (
     <div className="pricing-content">
-      <Row className="g-0">
+      <Row className="g-2">
         {/* AurPOS */}
         <Col lg={6} md={6} sm={12}>
           <div className="pricing-card">

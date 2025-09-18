@@ -10,41 +10,28 @@ import { useTranslation } from "react-i18next";
 const products =  [
   {
     id: 1,
-    name: "تيشيرت أبيض كلاسيك",
-    category: "تيشيرت",
-    image: "/staging/images/auracc3.jpg",
+    name: "ترخيص أورست التميت" ,
+    category: "باقه",
+    image: "/staging/images/product1.png",
     price: 199.99,
     quantity: 1
   },
   {
     id: 2,
-    name: "سماعات لاسلكية",
-    category: "تيشيرت",
-    image: "/staging/images/easy.jpg",
+    name: "ترخيص أورست برو ",
+    category: "باقه",
+    image: "/staging/images/product2.png",
     price: 1299.00,
     quantity: 2
   },
   {
     id: 3,
-    name: "محفظة جلد",
-    image: "/staging/images/easy.jpg",
-    price: 249.5,
-    quantity: 1
-  },
-  {
-    id: 4,
-    name: "حذاء رياضي - أسود",
-    image: "/staging/images/auracc3.jpg",
+    name: "طابعة كاشير HPRT – TP80BE",
+    category : "طابعه",
+    image: "/staging/images/product3.webp",
     price: 899.0,
     quantity: 1
   },
-  {
-    id: 5,
-    name: "كوب سيراميك",
-    image: "/staging/images/auracc3.jpg",
-    price: 79.0,
-    quantity: 1
-  }
 ];
 
 export default function Cart (){

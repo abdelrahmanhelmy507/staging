@@ -44,102 +44,106 @@ export default function AurestHeader() {
          <nav ref={scrollRef} className=" aurmenu-nav nav-scroll">
   <ul className="nav-list d-flex align-items-center gap-3">
     <li className="nav-item nav-item2">
-      <FaRocket className="aurest-icon  aurest-nav-link"/> 
       <Link className="nav-link" to={"products/7"}>
+      <FaRocket className="aurest-icon  aurest-nav-link d-block m-auto mb-1"/> 
         {t("أورست لايت")}
       </Link>
     </li>
 
     <li className="nav-item nav-item2">
-      <MdDevicesOther className="aurest-icon" />
       <Link className="nav-link aurest-nav-link" to={"products/9"}>
+      <MdDevicesOther className="aurest-icon d-block m-auto mb-1" />
         {t("أجهزة أورست لايت")}
       </Link>
     </li>
 
     <li className="nav-item nav-item2">
-      <RiComputerLine className="aurest-icon " />
       <Link className="nav-link  aurest-nav-link" to={"products/10"}>
+      <RiComputerLine className="aurest-icon d-block m-auto mb-1" />
         {t("أورست بيسك")}
       </Link>
     </li>
 
     <li className="nav-item nav-item2">
-      <FaTabletAlt className="aurest-icon"/>
       <a className="nav-link  aurest-nav-link" href="https://aurmenu.com/" target="blank">
+      <FaTabletAlt className="aurest-icon d-block m-auto mb-1"/>
         {t("أجهزة أورست بيسك")}
       </a>
     </li>
 
     <li className="nav-item nav-item2">
-      <RiCpuLine className="aurest-icon"/>
       <a className="nav-link  aurest-nav-link" href="https://aurmenu.com/" target="blank">
+      <RiCpuLine className="aurest-icon d-block m-auto mb-1"/>
         {t("أورست برو")}
       </a>
     </li>
 
     <li className="nav-item nav-item2">
-      <MdOutlineLaptopMac className="aurest-icon"/>
       <a className="nav-link  aurest-nav-link" href="https://aurmenu.com/" target="blank">
+      <MdOutlineLaptopMac className="aurest-icon d-block m-auto mb-1"/>
         {t("أجهزة أورست برو")}
       </a>
     </li>
 
     <li className="nav-item nav-item2">
-      <FaServer className="aurest-icon"/>
       <a className="nav-link  aurest-nav-link" href="https://aurmenu.com/" target="blank">
+      <FaServer className="aurest-icon d-block m-auto mb-1"/>
         {t("أورست التيمت")}
       </a>
     </li>
 
     <li className="nav-item nav-item2">
-      <MdOutlinePhonelink className="aurest-icon"/>
       <a className="nav-link  aurest-nav-link" href="https://aurmenu.com/" target="blank">
+      <MdOutlinePhonelink className="aurest-icon d-block m-auto mb-1"/>
         {t("أجهزة أورست التيمت")}
       </a>
     </li>
 
     <li className="nav-item nav-item2">
-      <MdOutlineContactMail className="aurest-icon"/>
       <Link className="nav-link  aurest-nav-link" to={"agentcontact"}>
+      <MdOutlineContactMail className="aurest-icon d-block m-auto mb-1"/>
         {t("تواصل معنا")}
       </Link>
     </li>
 
     <li className="nav-item nav-item2">
-      <MdLanguage className="aurest-icon"/>
       <a href="https://aurest.net/" target="blank" className="nav-link  aurest-nav-link">
+      <MdLanguage className="aurest-icon d-block m-auto mb-1"/>
         {t("المزيد من أورست")}
       </a>
     </li>
 
     <li className="nav-item nav-item2">
-      <AiOutlineInfoCircle className="aurest-icon"/>
-      <Link className="nav-link  aurest-nav-link">{t("حول أورست")}</Link>
+      <Link className="nav-link  aurest-nav-link">
+      <AiOutlineInfoCircle className="aurest-icon d-block m-auto mb-1"/>
+      {t("حول أورست")}
+      </Link>
     </li>
 
     <li className="nav-item nav-item2">
-      <MdOutlineStar className="aurest-icon"/>
-      <Link className="nav-link  aurest-nav-link">{t("المميزات")}</Link>
+      <Link className="nav-link  aurest-nav-link">
+      <MdOutlineStar className="aurest-icon d-block m-auto mb-1"/>
+      {t("المميزات")}
+      </Link>
     </li>
 
     <li className="nav-item nav-item2">
-      <MdOutlineSupportAgent className="aurest-icon"/>
       <Link className="nav-link  aurest-nav-link" to={"support"}>
+      <MdOutlineSupportAgent className="aurest-icon d-block m-auto mb-1"/>
         {t("المساندة والدعم")}
       </Link>
     </li>
 
     <li className="nav-item nav-item2">
-      <MdOutlineSchool className="aurest-icon"/>
       <Link className="nav-link  aurest-nav-link" to={"education"}>
+      <MdOutlineSchool className="aurest-icon d-block m-auto mb-1"/>
         {t("التدريب والتعليم")}
       </Link>
     </li>
 
     <li className="nav-item nav-item2">
-      <MdWorkOutline className="aurest-icon"/>
       <Link className="nav-link  aurest-nav-link" to={"careers"}>
+      <MdWorkOutline className="aurest-icon d-block m-auto mb-1"/>
         {t("التوظيف")}
       </Link>
     </li>

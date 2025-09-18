@@ -55,6 +55,7 @@ import Auracc from "./components/Store/auracc/Aurac.jsx";
 import AuraccOutlet from "./components/Store/auracc/AuraccOutlet.jsx";
 import AurmenuAboutPage from "./components/Store/aurmenu/AurmenuAboutPage.jsx";
 import AurmenuFeaturesPage from "./components/Store/aurmenu/AurmenuFeaturesPage.jsx";
+import ProductDetailsPage from "./components/Store/aurmenu/ProductDetails/ProductDetailsPage.jsx";
 
 
 
@@ -89,6 +90,7 @@ export default function App() {
               <Route path="support" element={<SupportCenter />} />
               <Route path="education" element={<TrainingEducation />} />
               <Route path="products/:id" element={<ProductDetailsLanding />} />
+              <Route path="product/:id" element={<ProductDetailsPage/>} />
               <Route path="about" element ={<AurmenuAboutPage />} />
               <Route path="features" element={<AurmenuFeaturesPage />} />
             </Route>

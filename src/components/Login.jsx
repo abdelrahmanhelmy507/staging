@@ -1,19 +1,20 @@
 import axios from "axios";
 import React, { useState } from "react";
-import { Container, Row, Col, Card, Form, Button } from "react-bootstrap";
+import { Container, Row, Col, Card, Form, Button  } from "react-bootstrap";
+import PhoneInput from "react-phone-input-2";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 export default function Login() {
+  const { t } = useTranslation();
   const [userInput, setUserInput] = useState({
-    username: "",
-    email: "",
-    password: "",
+   phoneNumber : ""
   });
 
   const login = async (e) => {
     e.preventDefault();
     if (!userInput.username || !userInput.email || !userInput.password) {
-      alert("من فضلك املأ كل الحقول");
+      alert(t("من فضلك ادخل رقم الهاتف "));
       return;
     }
     try {
@@ -23,7 +24,7 @@ export default function Login() {
           "Content-Type": "application/json",
         },
       });
-      alert("تم التسجيل بنجاح ");
+      alert(t("تم التسجيل بنجاح"));
     } catch (err) {
       alert(err.message);
     }
@@ -38,9 +39,9 @@ export default function Login() {
         <Col xs={12} sm={8} md={6} lg={4}>
           <Card className="shadow-lg login-card">
             <Card.Body>
-              <h3 className="text-center mb-4 title">تسجيل الدخول</h3>
+              <h3 className="text-center mb-4 title"> {t("تسجيل")}</h3>
               <Form onSubmit={login}>
-                <Form.Group className="mb-3" controlId="formUsername">
+                {/* <Form.Group className="mb-3" controlId="formUsername">
                   <Form.Label>اسم المستخدم </Form.Label>
                   <Form.Control
                     type="text"
@@ -71,16 +72,26 @@ export default function Login() {
                       setUserInput({ ...userInput, password: e.target.value });
                     }}
                   />
+                </Form.Group> */}
+                <Form.Group className="mb-3" controlId="formPhone">
+                  <Form.Label> {t("رقم الهاتف")} </Form.Label>
+                  <PhoneInput
+                    country={"eg"}
+                    inputClass="w-100"
+                    containerClass="phone-input-rtl"
+                    onChange={(value) => {
+                      setUserInput({ ...userInput, phoneNumber: value });
+                    }}
+                  />
                 </Form.Group>
-
                 <Button variant="primary" type="submit" className="w-100">
-                  تسجيل
+                  {t("تسجيل")}
                 </Button>
               </Form>
 
               <div className="text-center mt-3 register-link">
-                <span>لا يوجد لديك حساب ؟ </span>
-                <Link to="/register">انشاء حساب</Link>
+                <span>{t("لا يوجد لديك حساب؟")} </span>
+                <Link to="/register"> {t("انشاء حساب")} </Link>
               </div>
             </Card.Body>
           </Card>

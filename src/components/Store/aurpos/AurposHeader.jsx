@@ -39,81 +39,85 @@ export default function AurposHeader() {
           <ul className="nav-list d-flex align-items-center gap-3">
 
             <li className="nav-item nav-item2">
-              <FaRocket className="aurpos-icon"/> 
               <Link className="nav-link" to={"products/7"}>
+              <FaRocket className="aurpos-icon d-block m-auto mb-1"/> 
                 {t("اوربوس الاساسية")}
               </Link>
             </li>
 
             <li className="nav-item nav-item2">
-              <MdDevicesOther className="aurpos-icon"/>
               <Link className="nav-link" to={"products/9"}>
+              <MdDevicesOther className="aurpos-icon d-block m-auto mb-1"/>
                 {t("اوربوس الفضية")}
               </Link>
             </li>
 
             <li className="nav-item nav-item2">
-              <RiComputerLine className="aurpos-icon"/>
               <Link className="nav-link" to={"products/10"}>
+              <RiComputerLine className="aurpos-icon d-block m-auto mb-1"/>
                 {t("وربوس الموسع")}
               </Link>
             </li>
 
             <li className="nav-item nav-item2">
-              <FaTabletAlt className="aurpos-icon"/>
               <a className="nav-link" href="https://aurmenu.com/" target="_blank" rel="noreferrer">
+              <FaTabletAlt className="aurpos-icon d-block m-auto mb-1"/>
                 {t("أجهزة أورست بيسك")}
               </a>
             </li>
 
             <li className="nav-item nav-item2">
-              <RiCpuLine className="aurpos-icon"/>
               <a className="nav-link" href="https://aurmenu.com/" target="_blank" rel="noreferrer">
+              <RiCpuLine className="aurpos-icon d-block m-auto mb-1"/>
                 {t("اوربوس المخصص")}
               </a>
             </li>
 
             <li className="nav-item nav-item2">
-              <MdOutlineContactMail className="aurpos-icon"/>
               <Link className="nav-link" to={"agentcontact"}>
+              <MdOutlineContactMail className="aurpos-icon d-block m-auto mb-1"/>
                 {t("تواصل معنا")}
               </Link>
             </li>
 
             <li className="nav-item nav-item2">
-              <MdLanguage className="aurpos-icon"/>
               <a href="https://aurpos.com/" target="_blank" rel="noreferrer" className="nav-link">
+              <MdLanguage className="aurpos-icon d-block m-auto mb-1"/>
                 {t("المزيد من أوربوس")}
               </a>
             </li>
 
             <li className="nav-item nav-item2">
-              <AiOutlineInfoCircle className="aurpos-icon"/>
-              <Link className="nav-link">{t("حول أوربس")}</Link>
+              <Link className="nav-link">
+              <AiOutlineInfoCircle className="aurpos-icon d-block m-auto mb-1"/>
+              {t("حول أوربس")}
+              </Link>
             </li>
 
             <li className="nav-item nav-item2">
-              <MdOutlineStar className="aurpos-icon"/>
-              <Link className="nav-link">{t("المميزات")}</Link>
+              <Link className="nav-link">
+              <MdOutlineStar className="aurpos-icon d-block m-auto mb-1"/>
+              {t("المميزات")}
+              </Link>
             </li>
 
             <li className="nav-item nav-item2">
-              <MdOutlineSupportAgent className="aurpos-icon"/>
               <Link className="nav-link" to={"support"}>
+              <MdOutlineSupportAgent className="aurpos-icon d-block m-auto mb-1"/>
                 {t("مركز المساندة والدعم")}
               </Link>
             </li>
 
             <li className="nav-item nav-item2">
-              <MdOutlineSchool className="aurpos-icon"/>
               <Link className="nav-link" to={"education"}>
+              <MdOutlineSchool className="aurpos-icon d-block m-auto mb-1"/>
                 {t("التدريب والتعليم")}
               </Link>
             </li>
 
             <li className="nav-item nav-item2">
-              <MdWorkOutline className="aurpos-icon"/>
               <Link className="nav-link" to={"careers"}>
+              <MdWorkOutline className="aurpos-icon d-block m-auto mb-1"/>
                 {t("التوظيف")}
               </Link>
             </li>
